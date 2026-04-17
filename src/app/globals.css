@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy-dark: #0F1B2D;
+    --navy: #1B3A5C;
+    --gold: #C9A84C;
+    --warm-white: #FAFAF8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-50 text-slate-800 antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    background-color: rgba(201, 168, 76, 0.3);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-navy-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.7s ease-out forwards;
+  }
+}
+
+/* Devotional content prose styles */
+.devotional-content {
+  @apply prose prose-slate max-w-none;
+}
+
+.devotional-content blockquote {
+  @apply border-l-4 border-gold-500 pl-4 italic text-navy-700 bg-gold-50 py-2 rounded-r-lg not-italic;
+}
+
+.devotional-content h3 {
+  @apply font-serif text-navy-900 font-bold text-xl;
+}
+
+.devotional-content p {
+  @apply leading-relaxed text-slate-700;
+}
