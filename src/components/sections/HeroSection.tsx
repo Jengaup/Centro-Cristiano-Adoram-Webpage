@@ -42,9 +42,11 @@ export default function HeroSection({ locale, dict }: Props) {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32 pt-40">
-        <p className="animate-fade-in text-gold-400 text-xs sm:text-sm font-bold tracking-[0.3em] uppercase mb-6">
-          {dict.eyebrow}
-        </p>
+        {dict.eyebrow && (
+          <p className="animate-fade-in text-gold-400 text-xs sm:text-sm font-bold tracking-[0.3em] uppercase mb-6">
+            {dict.eyebrow}
+          </p>
+        )}
         <h1 className="animate-slide-up font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
           {dict.headline1}{" "}
           <span className="text-gold-400 relative inline-block">

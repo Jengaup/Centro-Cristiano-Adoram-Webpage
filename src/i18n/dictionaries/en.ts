@@ -20,7 +20,7 @@ const en = {
     switchLang: "Español",
   },
   hero: {
-    eyebrow: "Apostolic Protestant Church",
+    eyebrow: "",
     headline1: "A place where",
     headlineAccent: "heaven",
     headline2: "touches the earth",

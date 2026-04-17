@@ -15,15 +15,16 @@ export const siteConfig = {
     state: "Estado",
     zip: "00000",
     country: "País",
-    mapsUrl: "https://maps.google.com",
+    mapsUrl: "https://maps.app.goo.gl/tTsXxCGkToC2HiUk8",
   },
   serviceTimes: [
     { day: "Domingo", time: "10:00 AM", name: "Servicio Principal" },
-    { day: "Miércoles", time: "7:00 PM", name: "Estudio Bíblico" },
-    { day: "Viernes", time: "7:30 PM", name: "Noche de Alabanza" },
+    { day: "Martes", time: "7:00 PM", name: "Estudios Bíblicos (Zoom)" },
+    { day: "Viernes", time: "7:00 PM", name: "Servicio de Oración" },
+    { day: "Viernes", time: "7:30 PM", name: "Servicio de Jóvenes" },
   ],
   social: {
-    youtube: "https://youtube.com/@CentroCristianoAdoram",
+    youtube: "https://www.youtube.com/@CCAdoram",
     facebook: "https://facebook.com/CentroCristianoAdoram",
     instagram: "https://instagram.com/CentroCristianoAdoram",
     whatsapp: "https://wa.me/10000000000",
@@ -34,8 +35,8 @@ export const siteConfig = {
 
 export const youtubeConfig: YouTubeChannelConfig = {
   channelId: "UCxxxxxxxxxxxxxxxxxxxxxxxx",
-  channelHandle: "@CentroCristianoAdoram",
-  channelUrl: "https://youtube.com/@CentroCristianoAdoram",
+  channelHandle: "@CCAdoram",
+  channelUrl: "https://www.youtube.com/@CCAdoram",
   // apiKey: process.env.YOUTUBE_API_KEY, // Uncomment when ready
 };
 

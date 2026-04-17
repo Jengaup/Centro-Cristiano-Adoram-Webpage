@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Youtube, ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/data/config";
@@ -82,9 +83,13 @@ export default function Navbar({ locale, dict }: Props) {
           className="flex items-center gap-2.5 group"
           onClick={() => setMobileOpen(false)}
         >
-          <div className="w-9 h-9 rounded-lg bg-gold-500 flex items-center justify-center shadow-gold group-hover:bg-gold-400 transition-colors">
-            <span className="text-navy-950 font-serif font-bold text-lg leading-none">A</span>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Centro Cristiano Adoram"
+            width={44}
+            height={44}
+            className="rounded-lg object-contain"
+          />
           <div className="hidden sm:block">
             <span className="block text-white font-serif font-bold text-base leading-tight">Centro Cristiano</span>
             <span className="block text-gold-400 font-bold text-sm tracking-widest uppercase leading-tight">Adoram</span>
