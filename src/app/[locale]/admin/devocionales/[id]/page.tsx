@@ -7,9 +7,17 @@ import RoleGuard from "@/components/admin/RoleGuard";
 import { devotionals } from "@/data/devotionals";
 import { getMockCurrentUser } from "@/data/users";
 import { canEditDevotional } from "@/lib/permissions";
+import { locales } from "@/i18n/config";
+import type { Locale } from "@/i18n/config";
 
 interface Props {
-  params: { id: string };
+  params: { locale: Locale; id: string };
+}
+
+export function generateStaticParams() {
+  return locales.flatMap((locale) =>
+    devotionals.map((d) => ({ locale, id: d.id }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -22,26 +30,19 @@ export default function EditDevotionalPage({ params }: Props) {
   if (!devotional) notFound();
 
   const currentUser = getMockCurrentUser();
-  const hasEditPermission = canEditDevotional(
-    currentUser.role,
-    currentUser.id,
-    devotional.authorId
-  );
+  const hasEditPermission = canEditDevotional(currentUser.role, currentUser.id, devotional.authorId);
 
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
         <Link
-          href="/admin/devocionales"
+          href={`/${params.locale}/admin/devocionales`}
           className="flex items-center gap-1.5 text-sm text-navy-600 hover:text-navy-800 font-semibold transition-colors"
         >
-          <ArrowLeft size={14} />
-          Devocionales
+          <ArrowLeft size={14} />Devocionales
         </Link>
         <span className="text-warm-400">/</span>
-        <h1 className="font-serif text-xl font-bold text-navy-900 truncate">
-          {devotional.title}
-        </h1>
+        <h1 className="font-serif text-xl font-bold text-navy-900 truncate">{devotional.title}</h1>
       </div>
 
       <RoleGuard

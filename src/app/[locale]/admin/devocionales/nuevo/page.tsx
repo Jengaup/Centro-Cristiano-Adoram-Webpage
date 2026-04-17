@@ -4,26 +4,24 @@ import { ArrowLeft } from "lucide-react";
 import DevotionalEditor from "@/components/admin/DevotionalEditor";
 import RoleGuard from "@/components/admin/RoleGuard";
 import { getMockCurrentUser } from "@/data/users";
+import type { Locale } from "@/i18n/config";
 
 export const metadata: Metadata = { title: "Nuevo Devocional" };
 
-export default function NewDevotionalPage() {
+export default function NewDevotionalPage({ params }: { params: { locale: Locale } }) {
   const currentUser = getMockCurrentUser();
 
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
         <Link
-          href="/admin/devocionales"
+          href={`/${params.locale}/admin/devocionales`}
           className="flex items-center gap-1.5 text-sm text-navy-600 hover:text-navy-800 font-semibold transition-colors"
         >
-          <ArrowLeft size={14} />
-          Devocionales
+          <ArrowLeft size={14} />Devocionales
         </Link>
         <span className="text-warm-400">/</span>
-        <h1 className="font-serif text-xl font-bold text-navy-900">
-          Nuevo Devocional
-        </h1>
+        <h1 className="font-serif text-xl font-bold text-navy-900">Nuevo Devocional</h1>
       </div>
 
       <RoleGuard role={currentUser.role} permission="canCreateDevotionals">

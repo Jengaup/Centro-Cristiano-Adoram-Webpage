@@ -2,31 +2,55 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Youtube, ChevronDown } from "lucide-react";
+import { Menu, X, Youtube, ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/data/config";
+import type { Locale } from "@/i18n/config";
 
-const navLinks = [
-  { label: "Inicio", href: "/" },
-  {
-    label: "Nosotros",
-    href: "#nosotros",
-    children: [
-      { label: "Quiénes somos", href: "#nosotros" },
-      { label: "Nuestra Fe", href: "#nosotros" },
-      { label: "Nuestro Pastor", href: "#pastor" },
-    ],
-  },
-  { label: "Ministerios", href: "#ministerios" },
-  { label: "Eventos", href: "#eventos" },
-  { label: "Devocionales", href: "/devocionales" },
-  { label: "Planifica tu Visita", href: "/visitar" },
-];
+interface NavDict {
+  home: string;
+  about: string;
+  ministries: string;
+  events: string;
+  devotionals: string;
+  planVisit: string;
+  watchLive: string;
+  whoWeAre: string;
+  ourFaith: string;
+  ourPastor: string;
+  openMenu: string;
+  closeMenu: string;
+  switchLang: string;
+}
 
-export default function Navbar() {
+interface Props {
+  locale: Locale;
+  dict: NavDict;
+}
+
+export default function Navbar({ locale, dict }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const otherLocale: Locale = locale === "es" ? "en" : "es";
+
+  const navLinks = [
+    { label: dict.home, href: `/${locale}` },
+    {
+      label: dict.about,
+      href: `/${locale}#nosotros`,
+      children: [
+        { label: dict.whoWeAre, href: `/${locale}#nosotros` },
+        { label: dict.ourFaith, href: `/${locale}#nosotros` },
+        { label: dict.ourPastor, href: `/${locale}#pastor` },
+      ],
+    },
+    { label: dict.ministries, href: `/${locale}#ministerios` },
+    { label: dict.events, href: `/${locale}#eventos` },
+    { label: dict.devotionals, href: `/${locale}/devocionales` },
+    { label: dict.planVisit, href: `/${locale}/visitar` },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -35,14 +59,8 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
   return (
@@ -60,22 +78,16 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link
-          href="/"
+          href={`/${locale}`}
           className="flex items-center gap-2.5 group"
           onClick={() => setMobileOpen(false)}
         >
           <div className="w-9 h-9 rounded-lg bg-gold-500 flex items-center justify-center shadow-gold group-hover:bg-gold-400 transition-colors">
-            <span className="text-navy-950 font-serif font-bold text-lg leading-none">
-              A
-            </span>
+            <span className="text-navy-950 font-serif font-bold text-lg leading-none">A</span>
           </div>
           <div className="hidden sm:block">
-            <span className="block text-white font-serif font-bold text-base leading-tight">
-              Centro Cristiano
-            </span>
-            <span className="block text-gold-400 font-bold text-sm tracking-widest uppercase leading-tight">
-              Adoram
-            </span>
+            <span className="block text-white font-serif font-bold text-base leading-tight">Centro Cristiano</span>
+            <span className="block text-gold-400 font-bold text-sm tracking-widest uppercase leading-tight">Adoram</span>
           </div>
         </Link>
 
@@ -93,10 +105,7 @@ export default function Navbar() {
                   {link.label}
                   <ChevronDown
                     size={14}
-                    className={cn(
-                      "transition-transform",
-                      openDropdown === link.label && "rotate-180"
-                    )}
+                    className={cn("transition-transform", openDropdown === link.label && "rotate-180")}
                   />
                 </button>
                 {openDropdown === link.label && (
@@ -127,24 +136,33 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* CTA + Mobile toggle */}
-        <div className="flex items-center gap-3">
+        {/* Right: Live CTA + Lang switcher + Mobile toggle */}
+        <div className="flex items-center gap-2">
+          {/* Language switcher */}
+          <Link
+            href={`/${otherLocale}`}
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 text-xs font-bold tracking-wide transition-all"
+            aria-label={`Switch to ${dict.switchLang}`}
+          >
+            <Globe size={13} />
+            {dict.switchLang}
+          </Link>
+
           <a
             href={siteConfig.social.youtube}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm hover:shadow-md"
-            aria-label="Ver en vivo en YouTube"
+            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-lg transition-all shadow-sm"
+            aria-label={dict.watchLive}
           >
             <Youtube size={16} className="shrink-0" />
-            <span className="hidden md:inline">Ver en Vivo</span>
+            <span className="hidden md:inline">{dict.watchLive}</span>
           </a>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="lg:hidden p-2 text-white hover:text-gold-300 transition-colors"
-            aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-label={mobileOpen ? dict.closeMenu : dict.openMenu}
             aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -166,7 +184,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-3 pb-1 border-t border-white/10">
+            <div className="pt-3 pb-1 border-t border-white/10 space-y-2">
+              <Link
+                href={`/${otherLocale}`}
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-colors text-sm"
+              >
+                <Globe size={15} />
+                {dict.switchLang}
+              </Link>
               <a
                 href={siteConfig.social.youtube}
                 target="_blank"
@@ -174,7 +200,7 @@ export default function Navbar() {
                 className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-colors"
               >
                 <Youtube size={18} />
-                Ver en Vivo en YouTube
+                {dict.watchLive}
               </a>
             </div>
           </div>
