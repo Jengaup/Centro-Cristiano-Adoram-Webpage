@@ -73,11 +73,11 @@ const es = {
       },
       {
         title: "Nuestra Misión",
-        text: "Hacer discípulos de Jesucristo que adoren a Dios en espíritu y en verdad, crezcan en su Palabra y transformen sus familias, comunidades y naciones con el evangelio.",
+        text: "Empoderados por el Espíritu Santo, alcanzar a través de todos los recursos posibles cada esfera de la sociedad — matrimonios, jóvenes, niños, ancianos, mujeres y hombres — rescatando su relevancia y maximizando su potencial, para que se reproduzca en ellos la identidad del Reino de Dios.",
       },
       {
         title: "Nuestra Visión",
-        text: "Ser una iglesia local viva y fiel que funcione como un centro de restauración, adoración e impacto — donde cada persona encuentre su identidad en Cristo y su propósito en el Reino de Dios.",
+        text: "Como la Ecclesia, alcanzando a cada persona para Cristo, facilitando que los principios del Reino se impregnen en sus vidas.",
       },
       {
         title: "Nuestra Fe",
