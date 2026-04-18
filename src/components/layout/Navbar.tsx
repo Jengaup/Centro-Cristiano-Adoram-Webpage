@@ -67,10 +67,8 @@ export default function Navbar({ locale, dict }: Props) {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-navy-900/98 backdrop-blur-md shadow-navy"
-          : "bg-gradient-to-b from-navy-950/80 to-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-950",
+        isScrolled && "shadow-navy backdrop-blur-md"
       )}
     >
       <nav
