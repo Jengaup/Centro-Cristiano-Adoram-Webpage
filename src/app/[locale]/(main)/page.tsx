@@ -3,7 +3,6 @@ import { locales } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
 import HeroSection from "@/components/sections/HeroSection";
 import QuickAccess from "@/components/sections/QuickAccess";
-import YouTubeLiveSection from "@/components/sections/YouTubeLiveSection";
 import AboutSection from "@/components/sections/AboutSection";
 import PastorWelcome from "@/components/sections/PastorWelcome";
 import MinistriesSection from "@/components/sections/MinistriesSection";
@@ -32,7 +31,6 @@ export default async function HomePage({ params }: { params: { locale: Locale } 
     <>
       <HeroSection locale={params.locale} dict={dict.hero} />
       <QuickAccess locale={params.locale} dict={dict.quickAccess} />
-      <YouTubeLiveSection dict={dict.youtube} />
       <AboutSection dict={dict.about} />
       <PastorWelcome locale={params.locale} dict={dict.pastor} />
       <MinistriesSection locale={params.locale} dict={dict.ministries} />
