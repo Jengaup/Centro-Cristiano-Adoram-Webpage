@@ -42,8 +42,9 @@ export default function Footer({ locale, dict }: Props) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <Image
-                src="/logo.png"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
                 alt="Centro Cristiano Adoram"
                 width={48}
                 height={48}

@@ -8,7 +8,6 @@ import AboutSection from "@/components/sections/AboutSection";
 import PastorWelcome from "@/components/sections/PastorWelcome";
 import MinistriesSection from "@/components/sections/MinistriesSection";
 import EventsSection from "@/components/sections/EventsSection";
-import SermonsSection from "@/components/sections/SermonsSection";
 import DevotionalHighlight from "@/components/sections/DevotionalHighlight";
 import TestimoniesSection from "@/components/sections/TestimoniesSection";
 import PlanVisitSection from "@/components/sections/PlanVisitSection";
@@ -38,8 +37,7 @@ export default async function HomePage({ params }: { params: { locale: Locale } 
       <PastorWelcome locale={params.locale} dict={dict.pastor} />
       <MinistriesSection locale={params.locale} dict={dict.ministries} />
       <EventsSection dict={dict.events} />
-      <SermonsSection dict={dict.sermons} />
-      <DevotionalHighlight locale={params.locale} dict={dict.devotional} />
+<DevotionalHighlight locale={params.locale} dict={dict.devotional} />
       <TestimoniesSection locale={params.locale} dict={dict.testimonies} />
       <PlanVisitSection locale={params.locale} dict={dict.planVisit} />
       <PrayerRequestSection dict={dict.prayer} />

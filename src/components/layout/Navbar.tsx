@@ -83,8 +83,9 @@ export default function Navbar({ locale, dict }: Props) {
           className="flex items-center gap-2.5 group"
           onClick={() => setMobileOpen(false)}
         >
-          <Image
-            src="/logo.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
             alt="Centro Cristiano Adoram"
             width={44}
             height={44}
