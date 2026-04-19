@@ -1,6 +1,6 @@
 const en = {
   metadata: {
-    title: "Centro Cristiano Adoram | Apostolic Protestant Church",
+    title: "Centro Cristiano Adoram | Apostolic Church",
     description:
       "A faith family where worship is genuine, the Word is alive, and there is a place for you. Visit us — we are ready to receive you.",
   },
@@ -69,7 +69,7 @@ const en = {
     pillars: [
       {
         title: "Who We Are",
-        text: "We are an apostolic protestant church that believes in the complete authority of Scripture, the Trinity, the death and resurrection of Jesus Christ, and the power of the Holy Spirit to transform lives today.",
+        text: "We are an apostolic church that believes in the complete authority of Scripture, the Trinity, the death and resurrection of Jesus Christ, and the power of the Holy Spirit to transform lives today.",
       },
       {
         title: "Our Mission",
@@ -307,7 +307,7 @@ const en = {
   },
   footer: {
     tagline:
-      "An apostolic protestant faith family committed to worshiping God, growing in His Word, and transforming our communities.",
+      "An apostolic faith family committed to worshiping God, growing in His Word, and transforming our communities.",
     schedulesTitle: "Service Times",
     navigationTitle: "Navigation",
     contactTitle: "Contact",

@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Centro Cristiano Adoram",
   tagline: "Un lugar donde el cielo toca la tierra",
   description:
-    "Una familia de fe apostólica protestante comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
+    "Una familia de fe apostólica comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
   url: "https://adoram.iglesia",
   contactEmail: "adoramlares@gmail.com",
   phone: "787-379-8296",

@@ -1,6 +1,6 @@
 const es = {
   metadata: {
-    title: "Centro Cristiano Adoram | Iglesia Apostólica Protestante",
+    title: "Centro Cristiano Adoram | Iglesia Apostólica",
     description:
       "Una familia de fe donde la adoración es genuina, la Palabra es viva y hay un lugar para ti. Visítanos — estamos listos para recibirte.",
   },
@@ -69,7 +69,7 @@ const es = {
     pillars: [
       {
         title: "Quiénes Somos",
-        text: "Somos una iglesia apostólica protestante que cree en la autoridad completa de las Escrituras, en la Trinidad, en la muerte y resurrección de Jesucristo, y en el poder del Espíritu Santo para transformar vidas hoy.",
+        text: "Somos una iglesia apostólica que cree en la autoridad completa de las Escrituras, en la Trinidad, en la muerte y resurrección de Jesucristo, y en el poder del Espíritu Santo para transformar vidas hoy.",
       },
       {
         title: "Nuestra Misión",
@@ -308,7 +308,7 @@ const es = {
   },
   footer: {
     tagline:
-      "Una familia de fe apostólica protestante comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
+      "Una familia de fe apostólica comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
     schedulesTitle: "Horarios de Servicio",
     navigationTitle: "Navegación",
     contactTitle: "Contacto",
