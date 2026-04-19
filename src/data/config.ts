@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "Una familia de fe apostólica protestante comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
   url: "https://adoram.iglesia",
-  contactEmail: "info@adoram.iglesia",
+  contactEmail: "adoramlares@gmail.com",
   phone: "787-379-8296",
   whatsappNumber: "10000000000",
   address: {
