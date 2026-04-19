@@ -8,7 +8,7 @@ export const siteConfig = {
   url: "https://adoram.iglesia",
   contactEmail: "adoramlares@gmail.com",
   phone: "787-379-8296",
-  whatsappNumber: "10000000000",
+  whatsappNumber: "17873798296",
   address: {
     street: "Av. de la Fe 1234",
     city: "Tu Ciudad",
@@ -25,9 +25,9 @@ export const siteConfig = {
   ],
   social: {
     youtube: "https://www.youtube.com/@CCAdoram",
-    facebook: "https://facebook.com/CentroCristianoAdoram",
+    facebook: "https://www.facebook.com/share/17euRRLxaq/",
     instagram: "https://instagram.com/CentroCristianoAdoram",
-    whatsapp: "https://wa.me/10000000000",
+    whatsapp: "https://wa.me/17873798296",
   },
   pastorName: "Apóstol Juan Alberto Martines & Apóstol Wendy Ortis",
   pastorTitle: "Apóstoles",

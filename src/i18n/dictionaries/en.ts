@@ -120,7 +120,7 @@ const en = {
         meetingTime: "Sundays during main services",
       },
       {
-        name: "Adoram Generation",
+        name: "T. G. Youth Network",
         tagline: "Young people on fire for God",
         description:
           "A generation of young people passionately seeking God, developing their identity in Christ, and acting as agents of change in their environment.",
@@ -141,7 +141,7 @@ const en = {
         meetingTime: "Third Saturday of the month 10:00 AM",
       },
       {
-        name: "Worship Ministry",
+        name: "Kadosh",
         tagline: "Worship leaders, not just musicians",
         description:
           "Musicians, singers, and worshipers committed to bringing God's presence to every service and preparing hearts for a divine encounter.",
@@ -160,13 +160,6 @@ const en = {
         description:
           "The team that makes it possible for the gospel message to reach beyond our walls through broadcasts, social media, and production.",
         meetingTime: "According to ministry needs",
-      },
-      {
-        name: "Discipleship",
-        tagline: "Making disciples, not just converts",
-        description:
-          "Spiritual formation programs that take believers from their first steps in faith to maturity in Christ and active service.",
-        meetingTime: "Groups at various times — Check",
       },
       {
         name: "Community Outreach",

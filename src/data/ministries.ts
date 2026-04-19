@@ -28,7 +28,7 @@ export const ministries: Ministry[] = [
   },
   {
     id: "min-002",
-    name: "Generación Adoram",
+    name: "T. G. Youth Network",
     tagline: "Jóvenes encendidos para Dios",
     description:
       "Una generación de jóvenes que busca a Dios con pasión, desarrolla su identidad en Cristo y es agente de cambio en su entorno.",
@@ -67,7 +67,7 @@ export const ministries: Ministry[] = [
   },
   {
     id: "min-005",
-    name: "Ministerio de Alabanza",
+    name: "Kadosh",
     tagline: "Líderes de adoración, no solo músicos",
     description:
       "Músicos, cantantes y adoradores comprometidos a llevar la presencia de Dios a cada servicio y preparar corazones para el encuentro divino.",
@@ -103,19 +103,6 @@ export const ministries: Ministry[] = [
     targetAudience: "Creativos, técnicos y comunicadores",
     meetingTime: "Según necesidades del ministerio",
     leader: "Director(a) de Medios",
-  },
-  {
-    id: "min-008",
-    name: "Discipulado",
-    tagline: "Haciendo discípulos, no solo convertidos",
-    description:
-      "Programas de formación espiritual que llevan a creyentes desde sus primeros pasos en la fe hasta la madurez en Cristo y el servicio activo.",
-    icon: "📖",
-    color: "text-teal-700",
-    bgColor: "bg-teal-50 border-teal-200",
-    targetAudience: "Creyentes de todos los niveles de madurez",
-    meetingTime: "Grupos en diferentes horarios — Consultar",
-    leader: "Coordinador(a) de Discipulado",
   },
   {
     id: "min-009",

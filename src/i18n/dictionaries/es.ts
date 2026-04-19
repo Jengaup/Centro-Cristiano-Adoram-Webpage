@@ -120,7 +120,7 @@ const es = {
         meetingTime: "Domingos en los servicios principales",
       },
       {
-        name: "Generación Adoram",
+        name: "T. G. Youth Network",
         tagline: "Jóvenes encendidos para Dios",
         description:
           "Una generación de jóvenes que busca a Dios con pasión, desarrolla su identidad en Cristo y es agente de cambio en su entorno.",
@@ -141,7 +141,7 @@ const es = {
         meetingTime: "Tercer sábado del mes 10:00 AM",
       },
       {
-        name: "Ministerio de Alabanza",
+        name: "Kadosh",
         tagline: "Líderes de adoración, no solo músicos",
         description:
           "Músicos, cantantes y adoradores comprometidos a llevar la presencia de Dios a cada servicio y preparar corazones para el encuentro divino.",
@@ -160,13 +160,6 @@ const es = {
         description:
           "El equipo que hace posible que el mensaje del evangelio llegue más allá de nuestras paredes a través de transmisiones, redes sociales y producción.",
         meetingTime: "Según necesidades del ministerio",
-      },
-      {
-        name: "Discipulado",
-        tagline: "Haciendo discípulos, no solo convertidos",
-        description:
-          "Programas de formación espiritual que llevan a creyentes desde sus primeros pasos en la fe hasta la madurez en Cristo y el servicio activo.",
-        meetingTime: "Grupos en diferentes horarios — Consultar",
       },
       {
         name: "Alcance Comunitario",
