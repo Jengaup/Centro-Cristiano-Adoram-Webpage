@@ -34,11 +34,11 @@ export default function QuickAccess({ locale, dict }: Props) {
     <section className="relative z-20 -mt-8 mb-0 px-4 sm:px-6 lg:px-8" aria-label="Acceso rápido">
       <div className="max-w-5xl mx-auto">
         <div className="bg-white rounded-2xl shadow-navy overflow-hidden border border-warm-200">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-x divide-y sm:divide-y-0 divide-warm-200">
+          <div className="flex sm:grid sm:grid-cols-3 lg:grid-cols-5 overflow-x-auto sm:overflow-visible divide-x sm:divide-y divide-warm-200">
             {items.map((item) => {
               const Icon = item.icon;
               const inner = (
-                <div className="flex flex-col items-center text-center p-5 gap-3 h-full group-hover:bg-warm-50 transition-colors">
+                <div className="flex flex-col items-center text-center p-5 gap-3 min-w-[7rem] sm:min-w-0 group-hover:bg-warm-50 transition-colors">
                   <div className={`w-12 h-12 rounded-xl ${item.bgColor} ${item.hoverColor} flex items-center justify-center shadow-sm transition-all duration-200 group-hover:scale-110`}>
                     <Icon size={22} className="text-white" />
                   </div>
@@ -50,13 +50,13 @@ export default function QuickAccess({ locale, dict }: Props) {
               );
               if ("external" in item && item.external) {
                 return (
-                  <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-inset" aria-label={item.label}>
+                  <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="group block shrink-0 sm:shrink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-inset" aria-label={item.label}>
                     {inner}
                   </a>
                 );
               }
               return (
-                <Link key={item.label} href={item.href} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-inset">
+                <Link key={item.label} href={item.href} className="group block shrink-0 sm:shrink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-inset">
                   {inner}
                 </Link>
               );

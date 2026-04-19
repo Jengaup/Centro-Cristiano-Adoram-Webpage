@@ -40,8 +40,8 @@ export default function PastorWelcome({ locale, dict }: Props) {
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-gold-500/10 border-2 border-gold-400/30 -z-0" />
             <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl bg-navy-100 border-2 border-navy-200/50 -z-0" />
-            <div className="absolute -bottom-3 left-8 lg:left-4 z-20 bg-white shadow-warm rounded-xl px-5 py-3 border border-warm-200">
-              <p className="font-bold text-navy-800 text-sm">{siteConfig.pastorName}</p>
+            <div className="absolute -bottom-3 left-4 z-20 bg-white shadow-warm rounded-xl px-4 py-3 border border-warm-200 max-w-[calc(100%-1.5rem)]">
+              <p className="font-bold text-navy-800 text-sm leading-snug">{siteConfig.pastorName}</p>
               <p className="text-gold-600 text-xs font-semibold tracking-wide uppercase">{siteConfig.pastorTitle}</p>
             </div>
           </div>
