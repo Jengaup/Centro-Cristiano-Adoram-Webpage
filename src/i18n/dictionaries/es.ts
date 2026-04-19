@@ -96,10 +96,10 @@ const es = {
       "No importa de dónde vengas, qué hayas vivido o cuántas veces hayas fallado. Aquí encontrarás una familia que te recibe, te acepta y cree en tu potencial en Cristo.",
     message3:
       "Si eres nuevo, te invito a planificar tu primera visita. Nuestras puertas — y nuestros corazones — están abiertos para ti y tu familia.",
-    signature: "Con cariño pastoral",
+    signature: "Apóstoles Juan Alberto Martines & Wendy Ortis",
     firstVisitTeaser: "¿Primera vez? Tenemos algo especial para ti.",
     firstVisitLink: "Conoce qué esperar en tu primera visita →",
-    photoPlaceholder: "Foto del Pastor",
+    photoPlaceholder: "Foto de los Apóstoles",
     photoPlaceholderSub: "(Actualiza con foto real)",
   },
   ministries: {

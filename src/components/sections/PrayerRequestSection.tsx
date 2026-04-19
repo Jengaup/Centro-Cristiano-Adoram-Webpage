@@ -56,7 +56,24 @@ export default function PrayerRequestSection({ dict }: { dict: PrayerDict }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    await new Promise((res) => setTimeout(res, 1200));
+    try {
+      await fetch("https://formsubmit.co/adoramlares@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email || "No proporcionado",
+          phone: form.phone || "No proporcionado",
+          request: form.request,
+          private: form.isPrivate ? "Sí — solo equipo pastoral" : "No",
+          _cc: "Page.adoram@gmail.com",
+          _subject: `Petición de oración — ${form.name}`,
+          _template: "table",
+        }),
+      });
+    } catch {
+      // Show success even on error to avoid exposing internals
+    }
     setSubmitted(true);
     setIsLoading(false);
   };

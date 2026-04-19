@@ -7,7 +7,7 @@ export const siteConfig = {
     "Una familia de fe apostólica protestante comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
   url: "https://adoram.iglesia",
   contactEmail: "info@adoram.iglesia",
-  phone: "+1 (000) 000-0000",
+  phone: "787-379-8296",
   whatsappNumber: "10000000000",
   address: {
     street: "Av. de la Fe 1234",
@@ -29,8 +29,8 @@ export const siteConfig = {
     instagram: "https://instagram.com/CentroCristianoAdoram",
     whatsapp: "https://wa.me/10000000000",
   },
-  pastorName: "Pastor(a) Nombre Apellido",
-  pastorTitle: "Pastor Principal",
+  pastorName: "Apóstol Juan Alberto Martines & Apóstol Wendy Ortis",
+  pastorTitle: "Apóstoles",
 };
 
 export const youtubeConfig: YouTubeChannelConfig = {
