@@ -37,7 +37,8 @@ export default function DevotionalHighlight({ locale, dict }: Props) {
 
           <div>
             <Link href={`/${locale}/devocionales/${devotional.slug}`} className="group block">
-              <article className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-gold-400/40 transition-all duration-300">
+              <article className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-gold-400/40 transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-gold-500/5 via-transparent to-transparent pointer-events-none" />
                 <div className="flex flex-wrap gap-2 mb-4">
                   {devotional.tags.slice(0, 2).map((tag) => (
                     <Badge key={tag.id} variant="gold" className="bg-gold-500/20 border-gold-400/40 text-gold-300">{tag.name}</Badge>
