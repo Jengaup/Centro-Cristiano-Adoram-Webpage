@@ -343,6 +343,11 @@ const es = {
   devotionalPage: {
     backLink: "Todos los devocionales",
     minutesRead: "min de lectura",
+    listen: "Escuchar",
+    pause: "Pausar",
+    resume: "Reanudar",
+    stop: "Detener",
+    reading: "Leyendo...",
     share: "Compartir",
     touchedTitle: "¿Este devocional tocó tu corazón?",
     touchedMessage:

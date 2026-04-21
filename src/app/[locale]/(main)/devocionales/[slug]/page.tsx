@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Clock, Tag, Share2, Heart } from "lucide-react";
 import Badge from "@/components/ui/Badge";
+import DevotionalReader from "@/components/ui/DevotionalReader";
 import { getDevotionalBySlug, getPublishedDevotionals } from "@/data/devotionals";
 import { formatDate } from "@/lib/utils";
 import { getDictionary } from "@/i18n/getDictionary";
@@ -90,12 +91,26 @@ export default async function DevotionalPage({ params }: Props) {
                 <p className="text-warm-500 text-xs">{formatDate(devotional.publishDate)}</p>
               </div>
             </div>
-            <button
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-warm-300 text-slate-600 hover:border-gold-400 hover:text-gold-600 text-sm font-semibold transition-colors"
-              aria-label={d.share}
-            >
-              <Share2 size={14} />{d.share}
-            </button>
+            <div className="flex items-center gap-2 flex-wrap">
+              <DevotionalReader
+                title={devotional.title}
+                content={devotional.content}
+                locale={params.locale}
+                labels={{
+                  listen: d.listen,
+                  pause: d.pause,
+                  resume: d.resume,
+                  stop: d.stop,
+                  reading: d.reading,
+                }}
+              />
+              <button
+                className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-warm-300 text-slate-600 hover:border-gold-400 hover:text-gold-600 text-sm font-semibold transition-colors"
+                aria-label={d.share}
+              >
+                <Share2 size={14} />{d.share}
+              </button>
+            </div>
           </div>
         </header>
 

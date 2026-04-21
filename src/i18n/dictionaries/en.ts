@@ -341,6 +341,11 @@ const en = {
   devotionalPage: {
     backLink: "All devotionals",
     minutesRead: "min read",
+    listen: "Listen",
+    pause: "Pause",
+    resume: "Resume",
+    stop: "Stop",
+    reading: "Reading...",
     share: "Share",
     touchedTitle: "Did this devotional touch your heart?",
     touchedMessage:
