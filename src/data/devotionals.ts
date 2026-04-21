@@ -58,6 +58,37 @@ export const devotionals: Devotional[] = [
     scriptureReference: "Hebreos 11:1 · Romanos 15:13",
     scriptureText:
       "La fe es la certeza de lo que se espera, la convicción de lo que no se ve.",
+    titleEn: "The Anchor That Holds",
+    excerptEn:
+      "When uncertainty tries to steal our peace, faith is not a feeling — it is a decision rooted in who Jesus is. The anchor of the soul is firm and secure, reaching all the way to where Christ is.",
+    scriptureTextEn:
+      "Now faith is the substance of things hoped for, the evidence of things not seen.",
+    contentEn: `
+      <p>We live in times where uncertainty wants to steal our peace. Projects that don't move forward, dreams that are delayed, prayers that seem to go unanswered. In those moments, faith is not a feeling — it is a decision rooted in who Jesus is.</p>
+
+      <p>Christian hope does not rest on favorable circumstances, but on the resurrection of Christ. Because He came out victorious from the tomb, our hope has an eternal foundation. Paul did not write to a prosperous community; he wrote to people facing pressure, and told them that the God of hope could fill them with all joy and peace in believing — not after the problems were solved, but in the middle of them.</p>
+
+      <p>Faith and hope are not illusions. They are the anchor of the soul, firm and secure, which enters within the veil, where Christ is (Hebrews 6:19).</p>
+
+      <h3>Questions to Reflect On</h3>
+      <ul>
+        <li>In what specific circumstance do you need to trust today that Christ has already conquered?</li>
+        <li>Is your hope anchored in outcomes or in the person of Jesus Christ?</li>
+        <li>What promise of God do you need to speak out loud this week?</li>
+      </ul>
+
+      <h3>Prayer</h3>
+      <blockquote>Lord Jesus, when the road darkens and the wait grows long, remind me that You are my anchor. May my faith not rest on what I see but on who You are. Fill me with living hope today — not because the circumstances have changed, but because You rose and You reign. Amen.</blockquote>
+
+      <h3>Concrete Action</h3>
+      <ol>
+        <li>Write a biblical promise related to your situation and place it where you will see it every morning.</li>
+        <li>Share with someone you trust in what area you need to believe God this week.</li>
+        <li>Read Hebrews 11 in full as a reminder that faith has always been a journey, not a destination.</li>
+      </ol>
+
+      <p><em>"He who promised is faithful." — Hebrews 10:23</em></p>
+    `,
     authorId: "pastor-001",
     authorName: "Pastor Jose Alberto Jimenez",
     featuredImage: "",
@@ -107,6 +138,37 @@ export const devotionals: Devotional[] = [
     scriptureReference: "Juan 16:24 · Romanos 8:34 · Lucas 22:42",
     scriptureText:
       "Hasta ahora nada habéis pedido en mi nombre; pedid, y recibiréis, para que vuestro gozo sea cumplido.",
+    titleEn: "More Than Words: Praying From the Cross",
+    excerptEn:
+      "Praying in Jesus' name is not a magic formula at the end of a prayer — it is praying from the position of those who have been reconciled with the Father through the cross, covered by His righteousness, represented by His intercession.",
+    scriptureTextEn:
+      "Until now you have asked nothing in My name. Ask, and you will receive, that your joy may be full.",
+    contentEn: `
+      <p>Many pray, but few understand what it means to pray in the name of Jesus. It is not a magic formula at the end of a prayer — it is praying from the position of those who have been reconciled with the Father through the cross, covered by His righteousness, represented by His intercession.</p>
+
+      <p>Romans 8:34 reveals something astounding: at this very moment, Christ Jesus is at the right hand of the Father, interceding for us. Our prayer joins the prayer of Christ Himself. When you kneel down, you are not alone — you are participating in something that is already happening in the heavens.</p>
+
+      <p>Faith in prayer is not convincing God to do something He doesn't want to do. It is aligning with what He already desires: our restoration, our peace, the advance of His kingdom. Praying with faith is trusting the character of the Father, just as Jesus did in Gethsemane: "Not my will, but yours."</p>
+
+      <h3>Questions to Reflect On</h3>
+      <ul>
+        <li>Do you pray seeking God's will, or trying to bend His arm toward yours?</li>
+        <li>How does your prayer change knowing that Christ is interceding alongside you?</li>
+        <li>Is there something you have stopped praying for out of lack of faith? What holds you back?</li>
+      </ul>
+
+      <h3>Prayer</h3>
+      <blockquote>Father, thank You because I come to You not with my own merits but with the blood of Your Son. Thank You because Jesus Himself intercedes for me. Teach me to pray with genuine faith — not to manipulate You, but to align with You. May my will bow before Yours with confidence, not with fear. In the name of Jesus. Amen.</blockquote>
+
+      <h3>Concrete Action</h3>
+      <ol>
+        <li>Set aside 15 minutes today to pray in silence, without a list of requests — just listen.</li>
+        <li>Keep a prayer journal for 7 days, noting requests and answers, including unexpected ones.</li>
+        <li>Read Luke 11:1-13 and let Jesus' teaching on prayer renew your perspective.</li>
+      </ol>
+
+      <p><em>"He always lives to make intercession for them." — Hebrews 7:25</em></p>
+    `,
     authorId: "pastor-001",
     authorName: "Pastor Jose Alberto Jimenez",
     featuredImage: "",
@@ -156,6 +218,37 @@ export const devotionals: Devotional[] = [
     scriptureReference: "Josué 24:15 · Efesios 5:25 · Deuteronomio 6:6-7",
     scriptureText:
       "Y yo y mi casa serviremos a Jehová.",
+    titleEn: "Your Home, His Territory",
+    excerptEn:
+      "Joshua did not say 'as for me and my house, we will serve the Lord' from the comfort of a settled life. He said it at the end of a long journey. Your home is not an accident — it is a territory with an eternal purpose.",
+    scriptureTextEn:
+      "But as for me and my house, we will serve the Lord.",
+    contentEn: `
+      <p>Joshua did not say those words from the comfort of a settled life. He said them at the end of a long journey, facing a people who had to choose between the gods of the surrounding culture and the God who had delivered them. And in that moment of collective decision, he spoke for his household.</p>
+
+      <p>A family with purpose is not one where everything works perfectly. It is one where Christ is the center, where the values of the kingdom are passed on through everyday conversations, at the table, in conflict resolved with grace, in forgiveness practiced before the children are grown.</p>
+
+      <p>Deuteronomy 6 instructs parents to speak of the commandments "when you sit in your house, when you walk by the way, when you lie down, and when you rise up." The gospel is not a Sunday program — it is the pulse of the home. Christ in the kitchen, in the hard conversations, in the tears of the children.</p>
+
+      <h3>Questions to Reflect On</h3>
+      <ul>
+        <li>Does your home reflect the character of Christ or the culture that surrounds it?</li>
+        <li>What concrete habits do you have for passing on faith to those who live with you?</li>
+        <li>Where do you need to ask forgiveness in your family before leading spiritually?</li>
+      </ul>
+
+      <h3>Prayer</h3>
+      <blockquote>Lord, may my home be more than a place of coexistence — may it be a territory where Your presence is felt, where forgiveness flows, where Your words are heard. Help me to be the kind of husband, father, or son who points to Christ through the way I live, not just through what I say. Sanctify my house from the inside. Amen.</blockquote>
+
+      <h3>Concrete Action</h3>
+      <ol>
+        <li>This week, share a biblical promise at the family table and discuss together what it means.</li>
+        <li>Specifically ask forgiveness from someone in your family for something unresolved — without waiting for them to go first.</li>
+        <li>Pray aloud with and for your loved ones, even briefly — family prayer has a generational impact.</li>
+      </ol>
+
+      <p><em>"Train up a child in the way he should go, and when he is old he will not depart from it." — Proverbs 22:6</em></p>
+    `,
     authorId: "pastor-001",
     authorName: "Pastor Jose Alberto Jimenez",
     featuredImage: "",
@@ -205,6 +298,37 @@ export const devotionals: Devotional[] = [
     scriptureReference: "Joel 2:25 · Isaías 61:3 · Juan 21:15-17",
     scriptureText:
       "Os restituiré los años que comió la oruga, el saltón, el revoltón y la langosta... Y comeréis hasta saciaros, y alabaréis el nombre de Jehová vuestro Dios.",
+    titleEn: "God Works With the Pieces",
+    excerptEn:
+      "There are losses that don't seem recoverable. But the God of Joel is a God who restores — not just who forgives, but who gives back. The promise is not that the past didn't happen, but that the future will be greater than the damage suffered.",
+    scriptureTextEn:
+      "So I will restore to you the years that the swarming locust has eaten... You shall eat in plenty and be satisfied, and praise the name of the Lord your God.",
+    contentEn: `
+      <p>There are losses that don't seem recoverable. Wasted years, broken relationships, decisions that still hurt. And the temptation is to live looking backward, tallying what was lost, convincing yourself that there is no longer enough time or grace.</p>
+
+      <p>But the God of Joel is a God who restores. Not just one who forgives — one who gives back. Who takes what the locusts ate and transforms it. The promise is not that the past didn't exist, but that the future will be greater than the damage suffered. That is only possible because Christ carried not only our sin, but our losses.</p>
+
+      <p>The scene in John 21 is powerful: Peter had denied Jesus three times. And Jesus does not avoid him or condemn him — He asks him the same question three times. One for each denial. Not to remind him of his failure, but to restore him to his calling. That is what Christ does with you: He does not erase the past, He redeems it.</p>
+
+      <h3>Questions to Reflect On</h3>
+      <ul>
+        <li>Is there something from your past you still haven't placed in Christ's hands for Him to redeem?</li>
+        <li>Do you genuinely believe God can restore what was lost, or do you just say it?</li>
+        <li>What "locust years" could you see differently if you trusted in Joel's promise?</li>
+      </ul>
+
+      <h3>Prayer</h3>
+      <blockquote>Lord, I give You the years that are gone, the missed opportunities, the mistakes that still weigh on me. You are the God who restores. You took what seemed like a defeat — the cross — and turned it into eternal victory. I trust that You can do the same with my story. Restore me. Give me hope that does not put to shame. Amen.</blockquote>
+
+      <h3>Concrete Action</h3>
+      <ol>
+        <li>Write down on paper the areas of your life where you need restoration and present them to God as an act of faith.</li>
+        <li>Read John 21:1-19 slowly. Identify with Peter — what is Jesus saying to you today?</li>
+        <li>Find someone who is also in the process of restoration and be their companion, not their judge.</li>
+      </ol>
+
+      <p><em>"The Spirit of the Lord... to proclaim the year of the Lord's favor." — Isaiah 61:1-2</em></p>
+    `,
     authorId: "pastor-001",
     authorName: "Pastor Jose Alberto Jimenez",
     featuredImage: "",

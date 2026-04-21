@@ -34,6 +34,11 @@ export default async function DevotionalPage({ params }: Props) {
   const dict = await getDictionary(params.locale);
   const d = dict.devotionalPage;
 
+  const isEn = params.locale === "en";
+  const title   = (isEn && devotional.titleEn)        ? devotional.titleEn        : devotional.title;
+  const content = (isEn && devotional.contentEn)      ? devotional.contentEn      : devotional.content;
+  const verse   = (isEn && devotional.scriptureTextEn) ? devotional.scriptureTextEn : devotional.scriptureText;
+
   const related = getPublishedDevotionals()
     .filter((dev) => dev.id !== devotional.id)
     .slice(0, 3);
@@ -71,11 +76,11 @@ export default async function DevotionalPage({ params }: Props) {
             <BookOpen size={14} />{devotional.scriptureReference}
           </p>
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-6">
-            {devotional.title}
+            {title}
           </h1>
-          {devotional.scriptureText && (
+          {verse && (
             <blockquote className="border-l-4 border-gold-500 pl-5 py-3 bg-gold-50 rounded-r-xl mb-6">
-              <p className="font-serif text-lg text-navy-700 italic leading-relaxed">"{devotional.scriptureText}"</p>
+              <p className="font-serif text-lg text-navy-700 italic leading-relaxed">"{verse}"</p>
               <footer className="mt-2 text-gold-700 font-bold text-xs tracking-widest uppercase">
                 — {devotional.scriptureReference}
               </footer>
@@ -93,8 +98,8 @@ export default async function DevotionalPage({ params }: Props) {
             </div>
             <div className="flex items-center gap-2 flex-wrap">
               <DevotionalReader
-                title={devotional.title}
-                content={devotional.content}
+                title={title}
+                content={content}
                 locale={params.locale}
                 labels={{
                   listen: d.listen,
@@ -114,7 +119,7 @@ export default async function DevotionalPage({ params }: Props) {
           </div>
         </header>
 
-        <div className="devotional-content" dangerouslySetInnerHTML={{ __html: devotional.content }} />
+        <div className="devotional-content" dangerouslySetInnerHTML={{ __html: content }} />
 
         <footer className="mt-16 pt-10 border-t border-warm-200">
           <div className="bg-navy-gradient rounded-2xl p-8 text-center text-white">

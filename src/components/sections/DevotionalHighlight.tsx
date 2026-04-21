@@ -24,6 +24,11 @@ export default function DevotionalHighlight({ locale, dict }: Props) {
   const devotional = getFeaturedDevotional();
   if (!devotional) return null;
 
+  const isEn = locale === "en";
+  const devTitle  = isEn && devotional.titleEn       ? devotional.titleEn       : devotional.title;
+  const devExcerpt = isEn && devotional.excerptEn    ? devotional.excerptEn     : devotional.excerpt;
+  const devVerse  = isEn && devotional.scriptureTextEn ? devotional.scriptureTextEn : devotional.scriptureText;
+
   return (
     <section id="devocional" className="py-24 bg-navy-gradient text-white" aria-label="Devocional destacado">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,11 +52,11 @@ export default function DevotionalHighlight({ locale, dict }: Props) {
                 <p className="text-gold-400 text-xs font-bold tracking-widest uppercase mb-3 flex items-center gap-2">
                   <BookOpen size={12} />{devotional.scriptureReference}
                 </p>
-                <h3 className="font-serif text-2xl font-bold text-white mb-3 group-hover:text-gold-200 transition-colors leading-tight">{devotional.title}</h3>
+                <h3 className="font-serif text-2xl font-bold text-white mb-3 group-hover:text-gold-200 transition-colors leading-tight">{devTitle}</h3>
                 <blockquote className="border-l-2 border-gold-500 pl-4 mb-4">
-                  <p className="text-navy-200 text-sm italic leading-relaxed">"{devotional.scriptureText}"</p>
+                  <p className="text-navy-200 text-sm italic leading-relaxed">"{devVerse}"</p>
                 </blockquote>
-                <p className="text-navy-200 text-sm leading-relaxed mb-5">{devotional.excerpt}</p>
+                <p className="text-navy-200 text-sm leading-relaxed mb-5">{devExcerpt}</p>
                 <div className="flex items-center justify-between text-xs text-navy-300">
                   <div className="flex items-center gap-3">
                     <div className="w-7 h-7 rounded-full bg-gold-500/30 border border-gold-500/50 flex items-center justify-center">
