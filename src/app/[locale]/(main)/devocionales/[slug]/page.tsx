@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Clock, Tag, Share2, Heart } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, Tag, Heart } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import DevotionalReader from "@/components/ui/DevotionalReader";
+import ShareButton from "@/components/ui/ShareButton";
 import { getDevotionalBySlug, getPublishedDevotionals } from "@/data/devotionals";
 import { formatDate } from "@/lib/utils";
 import { getDictionary } from "@/i18n/getDictionary";
@@ -109,12 +110,12 @@ export default async function DevotionalPage({ params }: Props) {
                   reading: d.reading,
                 }}
               />
-              <button
-                className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-warm-300 text-slate-600 hover:border-gold-400 hover:text-gold-600 text-sm font-semibold transition-colors"
-                aria-label={d.share}
-              >
-                <Share2 size={14} />{d.share}
-              </button>
+              <ShareButton
+                title={title}
+                excerpt={isEn && devotional.excerptEn ? devotional.excerptEn : devotional.excerpt}
+                label={d.share}
+                copiedLabel={d.copied}
+              />
             </div>
           </div>
         </header>

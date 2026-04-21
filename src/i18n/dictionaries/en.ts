@@ -347,6 +347,7 @@ const en = {
     stop: "Stop",
     reading: "Reading...",
     share: "Share",
+    copied: "Link copied!",
     touchedTitle: "Did this devotional touch your heart?",
     touchedMessage:
       "Share it with someone who needs it, or tell us how God spoke to your heart.",

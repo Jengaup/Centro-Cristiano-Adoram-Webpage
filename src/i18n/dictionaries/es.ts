@@ -349,6 +349,7 @@ const es = {
     stop: "Detener",
     reading: "Leyendo...",
     share: "Compartir",
+    copied: "¡Enlace copiado!",
     touchedTitle: "¿Este devocional tocó tu corazón?",
     touchedMessage:
       "Compártelo con alguien que lo necesite, o cuéntanos cómo Dios habló a tu corazón.",
