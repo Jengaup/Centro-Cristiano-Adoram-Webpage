@@ -10,11 +10,11 @@ export const siteConfig = {
   phone: "787-379-8296",
   whatsappNumber: "17873798296",
   address: {
-    street: "Av. de la Fe 1234",
-    city: "Tu Ciudad",
-    state: "Estado",
-    zip: "00000",
-    country: "País",
+    street: "Km 19.6 PR 129 Interior, Callejones",
+    city: "Lares",
+    state: "PR",
+    zip: "00669",
+    country: "Puerto Rico",
     mapsUrl: "https://maps.app.goo.gl/tTsXxCGkToC2HiUk8",
   },
   serviceTimes: [
