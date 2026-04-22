@@ -86,7 +86,7 @@ export default function Footer({ locale, dict }: Props) {
                   <Clock size={14} className="mt-1 text-gold-500 shrink-0" />
                   <div>
                     <p className="text-white text-sm font-medium">{service.name}</p>
-                    <p className="text-navy-200 text-xs">{service.day} — {service.time}</p>
+                    <p className="text-navy-200 text-xs">{service.day}, {service.time}</p>
                   </div>
                 </li>
               ))}

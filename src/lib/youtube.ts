@@ -37,7 +37,7 @@ export async function getLatestChannelVideo(
   // In production: parse items[0] from YouTube search API response
   return {
     latestVideoId: "dQw4w9WgXcQ",
-    latestVideoTitle: "Servicio Dominical — Centro Cristiano Adoram",
+    latestVideoTitle: "Servicio Dominical, Centro Cristiano Adoram",
     latestThumbnailUrl: `https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg`,
     latestPublishedAt: new Date().toISOString(),
   };

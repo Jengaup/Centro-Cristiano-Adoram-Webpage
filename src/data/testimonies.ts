@@ -36,7 +36,7 @@ export const testimonies: Testimony[] = [
     role: "Joven",
     yearsInChurch: 2,
     excerpt:
-      "Vine por primera vez porque un amigo me invitó. Pensé que no era 'para mí'. Pero desde el primer servicio sentí algo diferente — una calidez genuina y una presencia que no podía explicar.",
+      "Vine por primera vez porque un amigo me invitó. Pensé que no era 'para mí'. Pero desde el primer servicio sentí algo diferente, una calidez genuina y una presencia que no podía explicar.",
     highlight: "Me encontró donde estaba sin juzgarme",
     avatar: "",
   },

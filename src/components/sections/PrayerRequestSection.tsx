@@ -65,9 +65,9 @@ export default function PrayerRequestSection({ dict }: { dict: PrayerDict }) {
           email: form.email || "No proporcionado",
           phone: form.phone || "No proporcionado",
           request: form.request,
-          private: form.isPrivate ? "Sí — solo equipo pastoral" : "No",
+          private: form.isPrivate ? "Sí, solo equipo pastoral" : "No",
           _cc: "Page.adoram@gmail.com",
-          _subject: `Petición de oración — ${form.name}`,
+          _subject: `Petición de oración, ${form.name}`,
           _template: "table",
         }),
       });

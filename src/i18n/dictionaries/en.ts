@@ -2,7 +2,7 @@ const en = {
   metadata: {
     title: "Centro Cristiano Adoram | Apostolic Church",
     description:
-      "A faith family where worship is genuine, the Word is alive, and there is a place for you. Visit us — we are ready to receive you.",
+      "A faith family where worship is genuine, the Word is alive, and there is a place for you. Visit us, we are ready to receive you.",
   },
   nav: {
     home: "Home",
@@ -25,7 +25,7 @@ const en = {
     headlineAccent: "heaven",
     headline2: "touches the earth",
     subheadline:
-      "Welcome to Centro Cristiano Adoram — a faith family where worship is genuine, the Word is alive, and there is a place for you.",
+      "Welcome to Centro Cristiano Adoram, a faith family where worship is genuine, the Word is alive, and there is a place for you.",
     cta1: "Plan Your Visit",
     cta2: "Watch Live",
     trust1: "Sundays 10:00 AM",
@@ -65,7 +65,7 @@ const en = {
       "We are not perfect, but we are real. A place where people find God, build community, and discover their purpose.",
     quote:
       '"Connect with what God is doing. There is more than you can imagine waiting for you here."',
-    quoteAuthor: "— Centro Cristiano Adoram",
+    quoteAuthor: "Centro Cristiano Adoram",
     pillars: [
       {
         title: "Who We Are",
@@ -77,7 +77,7 @@ const en = {
       },
       {
         title: "Our Vision",
-        text: "To be a living and faithful local church that functions as a center of restoration, worship, and impact — where every person finds their identity in Christ and their purpose in the Kingdom of God.",
+        text: "To be a living and faithful local church that functions as a center of restoration, worship, and impact, where every person finds their identity in Christ and their purpose in the Kingdom of God.",
       },
       {
         title: "Our Faith",
@@ -93,9 +93,9 @@ const en = {
     message1:
       "Welcome. If you are reading this, I want you to know you did not arrive here by accident. God has something special prepared for you, and we at Adoram are here to walk with you through that process.",
     message2:
-      "No matter where you come from, what you have been through, or how many times you have failed — here you will find a family that receives you, accepts you, and believes in your potential in Christ.",
+      "No matter where you come from, what you have been through, or how many times you have failed, here you will find a family that receives you, accepts you, and believes in your potential in Christ.",
     message3:
-      "If you are new, I invite you to plan your first visit. Our doors — and our hearts — are open to you and your family.",
+      "If you are new, I invite you to plan your first visit. Our doors, and our hearts, are open to you and your family.",
     signature: "With pastoral love",
     firstVisitTeaser: "First time? We have something special for you.",
     firstVisitLink: "Find out what to expect on your first visit →",
@@ -110,7 +110,7 @@ const en = {
     scheduleLabel: "Schedule:",
     contactText: "Want to know more about a ministry?",
     contactLink: "Write to us",
-    contactEnd: "— we will be happy to guide you.",
+    contactEnd: "we will be happy to guide you.",
     items: [
       {
         name: "Adoram Kids",
@@ -130,8 +130,8 @@ const en = {
         name: "Real Men",
         tagline: "Men who honor God",
         description:
-          "A space for men to grow as spiritual leaders in their homes, communities, and the church — rooted in the Word.",
-        meetingTime: "Every 2 weeks — Wednesdays 7:00 PM",
+          "A space for men to grow as spiritual leaders in their homes, communities, and the church, rooted in the Word.",
+        meetingTime: "Every 2 weeks, Wednesdays 7:00 PM",
       },
       {
         name: "Women of Worth",
@@ -145,14 +145,14 @@ const en = {
         tagline: "Worship leaders, not just musicians",
         description:
           "Musicians, singers, and worshipers committed to bringing God's presence to every service and preparing hearts for a divine encounter.",
-        meetingTime: "Weekly rehearsals — Check schedule",
+        meetingTime: "Weekly rehearsals, Check schedule",
       },
       {
         name: "Intercession Ministry",
         tagline: "The church that prays prevails",
         description:
           "Committed intercessors who uphold the church, its leaders, and the community in fervent and persistent prayer.",
-        meetingTime: "Weekly — check schedule",
+        meetingTime: "Weekly, check schedule",
       },
       {
         name: "Media Ministry",
@@ -206,10 +206,10 @@ const en = {
     eyebrow: "Testimonies",
     title: "Lives transformed by God",
     subtitle:
-      "These are not just nice stories — they are evidence of the real power of God working in real people.",
+      "These are not just nice stories, they are evidence of the real power of God working in real people.",
     yearsAt: "years at Adoram",
     shareTitle: "Do you have a testimony to share?",
-    shareLink: "Write to us — we want to hear you",
+    shareLink: "Write to us, we want to hear you",
   },
   planVisit: {
     eyebrow: "First Visit",
@@ -226,7 +226,7 @@ const en = {
       {
         title: "What to Wear?",
         description:
-          "Come as you are. There is no dress code. What matters is that you are present — not what you are wearing.",
+          "Come as you are. There is no dress code. What matters is that you are present, not what you are wearing.",
       },
       {
         title: "Children & Families",
@@ -236,7 +236,7 @@ const en = {
       {
         title: "Parking",
         description:
-          "Parking is available. Arrive stress-free — we will help you find your way.",
+          "Parking is available. Arrive stress-free, we will help you find your way.",
       },
       {
         title: "What Time to Arrive?",
@@ -247,7 +247,7 @@ const en = {
     checklistTitle: "Your first visit in 5 points",
     checklistSubtitle: "Everything you need to know before you come",
     checklist: [
-      "Arrive 10 minutes early — someone is waiting for you at the entrance",
+      "Arrive 10 minutes early, someone is waiting for you at the entrance",
       "Live worship and music to start",
       "Biblical preaching relevant to your life",
       "Adoram Kids cares for your children during the service",
@@ -288,14 +288,14 @@ const en = {
     requestLabel: "Your prayer request *",
     requestPlaceholder: "Tell us how we can pray for you...",
     privateLabel:
-      "My request is private — only the pastoral and intercession team should see it.",
+      "My request is private, only the pastoral and intercession team should see it.",
     sendButton: "Send Prayer Request",
     sending: "Sending...",
     successTitle: "We received your request!",
     successMessage:
       "Our team of intercessors is praying for you. God listens, and we believe alongside you.",
     successScripture:
-      '"The effective prayer of a righteous person can accomplish much." — James 5:16',
+      '"The effective prayer of a righteous person can accomplish much.", James 5:16',
     sendAnother: "Send another request",
   },
   footer: {
@@ -336,7 +336,7 @@ const en = {
     featured: "Featured",
     minutesRead: "min",
     emptyTitle: "Devotionals coming soon",
-    emptySubtitle: "Come back soon — there are reflections on the way.",
+    emptySubtitle: "Come back soon, there are reflections on the way.",
   },
   devotionalPage: {
     backLink: "All devotionals",
@@ -415,7 +415,7 @@ const en = {
       {
         question: "What should I bring?",
         answer:
-          "Just your open heart. If you have a Bible, feel free to bring it. If not, don't worry — we use screens during the sermon.",
+          "Just your open heart. If you have a Bible, feel free to bring it. If not, don't worry, we use screens during the sermon.",
       },
       {
         question: "Is there anything for my children?",
@@ -440,14 +440,14 @@ const en = {
     ],
     finalTitle: "Ready to visit us?",
     finalText:
-      "If you have any questions before coming, write to us — we will be happy to answer.",
+      "If you have any questions before coming, write to us, we will be happy to answer.",
     finalWhatsApp: "Write to Us on WhatsApp",
     finalPrayer: "Send a prayer request",
   },
   notFound: {
     title: "Page not found",
     message:
-      "It seems this page does not exist. But you are not lost — God knows exactly where you are.",
+      "It seems this page does not exist. But you are not lost, God knows exactly where you are.",
     cta: "Back to home",
   },
 };

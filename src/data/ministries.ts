@@ -49,7 +49,7 @@ export const ministries: Ministry[] = [
     color: "text-navy-700",
     bgColor: "bg-navy-50 border-navy-200",
     targetAudience: "Varones mayores de 18 años",
-    meetingTime: "Cada 2 semanas — Miércoles 7:00 PM",
+    meetingTime: "Cada 2 semanas, Miércoles 7:00 PM",
     leader: "Coordinador de Varones",
   },
   {
@@ -75,7 +75,7 @@ export const ministries: Ministry[] = [
     color: "text-gold-700",
     bgColor: "bg-amber-50 border-amber-200",
     targetAudience: "Músicos y cantantes de la congregación",
-    meetingTime: "Ensayos semanales — Consultar horario",
+    meetingTime: "Ensayos semanales, Consultar horario",
     leader: "Director(a) de Alabanza",
   },
   {
@@ -88,7 +88,7 @@ export const ministries: Ministry[] = [
     color: "text-indigo-700",
     bgColor: "bg-indigo-50 border-indigo-200",
     targetAudience: "Toda persona llamada a la intercesión",
-    meetingTime: "Semanal — consultar horario",
+    meetingTime: "Semanal, consultar horario",
     leader: "Coordinador(a) de Oración",
   },
   {

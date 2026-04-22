@@ -57,7 +57,7 @@ export default function EventsSection({ dict }: { dict: EventsDict }) {
                 <p className="text-slate-500 text-sm leading-relaxed line-clamp-2">{event.description}</p>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-xs text-warm-500">
                   <span className="flex items-center gap-1.5"><CalendarDays size={11} />{formatDate(event.date)}</span>
-                  <span className="flex items-center gap-1.5"><Clock size={11} />{event.time}{event.endTime ? ` — ${event.endTime}` : ""}</span>
+                  <span className="flex items-center gap-1.5"><Clock size={11} />{event.time}{event.endTime ? `, ${event.endTime}` : ""}</span>
                   <span className="flex items-center gap-1.5"><MapPin size={11} />{event.location}</span>
                 </div>
               </div>

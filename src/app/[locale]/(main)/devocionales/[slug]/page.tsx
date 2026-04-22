@@ -83,7 +83,7 @@ export default async function DevotionalPage({ params }: Props) {
             <blockquote className="border-l-4 border-gold-500 pl-5 py-3 bg-gold-50 rounded-r-xl mb-6">
               <p className="font-serif text-lg text-navy-700 italic leading-relaxed">"{verse}"</p>
               <footer className="mt-2 text-gold-700 font-bold text-xs tracking-widest uppercase">
-                — {devotional.scriptureReference}
+               , {devotional.scriptureReference}
               </footer>
             </blockquote>
           )}
