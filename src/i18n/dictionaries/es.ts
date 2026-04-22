@@ -127,18 +127,18 @@ const es = {
         meetingTime: "Viernes 7:00 PM",
       },
       {
-        name: "Hombres de Fe",
+        name: "Real Men",
         tagline: "Varones que honran a Dios",
         description:
           "Un espacio para que los hombres crezcan como líderes espirituales en sus hogares, comunidades y la iglesia, arraigados en la Palabra.",
-        meetingTime: "Primer sábado del mes 8:00 AM",
+        meetingTime: "Cada 2 semanas — Miércoles 7:00 PM",
       },
       {
         name: "Mujeres de Valor",
         tagline: "Mujer, conoce tu dignidad en Cristo",
         description:
           "Un ministerio que celebra, equipa y fortalece a las mujeres en su identidad en Cristo, su rol en la familia y su llamado en la iglesia.",
-        meetingTime: "Tercer sábado del mes 10:00 AM",
+        meetingTime: "Eventos mensuales",
       },
       {
         name: "Kadosh",
@@ -148,11 +148,11 @@ const es = {
         meetingTime: "Ensayos semanales — Consultar horario",
       },
       {
-        name: "Casa de Oración",
+        name: "Ministerio de Intercesión",
         tagline: "La iglesia que ora prevalece",
         description:
           "Intercesores comprometidos que sostienen a la iglesia, a los líderes y a la comunidad en oración ferviente y persistente.",
-        meetingTime: "Martes 6:00 AM y según agenda de intercesión",
+        meetingTime: "Semanal — consultar horario",
       },
       {
         name: "Ministerio de Medios",

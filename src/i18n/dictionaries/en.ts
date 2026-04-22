@@ -127,18 +127,18 @@ const en = {
         meetingTime: "Fridays 7:00 PM",
       },
       {
-        name: "Men of Faith",
+        name: "Real Men",
         tagline: "Men who honor God",
         description:
           "A space for men to grow as spiritual leaders in their homes, communities, and the church — rooted in the Word.",
-        meetingTime: "First Saturday of the month 8:00 AM",
+        meetingTime: "Every 2 weeks — Wednesdays 7:00 PM",
       },
       {
         name: "Women of Worth",
         tagline: "Woman, know your dignity in Christ",
         description:
           "A ministry that celebrates, equips, and strengthens women in their identity in Christ, their role in the family, and their calling in the church.",
-        meetingTime: "Third Saturday of the month 10:00 AM",
+        meetingTime: "Monthly events",
       },
       {
         name: "Kadosh",
@@ -148,11 +148,11 @@ const en = {
         meetingTime: "Weekly rehearsals — Check schedule",
       },
       {
-        name: "House of Prayer",
+        name: "Intercession Ministry",
         tagline: "The church that prays prevails",
         description:
           "Committed intercessors who uphold the church, its leaders, and the community in fervent and persistent prayer.",
-        meetingTime: "Tuesdays 6:00 AM and per intercession schedule",
+        meetingTime: "Weekly — check schedule",
       },
       {
         name: "Media Ministry",
