@@ -41,7 +41,7 @@ export const ministries: Ministry[] = [
   },
   {
     id: "min-003",
-    name: "Hombres de Fe",
+    name: "Real Men",
     tagline: "Varones que honran a Dios",
     description:
       "Un espacio para que los hombres crezcan como líderes espirituales en sus hogares, comunidades y la iglesia, arraigados en la Palabra.",
@@ -49,7 +49,7 @@ export const ministries: Ministry[] = [
     color: "text-navy-700",
     bgColor: "bg-navy-50 border-navy-200",
     targetAudience: "Varones mayores de 18 años",
-    meetingTime: "Primer sábado del mes 8:00 AM",
+    meetingTime: "Cada 2 semanas — Miércoles 7:00 PM",
     leader: "Coordinador de Varones",
   },
   {
@@ -62,7 +62,7 @@ export const ministries: Ministry[] = [
     color: "text-burgundy-600",
     bgColor: "bg-rose-50 border-rose-200",
     targetAudience: "Mujeres de todas las edades",
-    meetingTime: "Tercer sábado del mes 10:00 AM",
+    meetingTime: "Eventos mensuales",
     leader: "Coordinadora de Mujeres",
   },
   {
@@ -80,7 +80,7 @@ export const ministries: Ministry[] = [
   },
   {
     id: "min-006",
-    name: "Casa de Oración",
+    name: "Ministerio de Intercesión",
     tagline: "La iglesia que ora prevalece",
     description:
       "Intercesores comprometidos que sostienen a la iglesia, a los líderes y a la comunidad en oración ferviente y persistente.",
@@ -88,7 +88,7 @@ export const ministries: Ministry[] = [
     color: "text-indigo-700",
     bgColor: "bg-indigo-50 border-indigo-200",
     targetAudience: "Toda persona llamada a la intercesión",
-    meetingTime: "Martes 6:00 AM y según agenda de intercesión",
+    meetingTime: "Semanal — consultar horario",
     leader: "Coordinador(a) de Oración",
   },
   {
