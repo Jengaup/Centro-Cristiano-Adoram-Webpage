@@ -162,6 +162,13 @@ const en = {
         meetingTime: "According to ministry needs",
       },
       {
+        name: "Danza Chayil",
+        tagline: "Worshiping God with the whole body",
+        description:
+          "A dance ministry that expresses worship to God through movement, artistic expression, and glory that honors His presence.",
+        meetingTime: "Check schedule",
+      },
+      {
         name: "Community Outreach",
         tagline: "God's love in action",
         description:

@@ -105,6 +105,19 @@ export const ministries: Ministry[] = [
     leader: "Director(a) de Medios",
   },
   {
+    id: "min-010",
+    name: "Danza Chayil",
+    tagline: "Adorando a Dios con todo el cuerpo",
+    description:
+      "Un ministerio de danza que expresa la adoración a Dios a través del movimiento, la expresión artística y la gloria que honra su presencia.",
+    icon: "🩰",
+    color: "text-purple-700",
+    bgColor: "bg-purple-50 border-purple-200",
+    targetAudience: "Mujeres y jóvenes con llamado a la danza",
+    meetingTime: "Consultar horario",
+    leader: "Coordinadora de Danza",
+  },
+  {
     id: "min-009",
     name: "Alcance Comunitario",
     tagline: "El amor de Dios en acción",

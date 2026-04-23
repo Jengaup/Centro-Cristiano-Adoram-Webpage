@@ -162,6 +162,13 @@ const es = {
         meetingTime: "Según necesidades del ministerio",
       },
       {
+        name: "Danza Chayil",
+        tagline: "Adorando a Dios con todo el cuerpo",
+        description:
+          "Un ministerio de danza que expresa la adoración a Dios a través del movimiento, la expresión artística y la gloria que honra su presencia.",
+        meetingTime: "Consultar horario",
+      },
+      {
         name: "Alcance Comunitario",
         tagline: "El amor de Dios en acción",
         description:
