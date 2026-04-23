@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Quote } from "lucide-react";
 import { siteConfig } from "@/data/config";
 import type { Locale } from "@/i18n/config";
@@ -27,16 +28,16 @@ export default function PastorWelcome({ locale, dict }: Props) {
     <section id="pastor" className="py-24 bg-white" aria-label="Mensaje del pastor">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Photo placeholder */}
+          {/* Pastor photo */}
           <div className="relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden bg-gradient-to-br from-navy-100 to-warm-200 aspect-[4/5] max-w-sm mx-auto lg:mx-0 shadow-navy flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 rounded-full bg-navy-600 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white font-serif font-bold text-4xl">{siteConfig.pastorName.charAt(0)}</span>
-                </div>
-                <p className="text-navy-600 font-semibold text-sm">{dict.photoPlaceholder}</p>
-                <p className="text-warm-500 text-xs mt-1">{dict.photoPlaceholderSub}</p>
-              </div>
+            <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0 shadow-navy">
+              <Image
+                src="/pastores.jpeg"
+                alt={siteConfig.pastorName}
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-gold-500/10 border-2 border-gold-400/30 -z-0" />
             <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl bg-navy-100 border-2 border-navy-200/50 -z-0" />
