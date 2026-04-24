@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Quote } from "lucide-react";
 import { siteConfig } from "@/data/config";
 import type { Locale } from "@/i18n/config";
@@ -31,12 +30,10 @@ export default function PastorWelcome({ locale, dict }: Props) {
           {/* Pastor photo */}
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0 shadow-navy">
-              <Image
-                src="/pastores.jpeg"
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/pastores.jpeg`}
                 alt={siteConfig.pastorName}
-                fill
-                className="object-cover object-top"
-                priority
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-gold-500/10 border-2 border-gold-400/30 -z-0" />
@@ -68,8 +65,6 @@ export default function PastorWelcome({ locale, dict }: Props) {
               <p className="text-navy-500 text-sm italic">{dict.signature}</p>
               <div className="h-px flex-1 bg-warm-200" />
             </div>
-            <p className="mt-4 font-serif text-lg text-navy-700 font-bold italic text-center">{siteConfig.pastorName}</p>
-            <p className="text-gold-600 text-xs font-semibold tracking-widest uppercase text-center mt-1">{siteConfig.pastorTitle}</p>
             <div className="mt-8 bg-warm-50 rounded-xl p-4 border border-warm-200">
               <p className="text-navy-700 text-sm font-semibold text-center mb-1">{dict.firstVisitTeaser}</p>
               <a href={`/${locale}/visitar`} className="block text-center text-gold-600 hover:text-gold-700 text-sm font-bold transition-colors underline underline-offset-2">
