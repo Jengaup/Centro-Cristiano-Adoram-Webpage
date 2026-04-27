@@ -1,8 +1,8 @@
 const es = {
   metadata: {
-    title: "Centro Cristiano Adoram | Iglesia Apostólica Protestante",
+    title: "Centro Cristiano Adoram | Iglesia Apostólica",
     description:
-      "Una familia de fe donde la adoración es genuina, la Palabra es viva y hay un lugar para ti. Visítanos — estamos listos para recibirte.",
+      "Una familia de fe donde la adoración es genuina, la Palabra es viva y hay un lugar para ti. Visítanos, estamos listos para recibirte.",
   },
   nav: {
     home: "Inicio",
@@ -20,12 +20,12 @@ const es = {
     switchLang: "English",
   },
   hero: {
-    eyebrow: "Iglesia Apostólica Protestante",
+    eyebrow: "",
     headline1: "Un lugar donde",
     headlineAccent: "el cielo",
     headline2: "toca la tierra",
     subheadline:
-      "Bienvenido a Centro Cristiano Adoram — una familia de fe donde la adoración es genuina, la Palabra es viva y hay un lugar para ti.",
+      "Bienvenido a Centro Cristiano Adoram, una familia de fe donde la adoración es genuina, la Palabra es viva y hay un lugar para ti.",
     cta1: "Planifica tu Visita",
     cta2: "Ver en Vivo",
     trust1: "Domingos 10:00 AM",
@@ -65,19 +65,19 @@ const es = {
       "No somos perfectos, pero somos reales. Un lugar donde las personas encuentran a Dios, hallan comunidad y descubren su propósito.",
     quote:
       '"Conéctate con lo que Dios está haciendo. Hay más de lo que puedes imaginar esperándote aquí."',
-    quoteAuthor: "— Centro Cristiano Adoram",
+    quoteAuthor: "Centro Cristiano Adoram",
     pillars: [
       {
         title: "Quiénes Somos",
-        text: "Somos una iglesia apostólica protestante que cree en la autoridad completa de las Escrituras, en la Trinidad, en la muerte y resurrección de Jesucristo, y en el poder del Espíritu Santo para transformar vidas hoy.",
+        text: "Somos una iglesia apostólica que cree en la autoridad completa de las Escrituras, en la Trinidad, en la muerte y resurrección de Jesucristo, y en el poder del Espíritu Santo para transformar vidas hoy.",
       },
       {
         title: "Nuestra Misión",
-        text: "Hacer discípulos de Jesucristo que adoren a Dios en espíritu y en verdad, crezcan en su Palabra y transformen sus familias, comunidades y naciones con el evangelio.",
+        text: "Empoderados por el Espíritu Santo, alcanzar a través de todos los recursos posibles cada esfera de la sociedad, matrimonios, jóvenes, niños, ancianos, mujeres y hombres, rescatando su relevancia y maximizando su potencial, para que se reproduzca en ellos la identidad del Reino de Dios.",
       },
       {
         title: "Nuestra Visión",
-        text: "Ser una iglesia local viva y fiel que funcione como un centro de restauración, adoración e impacto — donde cada persona encuentre su identidad en Cristo y su propósito en el Reino de Dios.",
+        text: "Como la Ecclesia, alcanzando a cada persona para Cristo, facilitando que los principios del Reino se impregnen en sus vidas.",
       },
       {
         title: "Nuestra Fe",
@@ -95,11 +95,11 @@ const es = {
     message2:
       "No importa de dónde vengas, qué hayas vivido o cuántas veces hayas fallado. Aquí encontrarás una familia que te recibe, te acepta y cree en tu potencial en Cristo.",
     message3:
-      "Si eres nuevo, te invito a planificar tu primera visita. Nuestras puertas — y nuestros corazones — están abiertos para ti y tu familia.",
-    signature: "Con cariño pastoral",
+      "Si eres nuevo, te invito a planificar tu primera visita. Nuestras puertas, y nuestros corazones, están abiertos para ti y tu familia.",
+    signature: "Apóstoles Juan Alberto Martines & Wendy Ortis",
     firstVisitTeaser: "¿Primera vez? Tenemos algo especial para ti.",
     firstVisitLink: "Conoce qué esperar en tu primera visita →",
-    photoPlaceholder: "Foto del Pastor",
+    photoPlaceholder: "Foto de los Apóstoles",
     photoPlaceholderSub: "(Actualiza con foto real)",
   },
   ministries: {
@@ -110,7 +110,7 @@ const es = {
     scheduleLabel: "Horario:",
     contactText: "¿Quieres saber más sobre algún ministerio?",
     contactLink: "Escríbenos",
-    contactEnd: "— con gusto te orientamos.",
+    contactEnd: "con gusto te orientamos.",
     items: [
       {
         name: "Adoram Kids",
@@ -120,39 +120,39 @@ const es = {
         meetingTime: "Domingos en los servicios principales",
       },
       {
-        name: "Generación Adoram",
+        name: "T. G. Youth Network",
         tagline: "Jóvenes encendidos para Dios",
         description:
           "Una generación de jóvenes que busca a Dios con pasión, desarrolla su identidad en Cristo y es agente de cambio en su entorno.",
         meetingTime: "Viernes 7:00 PM",
       },
       {
-        name: "Hombres de Fe",
+        name: "Real Men",
         tagline: "Varones que honran a Dios",
         description:
           "Un espacio para que los hombres crezcan como líderes espirituales en sus hogares, comunidades y la iglesia, arraigados en la Palabra.",
-        meetingTime: "Primer sábado del mes 8:00 AM",
+        meetingTime: "Cada 2 semanas, Miércoles 7:00 PM",
       },
       {
         name: "Mujeres de Valor",
         tagline: "Mujer, conoce tu dignidad en Cristo",
         description:
           "Un ministerio que celebra, equipa y fortalece a las mujeres en su identidad en Cristo, su rol en la familia y su llamado en la iglesia.",
-        meetingTime: "Tercer sábado del mes 10:00 AM",
+        meetingTime: "Eventos mensuales",
       },
       {
-        name: "Ministerio de Alabanza",
+        name: "Kadosh",
         tagline: "Líderes de adoración, no solo músicos",
         description:
           "Músicos, cantantes y adoradores comprometidos a llevar la presencia de Dios a cada servicio y preparar corazones para el encuentro divino.",
-        meetingTime: "Ensayos semanales — Consultar horario",
+        meetingTime: "Ensayos semanales, Consultar horario",
       },
       {
-        name: "Casa de Oración",
+        name: "Ministerio de Intercesión",
         tagline: "La iglesia que ora prevalece",
         description:
           "Intercesores comprometidos que sostienen a la iglesia, a los líderes y a la comunidad en oración ferviente y persistente.",
-        meetingTime: "Martes 6:00 AM y según agenda de intercesión",
+        meetingTime: "Semanal, consultar horario",
       },
       {
         name: "Ministerio de Medios",
@@ -162,11 +162,11 @@ const es = {
         meetingTime: "Según necesidades del ministerio",
       },
       {
-        name: "Discipulado",
-        tagline: "Haciendo discípulos, no solo convertidos",
+        name: "Danza Chayil",
+        tagline: "Adorando a Dios con todo el cuerpo",
         description:
-          "Programas de formación espiritual que llevan a creyentes desde sus primeros pasos en la fe hasta la madurez en Cristo y el servicio activo.",
-        meetingTime: "Grupos en diferentes horarios — Consultar",
+          "Un ministerio de danza que expresa la adoración a Dios a través del movimiento, la expresión artística y la gloria que honra su presencia.",
+        meetingTime: "Consultar horario",
       },
       {
         name: "Alcance Comunitario",
@@ -214,10 +214,10 @@ const es = {
     eyebrow: "Testimonios",
     title: "Vidas transformadas por Dios",
     subtitle:
-      "Estas no son solo historias bonitas — son evidencia del poder real de Dios obrando en personas reales.",
+      "Estas no son solo historias bonitas, son evidencia del poder real de Dios obrando en personas reales.",
     yearsAt: "años en Adoram",
     shareTitle: "¿Tienes un testimonio que compartir?",
-    shareLink: "Escríbenos — queremos escucharte",
+    shareLink: "Escríbenos, queremos escucharte",
   },
   planVisit: {
     eyebrow: "Primera Visita",
@@ -244,7 +244,7 @@ const es = {
       {
         title: "Estacionamiento",
         description:
-          "Contamos con estacionamiento disponible. Llega sin estrés — te ayudaremos a orientarte.",
+          "Contamos con estacionamiento disponible. Llega sin estrés, te ayudaremos a orientarte.",
       },
       {
         title: "¿A qué hora llegar?",
@@ -255,7 +255,7 @@ const es = {
     checklistTitle: "Tu primera visita en 5 puntos",
     checklistSubtitle: "Todo lo que necesitas saber antes de llegar",
     checklist: [
-      "Llegamos 10 minutos antes — hay alguien esperándote en la entrada",
+      "Llegamos 10 minutos antes, hay alguien esperándote en la entrada",
       "Adoración y música en vivo para comenzar",
       "Predicación bíblica relevante a tu vida",
       "Adoram Kids cuida a tus hijos durante el servicio",
@@ -296,19 +296,19 @@ const es = {
     requestLabel: "Tu petición de oración *",
     requestPlaceholder: "Cuéntanos cómo podemos orar por ti...",
     privateLabel:
-      "Mi petición es privada — solo el equipo pastoral y de intercesión debe verla.",
+      "Mi petición es privada, solo el equipo pastoral y de intercesión debe verla.",
     sendButton: "Enviar Petición de Oración",
     sending: "Enviando...",
     successTitle: "¡Recibimos tu petición!",
     successMessage:
       "Nuestro equipo de intercesores está orando por ti. Dios escucha, y nosotros creemos junto contigo.",
     successScripture:
-      '"La oración eficaz del justo puede mucho." — Santiago 5:16',
+      '"La oración eficaz del justo puede mucho.", Santiago 5:16',
     sendAnother: "Enviar otra petición",
   },
   footer: {
     tagline:
-      "Una familia de fe apostólica protestante comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
+      "Una familia de fe apostólica comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
     schedulesTitle: "Horarios de Servicio",
     navigationTitle: "Navegación",
     contactTitle: "Contacto",
@@ -345,12 +345,18 @@ const es = {
     minutesRead: "min",
     emptyTitle: "Pronto habrá nuevos devocionales",
     emptySubtitle:
-      "Vuelve pronto — hay reflexiones en camino.",
+      "Vuelve pronto, hay reflexiones en camino.",
   },
   devotionalPage: {
     backLink: "Todos los devocionales",
     minutesRead: "min de lectura",
+    listen: "Escuchar",
+    pause: "Pausar",
+    resume: "Reanudar",
+    stop: "Detener",
+    reading: "Leyendo...",
     share: "Compartir",
+    copied: "¡Enlace copiado!",
     touchedTitle: "¿Este devocional tocó tu corazón?",
     touchedMessage:
       "Compártelo con alguien que lo necesite, o cuéntanos cómo Dios habló a tu corazón.",
@@ -418,7 +424,7 @@ const es = {
       {
         question: "¿Qué debo llevar?",
         answer:
-          "Solo tu corazón abierto. Si tienes una Biblia, puedes traerla. Si no, no te preocupes — usaremos pantallas durante la predicación.",
+          "Solo tu corazón abierto. Si tienes una Biblia, puedes traerla. Si no, no te preocupes, usaremos pantallas durante la predicación.",
       },
       {
         question: "¿Hay algo para mis hijos?",
@@ -443,14 +449,14 @@ const es = {
     ],
     finalTitle: "¿Listo para visitarnos?",
     finalText:
-      "Si tienes alguna pregunta antes de venir, escríbenos — con gusto te respondemos.",
+      "Si tienes alguna pregunta antes de venir, escríbenos, con gusto te respondemos.",
     finalWhatsApp: "Escríbenos por WhatsApp",
     finalPrayer: "Enviar petición de oración",
   },
   notFound: {
     title: "Página no encontrada",
     message:
-      "Parece que esta página no existe. Pero no estás perdido — Dios sabe exactamente dónde estás.",
+      "Parece que esta página no existe. Pero no estás perdido, Dios sabe exactamente dónde estás.",
     cta: "Volver al inicio",
   },
 };

@@ -28,7 +28,7 @@ export const ministries: Ministry[] = [
   },
   {
     id: "min-002",
-    name: "Generación Adoram",
+    name: "T. G. Youth Network",
     tagline: "Jóvenes encendidos para Dios",
     description:
       "Una generación de jóvenes que busca a Dios con pasión, desarrolla su identidad en Cristo y es agente de cambio en su entorno.",
@@ -41,7 +41,7 @@ export const ministries: Ministry[] = [
   },
   {
     id: "min-003",
-    name: "Hombres de Fe",
+    name: "Real Men",
     tagline: "Varones que honran a Dios",
     description:
       "Un espacio para que los hombres crezcan como líderes espirituales en sus hogares, comunidades y la iglesia, arraigados en la Palabra.",
@@ -49,7 +49,7 @@ export const ministries: Ministry[] = [
     color: "text-navy-700",
     bgColor: "bg-navy-50 border-navy-200",
     targetAudience: "Varones mayores de 18 años",
-    meetingTime: "Primer sábado del mes 8:00 AM",
+    meetingTime: "Cada 2 semanas, Miércoles 7:00 PM",
     leader: "Coordinador de Varones",
   },
   {
@@ -62,12 +62,12 @@ export const ministries: Ministry[] = [
     color: "text-burgundy-600",
     bgColor: "bg-rose-50 border-rose-200",
     targetAudience: "Mujeres de todas las edades",
-    meetingTime: "Tercer sábado del mes 10:00 AM",
+    meetingTime: "Eventos mensuales",
     leader: "Coordinadora de Mujeres",
   },
   {
     id: "min-005",
-    name: "Ministerio de Alabanza",
+    name: "Kadosh",
     tagline: "Líderes de adoración, no solo músicos",
     description:
       "Músicos, cantantes y adoradores comprometidos a llevar la presencia de Dios a cada servicio y preparar corazones para el encuentro divino.",
@@ -75,12 +75,12 @@ export const ministries: Ministry[] = [
     color: "text-gold-700",
     bgColor: "bg-amber-50 border-amber-200",
     targetAudience: "Músicos y cantantes de la congregación",
-    meetingTime: "Ensayos semanales — Consultar horario",
+    meetingTime: "Ensayos semanales, Consultar horario",
     leader: "Director(a) de Alabanza",
   },
   {
     id: "min-006",
-    name: "Casa de Oración",
+    name: "Ministerio de Intercesión",
     tagline: "La iglesia que ora prevalece",
     description:
       "Intercesores comprometidos que sostienen a la iglesia, a los líderes y a la comunidad en oración ferviente y persistente.",
@@ -88,7 +88,7 @@ export const ministries: Ministry[] = [
     color: "text-indigo-700",
     bgColor: "bg-indigo-50 border-indigo-200",
     targetAudience: "Toda persona llamada a la intercesión",
-    meetingTime: "Martes 6:00 AM y según agenda de intercesión",
+    meetingTime: "Semanal, consultar horario",
     leader: "Coordinador(a) de Oración",
   },
   {
@@ -105,17 +105,17 @@ export const ministries: Ministry[] = [
     leader: "Director(a) de Medios",
   },
   {
-    id: "min-008",
-    name: "Discipulado",
-    tagline: "Haciendo discípulos, no solo convertidos",
+    id: "min-010",
+    name: "Danza Chayil",
+    tagline: "Adorando a Dios con todo el cuerpo",
     description:
-      "Programas de formación espiritual que llevan a creyentes desde sus primeros pasos en la fe hasta la madurez en Cristo y el servicio activo.",
-    icon: "📖",
-    color: "text-teal-700",
-    bgColor: "bg-teal-50 border-teal-200",
-    targetAudience: "Creyentes de todos los niveles de madurez",
-    meetingTime: "Grupos en diferentes horarios — Consultar",
-    leader: "Coordinador(a) de Discipulado",
+      "Un ministerio de danza que expresa la adoración a Dios a través del movimiento, la expresión artística y la gloria que honra su presencia.",
+    icon: "🩰",
+    color: "text-purple-700",
+    bgColor: "bg-purple-50 border-purple-200",
+    targetAudience: "Mujeres y jóvenes con llamado a la danza",
+    meetingTime: "Consultar horario",
+    leader: "Coordinadora de Danza",
   },
   {
     id: "min-009",

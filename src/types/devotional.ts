@@ -22,6 +22,11 @@ export interface Devotional {
   content: string;
   scriptureReference: string;
   scriptureText?: string;
+  /* Optional English translation fields */
+  titleEn?: string;
+  excerptEn?: string;
+  contentEn?: string;
+  scriptureTextEn?: string;
   authorId: string;
   authorName: string;
   authorAvatar?: string;

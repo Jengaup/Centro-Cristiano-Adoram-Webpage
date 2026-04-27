@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Clock, Tag, Share2, Heart } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, Tag, Heart } from "lucide-react";
 import Badge from "@/components/ui/Badge";
+import DevotionalReader from "@/components/ui/DevotionalReader";
+import ShareButton from "@/components/ui/ShareButton";
 import { getDevotionalBySlug, getPublishedDevotionals } from "@/data/devotionals";
 import { formatDate } from "@/lib/utils";
 import { getDictionary } from "@/i18n/getDictionary";
@@ -32,6 +34,11 @@ export default async function DevotionalPage({ params }: Props) {
 
   const dict = await getDictionary(params.locale);
   const d = dict.devotionalPage;
+
+  const isEn = params.locale === "en";
+  const title   = (isEn && devotional.titleEn)        ? devotional.titleEn        : devotional.title;
+  const content = (isEn && devotional.contentEn)      ? devotional.contentEn      : devotional.content;
+  const verse   = (isEn && devotional.scriptureTextEn) ? devotional.scriptureTextEn : devotional.scriptureText;
 
   const related = getPublishedDevotionals()
     .filter((dev) => dev.id !== devotional.id)
@@ -70,13 +77,13 @@ export default async function DevotionalPage({ params }: Props) {
             <BookOpen size={14} />{devotional.scriptureReference}
           </p>
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-6">
-            {devotional.title}
+            {title}
           </h1>
-          {devotional.scriptureText && (
+          {verse && (
             <blockquote className="border-l-4 border-gold-500 pl-5 py-3 bg-gold-50 rounded-r-xl mb-6">
-              <p className="font-serif text-lg text-navy-700 italic leading-relaxed">"{devotional.scriptureText}"</p>
+              <p className="font-serif text-lg text-navy-700 italic leading-relaxed">"{verse}"</p>
               <footer className="mt-2 text-gold-700 font-bold text-xs tracking-widest uppercase">
-                — {devotional.scriptureReference}
+               , {devotional.scriptureReference}
               </footer>
             </blockquote>
           )}
@@ -90,16 +97,30 @@ export default async function DevotionalPage({ params }: Props) {
                 <p className="text-warm-500 text-xs">{formatDate(devotional.publishDate)}</p>
               </div>
             </div>
-            <button
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-warm-300 text-slate-600 hover:border-gold-400 hover:text-gold-600 text-sm font-semibold transition-colors"
-              aria-label={d.share}
-            >
-              <Share2 size={14} />{d.share}
-            </button>
+            <div className="flex items-center gap-2 flex-wrap">
+              <DevotionalReader
+                title={title}
+                content={content}
+                locale={params.locale}
+                labels={{
+                  listen: d.listen,
+                  pause: d.pause,
+                  resume: d.resume,
+                  stop: d.stop,
+                  reading: d.reading,
+                }}
+              />
+              <ShareButton
+                title={title}
+                excerpt={isEn && devotional.excerptEn ? devotional.excerptEn : devotional.excerpt}
+                label={d.share}
+                copiedLabel={d.copied}
+              />
+            </div>
           </div>
         </header>
 
-        <div className="devotional-content" dangerouslySetInnerHTML={{ __html: devotional.content }} />
+        <div className="devotional-content" dangerouslySetInnerHTML={{ __html: content }} />
 
         <footer className="mt-16 pt-10 border-t border-warm-200">
           <div className="bg-navy-gradient rounded-2xl p-8 text-center text-white">

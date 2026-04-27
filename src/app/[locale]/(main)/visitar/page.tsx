@@ -54,7 +54,7 @@ export default async function VisitPage({ params }: { params: { locale: Locale }
               <ul className="space-y-1.5">
                 {siteConfig.serviceTimes.map((s) => (
                   <li key={s.name} className="text-sm text-slate-600">
-                    <span className="font-semibold text-navy-800">{s.day}</span> {s.time} —{" "}
+                    <span className="font-semibold text-navy-800">{s.day}</span> {s.time} {" "}
                     <span className="text-warm-500">{s.name}</span>
                   </li>
                 ))}

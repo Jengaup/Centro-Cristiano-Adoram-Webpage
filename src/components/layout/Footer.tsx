@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Clock, Phone, Mail, Youtube, Facebook, Instagram, MessageCircle, Heart } from "lucide-react";
 import { siteConfig } from "@/data/config";
 import type { Locale } from "@/i18n/config";
@@ -41,9 +42,14 @@ export default function Footer({ locale, dict }: Props) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gold-500 flex items-center justify-center">
-                <span className="text-navy-950 font-serif font-bold text-xl">A</span>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
+                alt="Centro Cristiano Adoram"
+                width={48}
+                height={48}
+                className="rounded-lg object-contain"
+              />
               <div>
                 <p className="text-white font-serif font-bold text-base leading-tight">Centro Cristiano</p>
                 <p className="text-gold-400 font-bold text-sm tracking-widest uppercase">Adoram</p>
@@ -80,7 +86,7 @@ export default function Footer({ locale, dict }: Props) {
                   <Clock size={14} className="mt-1 text-gold-500 shrink-0" />
                   <div>
                     <p className="text-white text-sm font-medium">{service.name}</p>
-                    <p className="text-navy-200 text-xs">{service.day} — {service.time}</p>
+                    <p className="text-navy-200 text-xs">{service.day}, {service.time}</p>
                   </div>
                 </li>
               ))}

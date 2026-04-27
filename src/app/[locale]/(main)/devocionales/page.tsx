@@ -24,6 +24,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
   const dict = await getDictionary(params.locale);
   const d = dict.devocionales;
   const devotionals = getPublishedDevotionals();
+  const isEn = params.locale === "en";
 
   return (
     <div className="min-h-screen bg-warm-50">
@@ -114,9 +115,11 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                         <BookOpen size={11} />{devotional.scriptureReference}
                       </p>
                       <h2 className="font-serif text-xl font-bold text-navy-900 group-hover:text-navy-700 transition-colors leading-snug mb-2">
-                        {devotional.title}
+                        {isEn && devotional.titleEn ? devotional.titleEn : devotional.title}
                       </h2>
-                      <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-4">{devotional.excerpt}</p>
+                      <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-4">
+                        {isEn && devotional.excerptEn ? devotional.excerptEn : devotional.excerpt}
+                      </p>
                       <div className="flex items-center justify-between pt-4 border-t border-warm-100">
                         <div className="flex items-center gap-2">
                           <div className="w-6 h-6 rounded-full bg-navy-100 flex items-center justify-center">
