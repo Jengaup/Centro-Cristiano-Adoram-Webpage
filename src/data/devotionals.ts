@@ -11,6 +11,8 @@ export const devotionalTags: DevotionalTag[] = [
   { id: "tag-008", name: "Restauración",  slug: "restauracion",  color: "#E8852A" },
   { id: "tag-009", name: "Cristo",        slug: "cristo",        color: "#0F1B2D" },
   { id: "tag-010", name: "Reino",         slug: "reino",         color: "#163050" },
+  { id: "tag-011", name: "Sufrimiento",   slug: "sufrimiento",   color: "#6B2737" },
+  { id: "tag-012", name: "Fortaleza",     slug: "fortaleza",     color: "#1B4332" },
 ];
 
 export const devotionalCategories: DevotionalCategory[] = [
@@ -98,7 +100,7 @@ export const devotionals: Devotional[] = [
     publishDate: "2026-04-21",
     createdAt: "2026-04-18T09:00:00Z",
     updatedAt: "2026-04-20T14:00:00Z",
-    isFeatured: true,
+    isFeatured: false,
     readingTimeMinutes: 5,
   },
 
@@ -339,6 +341,85 @@ export const devotionals: Devotional[] = [
     createdAt: "2026-04-04T07:00:00Z",
     updatedAt: "2026-04-06T09:00:00Z",
     isFeatured: false,
+    readingTimeMinutes: 6,
+  },
+  // ─── 5 ────────────────────────────────────────────────────────────────────
+  {
+    id: "dev-005",
+    slug: "el-peso-que-el-ya-cargo",
+    title: "El peso que Él ya cargó",
+    excerpt:
+      "El sufrimiento desorienta porque nadie lo elige. Pero Pablo descubrió algo que cambia todo: en la debilidad humana, el poder de Cristo se manifiesta de una forma que ninguna fortaleza propia puede replicar.",
+    content: `
+      <p>El sufrimiento desorienta porque nadie lo elige. Llega sin anunciarse, en forma de enfermedad, de pérdida, de traición, de silencio de Dios cuando más se necesita respuesta. Y en ese momento, la fe enfrenta su prueba más real: ¿seguiremos creyendo cuando no entendemos?</p>
+
+      <p>Pablo conocía esa tensión desde adentro. Tenía un «aguijón en la carne» que le pedía a Dios tres veces que removiera. La respuesta divina no fue quitar el dolor, fue revelar algo mayor: que en la debilidad humana, la fortaleza de Cristo se manifiesta de una forma que ningún poder propio puede replicar.</p>
+
+      <p>Isaías 53 declara que Cristo mismo «cargó nuestros dolores», no solo nuestros pecados, también nuestro sufrimiento. Eso significa que cuando atraviesas el valle, no lo haces con un Dios distante observando desde afuera. Lo haces con uno que conoce el dolor por experiencia propia, que fue crucificado, y que salió victorioso. Su fortaleza no elimina el sufrimiento inmediatamente, lo atraviesa contigo y lo transforma en algo que no puedes imaginar desde donde estás ahora.</p>
+
+      <h3>Preguntas para meditar</h3>
+      <ul>
+        <li>¿Hay dolor que estás cargando solo porque te da vergüenza reconocer que no puedes más?</li>
+        <li>¿Cómo cambiaría tu perspectiva saber que Cristo ya cargó este peso en la cruz?</li>
+        <li>¿Qué fortaleza ha nacido en ti precisamente porque atravesaste algo difícil?</li>
+      </ul>
+
+      <h3>Oración</h3>
+      <blockquote>Señor Jesús, hoy el peso se siente real y pesado. No tengo fuerza propia para seguir. Pero tú dijiste que tu gracia es suficiente. Que donde yo me acabo, tú empiezas. Te pido que tu poder repose sobre mi debilidad hoy, no cuando me sienta mejor, ahora. Tú cargaste mis dolores en la cruz. Confío en que sabes lo que haces con mi historia. Amén.</blockquote>
+
+      <h3>Acción concreta</h3>
+      <ol>
+        <li>Escribe honestamente lo que estás sufriendo, sin adornarlo ni espiritualizarlo. Luego entrégaselo a Dios en oración leyéndolo en voz alta.</li>
+        <li>Lee el Salmo 22 completo, el grito de abandono que terminó en alabanza. Es el salmo que Jesús citó en la cruz.</li>
+        <li>Busca a alguien que haya atravesado algo parecido y pregúntale cómo Dios lo sostuvo. La fe se fortalece con testimonios reales.</li>
+      </ol>
+
+      <p><em>«Aunque ande en valle de sombra de muerte, no temeré mal alguno, porque tú estarás conmigo.», Salmo 23:4</em></p>
+    `,
+    scriptureReference: "2 Corintios 12:9 · Isaías 53:4 · Filipenses 4:13",
+    scriptureText:
+      "Bástate mi gracia; porque mi poder se perfecciona en la debilidad. Por tanto, de buena gana me gloriaré más bien en mis debilidades, para que repose sobre mí el poder de Cristo.",
+    titleEn: "The Weight He Already Carried",
+    excerptEn:
+      "Suffering disorients because no one chooses it. But Paul discovered something that changes everything: in human weakness, the power of Christ manifests in a way that no personal strength can replicate.",
+    scriptureTextEn:
+      "My grace is sufficient for you, for my power is made perfect in weakness. Therefore I will boast all the more gladly about my weaknesses, so that Christ's power may rest on me.",
+    contentEn: `
+      <p>Suffering disorients because no one chooses it. It arrives unannounced, in the form of illness, loss, betrayal, or the silence of God when an answer is needed most. And in that moment, faith faces its most real test: will we keep believing when we don't understand?</p>
+
+      <p>Paul knew that tension from the inside. He had a "thorn in the flesh" and asked God three times to remove it. The divine response was not to take away the pain, but to reveal something greater: that in human weakness, the strength of Christ manifests in a way that no personal power can replicate.</p>
+
+      <p>Isaiah 53 declares that Christ Himself "carried our sorrows", not just our sins, but our suffering too. That means when you walk through the valley, you don't do it with a distant God watching from outside. You do it with One who knows pain by personal experience, who was crucified, and who came out victorious. His strength doesn't immediately eliminate suffering, it walks through it with you and transforms it into something you cannot imagine from where you are now.</p>
+
+      <h3>Questions to Reflect On</h3>
+      <ul>
+        <li>Is there pain you are carrying alone because you are ashamed to admit you can't go on?</li>
+        <li>How would your perspective change knowing that Christ already carried this weight on the cross?</li>
+        <li>What strength has been born in you precisely because you went through something difficult?</li>
+      </ul>
+
+      <h3>Prayer</h3>
+      <blockquote>Lord Jesus, today the weight feels real and heavy. I have no strength of my own to keep going. But You said Your grace is sufficient. That where I end, You begin. I ask that Your power rest on my weakness today, not when I feel better, now. You carried my sorrows on the cross. I trust that You know what You are doing with my story. Amen.</blockquote>
+
+      <h3>Concrete Action</h3>
+      <ol>
+        <li>Write honestly what you are suffering, without adorning it or spiritualizing it. Then give it to God in prayer by reading it aloud.</li>
+        <li>Read Psalm 22 in full, the cry of abandonment that ended in praise. It is the psalm Jesus quoted on the cross.</li>
+        <li>Find someone who has gone through something similar and ask them how God sustained them. Faith is strengthened by real testimonies.</li>
+      </ol>
+
+      <p><em>"Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me.", Psalm 23:4</em></p>
+    `,
+    authorId: "pastor-001",
+    authorName: "Pastor Jose Alberto Jimenez",
+    featuredImage: "",
+    tags: [devotionalTags[10], devotionalTags[11], devotionalTags[8]],
+    categoryId: "cat-001",
+    status: "published",
+    publishDate: "2026-04-24",
+    createdAt: "2026-04-24T07:00:00Z",
+    updatedAt: "2026-04-24T07:00:00Z",
+    isFeatured: true,
     readingTimeMinutes: 6,
   },
 ];
