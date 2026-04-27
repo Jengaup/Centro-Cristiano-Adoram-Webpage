@@ -47,7 +47,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/CentroCristianoAdoram",
     whatsapp: "https://wa.me/17873798296",
   },
-  pastorName: "Apóstol Juan Alberto Martines & Apóstol Wendy Ortis",
+  pastorName: "Apóstol Juan Alberto Martínez & Apóstol Wendy Ortiz",
   pastorTitle: "Apóstoles",
 };
 
