@@ -68,18 +68,27 @@ export default async function VisitPage({ params }: { params: { locale: Locale }
                 </div>
                 <h2 className="font-bold text-navy-800">{d.locationTitle}</h2>
               </div>
-              <p className="text-sm text-slate-600">
-                {siteConfig.address.street}<br />
-                {siteConfig.address.city}, {siteConfig.address.state}
-              </p>
-              <a
-                href={siteConfig.address.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gold-600 hover:text-gold-700 text-sm font-semibold underline underline-offset-2 mt-1 inline-block transition-colors"
-              >
-                {d.openMaps}
-              </a>
+              <div className="space-y-4">
+                {siteConfig.locations.map((loc) => (
+                  <div key={loc.name}>
+                    <p className="text-sm font-bold text-navy-700">{loc.city}, {loc.state}</p>
+                    {loc.street && (
+                      <p className="text-sm text-slate-600">{loc.street}</p>
+                    )}
+                    {loc.scheduleNote && (
+                      <p className="text-xs text-gold-600 italic mt-0.5">{loc.scheduleNote}</p>
+                    )}
+                    <a
+                      href={loc.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gold-600 hover:text-gold-700 text-sm font-semibold underline underline-offset-2 mt-0.5 inline-block transition-colors"
+                    >
+                      {d.openMaps}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="text-center md:text-left">

@@ -17,6 +17,24 @@ export const siteConfig = {
     country: "Puerto Rico",
     mapsUrl: "https://maps.app.goo.gl/tTsXxCGkToC2HiUk8",
   },
+  locations: [
+    {
+      name: "Lares",
+      street: "Km 19.6 PR 129 Interior, Callejones",
+      city: "Lares",
+      state: "PR",
+      mapsUrl: "https://maps.app.goo.gl/tTsXxCGkToC2HiUk8",
+      scheduleNote: null as string | null,
+    },
+    {
+      name: "Bayamón",
+      street: null as string | null,
+      city: "Bayamón",
+      state: "PR",
+      mapsUrl: "https://maps.app.goo.gl/Df7GDvhQSZRaH7Pe6",
+      scheduleNote: "Obra nueva — contáctanos para conocer nuestro próximo servicio",
+    },
+  ],
   serviceTimes: [
     { day: "Domingo", time: "10:00 AM", name: "Servicio Principal" },
     { day: "Martes", time: "7:00 PM", name: "Estudios Bíblicos (Zoom)" },

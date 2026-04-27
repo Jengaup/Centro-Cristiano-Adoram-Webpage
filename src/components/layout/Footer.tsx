@@ -119,15 +119,23 @@ export default function Footer({ locale, dict }: Props) {
           <div>
             <h3 className="text-gold-400 font-bold text-xs tracking-widest uppercase mb-4">{dict.contactTitle}</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2.5">
-                <MapPin size={14} className="mt-1 text-gold-500 shrink-0" />
-                <div>
-                  <p className="text-white text-sm font-medium">{dict.addressLabel}</p>
-                  <a href={siteConfig.address.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-navy-200 text-xs hover:text-gold-300 transition-colors">
-                    {siteConfig.address.street}<br />{siteConfig.address.city}, {siteConfig.address.state}
-                  </a>
-                </div>
-              </li>
+              {siteConfig.locations.map((loc) => (
+                <li key={loc.name} className="flex items-start gap-2.5">
+                  <MapPin size={14} className="mt-1 text-gold-500 shrink-0" />
+                  <div>
+                    <p className="text-white text-sm font-medium">{loc.city}, {loc.state}</p>
+                    {loc.street && (
+                      <p className="text-navy-200 text-xs">{loc.street}</p>
+                    )}
+                    {loc.scheduleNote && (
+                      <p className="text-gold-400 text-xs italic mt-0.5">{loc.scheduleNote}</p>
+                    )}
+                    <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-navy-300 text-xs hover:text-gold-300 transition-colors underline underline-offset-2">
+                      Ver en mapa →
+                    </a>
+                  </div>
+                </li>
+              ))}
               <li className="flex items-start gap-2.5">
                 <Phone size={14} className="mt-1 text-gold-500 shrink-0" />
                 <div>
