@@ -28,7 +28,7 @@ export const siteConfig = {
     },
     {
       name: "Bayamón",
-      street: null as string | null,
+      street: "Facilidades de COOPSEE, Centro Comercial Plaza Pradera #7, Cll Antonia Príncipe, Carr. 167",
       city: "Bayamón",
       state: "PR",
       mapsUrl: "https://maps.app.goo.gl/Df7GDvhQSZRaH7Pe6",
