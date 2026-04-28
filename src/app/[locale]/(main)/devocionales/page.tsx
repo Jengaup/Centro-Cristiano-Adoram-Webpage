@@ -81,7 +81,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                       key={tag.id}
                       className="px-2.5 py-1 rounded-full bg-warm-100 text-slate-600 text-xs font-semibold hover:bg-navy-100 hover:text-navy-700 transition-colors border border-warm-200"
                     >
-                      {tag.name}
+                      {params.locale === "en" && tag.nameEn ? tag.nameEn : tag.name}
                     </button>
                   ))}
                 </div>
@@ -105,7 +105,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                     <div className="p-6">
                       <div className="flex flex-wrap gap-1.5 mb-3">
                         {devotional.tags.slice(0, 2).map((tag) => (
-                          <Badge key={tag.id} variant="gold">{tag.name}</Badge>
+                          <Badge key={tag.id} variant="gold">{params.locale === "en" && tag.nameEn ? tag.nameEn : tag.name}</Badge>
                         ))}
                         {devotional.isFeatured && (
                           <Badge variant="navy">{d.featured}</Badge>

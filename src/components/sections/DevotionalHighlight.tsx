@@ -46,7 +46,7 @@ export default function DevotionalHighlight({ locale, dict }: Props) {
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-gold-500/5 via-transparent to-transparent pointer-events-none" />
                 <div className="flex flex-wrap gap-2 mb-4">
                   {devotional.tags.slice(0, 2).map((tag) => (
-                    <Badge key={tag.id} variant="gold" className="bg-gold-500/20 border-gold-400/40 text-gold-300">{tag.name}</Badge>
+                    <Badge key={tag.id} variant="gold" className="bg-gold-500/20 border-gold-400/40 text-gold-300">{locale === "en" && tag.nameEn ? tag.nameEn : tag.name}</Badge>
                   ))}
                 </div>
                 <p className="text-gold-400 text-xs font-bold tracking-widest uppercase mb-3 flex items-center gap-2">

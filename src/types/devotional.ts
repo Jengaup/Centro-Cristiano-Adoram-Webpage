@@ -3,6 +3,7 @@ export type DevotionalStatus = "draft" | "published" | "scheduled";
 export interface DevotionalTag {
   id: string;
   name: string;
+  nameEn?: string;
   slug: string;
   color?: string;
 }

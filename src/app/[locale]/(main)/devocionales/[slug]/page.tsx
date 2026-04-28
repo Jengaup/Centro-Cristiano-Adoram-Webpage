@@ -69,7 +69,7 @@ export default async function DevotionalPage({ params }: Props) {
           <div className="flex flex-wrap gap-2 mb-4">
             {devotional.tags.map((tag) => (
               <Badge key={tag.id} variant="gold">
-                <Tag size={10} />{tag.name}
+                <Tag size={10} />{isEn && tag.nameEn ? tag.nameEn : tag.name}
               </Badge>
             ))}
           </div>

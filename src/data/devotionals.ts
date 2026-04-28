@@ -1,18 +1,18 @@
 import type { Devotional, DevotionalTag, DevotionalCategory } from "@/types/devotional";
 
 export const devotionalTags: DevotionalTag[] = [
-  { id: "tag-001", name: "Fe",            slug: "fe",            color: "#C9A84C" },
-  { id: "tag-002", name: "Oración",       slug: "oracion",       color: "#1B3A5C" },
-  { id: "tag-003", name: "Esperanza",     slug: "esperanza",     color: "#2D6494" },
-  { id: "tag-004", name: "Gracia",        slug: "gracia",        color: "#5E8CB8" },
-  { id: "tag-005", name: "Propósito",     slug: "proposito",     color: "#163050" },
-  { id: "tag-006", name: "Adoración",     slug: "adoracion",     color: "#A87E28" },
-  { id: "tag-007", name: "Familia",       slug: "familia",       color: "#1B3A5C" },
-  { id: "tag-008", name: "Restauración",  slug: "restauracion",  color: "#E8852A" },
-  { id: "tag-009", name: "Cristo",        slug: "cristo",        color: "#0F1B2D" },
-  { id: "tag-010", name: "Reino",         slug: "reino",         color: "#163050" },
-  { id: "tag-011", name: "Sufrimiento",   slug: "sufrimiento",   color: "#6B2737" },
-  { id: "tag-012", name: "Fortaleza",     slug: "fortaleza",     color: "#1B4332" },
+  { id: "tag-001", name: "Fe",            nameEn: "Faith",        slug: "fe",            color: "#C9A84C" },
+  { id: "tag-002", name: "Oración",       nameEn: "Prayer",       slug: "oracion",       color: "#1B3A5C" },
+  { id: "tag-003", name: "Esperanza",     nameEn: "Hope",         slug: "esperanza",     color: "#2D6494" },
+  { id: "tag-004", name: "Gracia",        nameEn: "Grace",        slug: "gracia",        color: "#5E8CB8" },
+  { id: "tag-005", name: "Propósito",     nameEn: "Purpose",      slug: "proposito",     color: "#163050" },
+  { id: "tag-006", name: "Adoración",     nameEn: "Worship",      slug: "adoracion",     color: "#A87E28" },
+  { id: "tag-007", name: "Familia",       nameEn: "Family",       slug: "familia",       color: "#1B3A5C" },
+  { id: "tag-008", name: "Restauración",  nameEn: "Restoration",  slug: "restauracion",  color: "#E8852A" },
+  { id: "tag-009", name: "Cristo",        nameEn: "Christ",       slug: "cristo",        color: "#0F1B2D" },
+  { id: "tag-010", name: "Reino",         nameEn: "Kingdom",      slug: "reino",         color: "#163050" },
+  { id: "tag-011", name: "Sufrimiento",   nameEn: "Suffering",    slug: "sufrimiento",   color: "#6B2737" },
+  { id: "tag-012", name: "Fortaleza",     nameEn: "Strength",     slug: "fortaleza",     color: "#1B4332" },
 ];
 
 export const devotionalCategories: DevotionalCategory[] = [
