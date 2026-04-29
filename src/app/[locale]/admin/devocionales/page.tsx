@@ -29,7 +29,7 @@ export default function AdminDevotionalsPage({ params }: { params: { locale: Loc
 
       <RoleGuard role={currentUser.role} permission="canCreateDevotionals">
         <div className="bg-white rounded-2xl border border-warm-200 shadow-card p-6">
-          <DevotionalList devotionals={devotionals} currentUser={currentUser} />
+          <DevotionalList devotionals={devotionals} currentUser={currentUser} locale={params.locale} />
         </div>
       </RoleGuard>
     </div>

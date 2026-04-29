@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Clock, Tag, Heart } from "lucide-react";
+import sanitizeHtml from "sanitize-html";
 import Badge from "@/components/ui/Badge";
 import DevotionalReader from "@/components/ui/DevotionalReader";
 import ShareButton from "@/components/ui/ShareButton";
@@ -37,8 +38,21 @@ export default async function DevotionalPage({ params }: Props) {
 
   const isEn = params.locale === "en";
   const title   = (isEn && devotional.titleEn)        ? devotional.titleEn        : devotional.title;
-  const content = (isEn && devotional.contentEn)      ? devotional.contentEn      : devotional.content;
+  const rawContent = (isEn && devotional.contentEn)   ? devotional.contentEn      : devotional.content;
   const verse   = (isEn && devotional.scriptureTextEn) ? devotional.scriptureTextEn : devotional.scriptureText;
+
+  const content = sanitizeHtml(rawContent, {
+    allowedTags: ["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li",
+                  "strong", "em", "b", "i", "u", "br", "blockquote", "a"],
+    allowedAttributes: { a: ["href", "target", "rel"] },
+    allowedSchemes: ["https", "http", "mailto"],
+    transformTags: {
+      a: (tagName, attribs) => ({
+        tagName,
+        attribs: { ...attribs, rel: "noopener noreferrer" },
+      }),
+    },
+  });
 
   const related = getPublishedDevotionals()
     .filter((dev) => dev.id !== devotional.id)

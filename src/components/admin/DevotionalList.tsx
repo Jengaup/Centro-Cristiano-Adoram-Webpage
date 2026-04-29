@@ -15,12 +15,14 @@ import {
 import Badge from "@/components/ui/Badge";
 import type { Devotional, DevotionalStatus } from "@/types/devotional";
 import type { User } from "@/types/user";
+import type { Locale } from "@/i18n/config";
 import { canEditDevotional, can } from "@/lib/permissions";
 import { formatDate } from "@/lib/utils";
 
 interface DevotionalListProps {
   devotionals: Devotional[];
   currentUser: User;
+  locale: Locale;
 }
 
 const STATUS_CONFIG: Record<
@@ -35,6 +37,7 @@ const STATUS_CONFIG: Record<
 export default function DevotionalList({
   devotionals,
   currentUser,
+  locale,
 }: DevotionalListProps) {
   const [filter, setFilter] = useState<DevotionalStatus | "all">("all");
 
@@ -145,7 +148,7 @@ export default function DevotionalList({
                   <td className="px-4 py-4">
                     <div className="flex items-center justify-end gap-2">
                       <Link
-                        href={`/devocionales/${devotional.slug}`}
+                        href={`/${locale}/devocionales/${devotional.slug}`}
                         target="_blank"
                         className="p-1.5 rounded-lg text-warm-500 hover:text-navy-600 hover:bg-warm-100 transition-colors"
                         title="Ver devocional"
@@ -154,7 +157,7 @@ export default function DevotionalList({
                       </Link>
                       {canEdit && (
                         <Link
-                          href={`/admin/devocionales/${devotional.id}`}
+                          href={`/${locale}/admin/devocionales/${devotional.id}`}
                           className="p-1.5 rounded-lg text-warm-500 hover:text-navy-600 hover:bg-warm-100 transition-colors"
                           title="Editar"
                         >
