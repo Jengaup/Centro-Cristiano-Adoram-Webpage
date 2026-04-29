@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Youtube, ChevronDown, Globe } from "lucide-react";
@@ -34,7 +35,9 @@ export default function Navbar({ locale, dict }: Props) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
+  const pathname = usePathname();
   const otherLocale: Locale = locale === "es" ? "en" : "es";
+  const otherLocalePath = pathname.replace(`/${locale}`, `/${otherLocale}`);
 
   const navLinks = [
     { label: dict.home, href: `/${locale}` },
@@ -144,7 +147,7 @@ export default function Navbar({ locale, dict }: Props) {
         <div className="flex items-center gap-2">
           {/* Language switcher */}
           <Link
-            href={`/${otherLocale}`}
+            href={otherLocalePath}
             className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 text-xs font-bold tracking-wide transition-all"
             aria-label={`Switch to ${dict.switchLang}`}
           >
@@ -190,7 +193,7 @@ export default function Navbar({ locale, dict }: Props) {
             ))}
             <div className="pt-3 pb-1 border-t border-white/10 space-y-2">
               <Link
-                href={`/${otherLocale}`}
+                href={otherLocalePath}
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-colors text-sm"
               >

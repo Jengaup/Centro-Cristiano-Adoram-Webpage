@@ -11,6 +11,7 @@ export interface DevotionalTag {
 export interface DevotionalCategory {
   id: string;
   name: string;
+  nameEn?: string;
   slug: string;
   description?: string;
 }

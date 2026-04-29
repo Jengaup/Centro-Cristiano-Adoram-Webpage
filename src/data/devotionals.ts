@@ -16,11 +16,11 @@ export const devotionalTags: DevotionalTag[] = [
 ];
 
 export const devotionalCategories: DevotionalCategory[] = [
-  { id: "cat-001", name: "Vida Espiritual",      slug: "vida-espiritual" },
-  { id: "cat-002", name: "Familia y Hogar",       slug: "familia-y-hogar" },
-  { id: "cat-003", name: "Promesas de Dios",      slug: "promesas-de-dios" },
-  { id: "cat-004", name: "Carácter Cristiano",    slug: "caracter-cristiano" },
-  { id: "cat-005", name: "Misión y Servicio",     slug: "mision-y-servicio" },
+  { id: "cat-001", name: "Vida Espiritual",      nameEn: "Spiritual Life",       slug: "vida-espiritual" },
+  { id: "cat-002", name: "Familia y Hogar",       nameEn: "Family & Home",        slug: "familia-y-hogar" },
+  { id: "cat-003", name: "Promesas de Dios",      nameEn: "God's Promises",       slug: "promesas-de-dios" },
+  { id: "cat-004", name: "Carácter Cristiano",    nameEn: "Christian Character",  slug: "caracter-cristiano" },
+  { id: "cat-005", name: "Misión y Servicio",     nameEn: "Mission & Service",    slug: "mision-y-servicio" },
 ];
 
 export const devotionals: Devotional[] = [

@@ -63,7 +63,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                   {devotionalCategories.map((cat) => (
                     <li key={cat.id}>
                       <button className="w-full text-left px-3 py-2 rounded-lg text-sm text-slate-600 hover:bg-warm-100 hover:text-navy-700 transition-colors">
-                        {cat.name}
+                        {params.locale === "en" && cat.nameEn ? cat.nameEn : cat.name}
                       </button>
                     </li>
                   ))}
