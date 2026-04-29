@@ -107,12 +107,6 @@ export default function AdminLayout({
         </header>
 
         <main className="flex-1 p-6 lg:p-8 max-w-7xl w-full">
-          <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6 text-amber-800 text-sm flex items-start gap-2">
-            <Shield size={16} className="shrink-0 mt-0.5 text-amber-600" />
-            <span>
-              <strong>Modo demo:</strong> Este panel usa datos de prueba. Para producción, integra autenticación real (NextAuth.js, Clerk, etc.) y una base de datos o CMS.
-            </span>
-          </div>
           {children}
         </main>
       </div>
