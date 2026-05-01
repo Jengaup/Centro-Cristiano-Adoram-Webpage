@@ -11,7 +11,7 @@ export default function NotFound() {
         <p className="text-gold-400 text-xs font-bold tracking-widest uppercase mb-4">404</p>
         <h1 className="font-serif text-4xl font-bold mb-4">Página no encontrada</h1>
         <p className="text-navy-200 text-lg leading-relaxed mb-8">
-          Parece que esta página no existe. Pero no estás perdido — Dios sabe exactamente dónde estás.
+          Parece que esta página no existe. Pero no estás perdido, Dios sabe exactamente dónde estás.
         </p>
         <Link
           href="/"

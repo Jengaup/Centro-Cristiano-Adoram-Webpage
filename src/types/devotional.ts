@@ -3,6 +3,7 @@ export type DevotionalStatus = "draft" | "published" | "scheduled";
 export interface DevotionalTag {
   id: string;
   name: string;
+  nameEn?: string;
   slug: string;
   color?: string;
 }
@@ -10,6 +11,7 @@ export interface DevotionalTag {
 export interface DevotionalCategory {
   id: string;
   name: string;
+  nameEn?: string;
   slug: string;
   description?: string;
 }
@@ -22,6 +24,11 @@ export interface Devotional {
   content: string;
   scriptureReference: string;
   scriptureText?: string;
+  /* Optional English translation fields */
+  titleEn?: string;
+  excerptEn?: string;
+  contentEn?: string;
+  scriptureTextEn?: string;
   authorId: string;
   authorName: string;
   authorAvatar?: string;

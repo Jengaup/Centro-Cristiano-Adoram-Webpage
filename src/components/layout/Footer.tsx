@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Clock, Phone, Mail, Youtube, Facebook, Instagram, MessageCircle, Heart } from "lucide-react";
 import { siteConfig } from "@/data/config";
 import type { Locale } from "@/i18n/config";
@@ -41,9 +42,14 @@ export default function Footer({ locale, dict }: Props) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gold-500 flex items-center justify-center">
-                <span className="text-navy-950 font-serif font-bold text-xl">A</span>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
+                alt="Centro Cristiano Adoram"
+                width={48}
+                height={48}
+                className="rounded-lg object-contain"
+              />
               <div>
                 <p className="text-white font-serif font-bold text-base leading-tight">Centro Cristiano</p>
                 <p className="text-gold-400 font-bold text-sm tracking-widest uppercase">Adoram</p>
@@ -80,7 +86,7 @@ export default function Footer({ locale, dict }: Props) {
                   <Clock size={14} className="mt-1 text-gold-500 shrink-0" />
                   <div>
                     <p className="text-white text-sm font-medium">{service.name}</p>
-                    <p className="text-navy-200 text-xs">{service.day} — {service.time}</p>
+                    <p className="text-navy-200 text-xs">{service.day}, {service.time}</p>
                   </div>
                 </li>
               ))}
@@ -113,15 +119,23 @@ export default function Footer({ locale, dict }: Props) {
           <div>
             <h3 className="text-gold-400 font-bold text-xs tracking-widest uppercase mb-4">{dict.contactTitle}</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2.5">
-                <MapPin size={14} className="mt-1 text-gold-500 shrink-0" />
-                <div>
-                  <p className="text-white text-sm font-medium">{dict.addressLabel}</p>
-                  <a href={siteConfig.address.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-navy-200 text-xs hover:text-gold-300 transition-colors">
-                    {siteConfig.address.street}<br />{siteConfig.address.city}, {siteConfig.address.state}
-                  </a>
-                </div>
-              </li>
+              {siteConfig.locations.map((loc) => (
+                <li key={loc.name} className="flex items-start gap-2.5">
+                  <MapPin size={14} className="mt-1 text-gold-500 shrink-0" />
+                  <div>
+                    <p className="text-white text-sm font-medium">{loc.city}, {loc.state}</p>
+                    {loc.street && (
+                      <p className="text-navy-200 text-xs">{loc.street}</p>
+                    )}
+                    {loc.scheduleNote && (
+                      <p className="text-gold-400 text-xs italic mt-0.5">{loc.scheduleNote}</p>
+                    )}
+                    <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-navy-300 text-xs hover:text-gold-300 transition-colors underline underline-offset-2">
+                      Ver en mapa →
+                    </a>
+                  </div>
+                </li>
+              ))}
               <li className="flex items-start gap-2.5">
                 <Phone size={14} className="mt-1 text-gold-500 shrink-0" />
                 <div>

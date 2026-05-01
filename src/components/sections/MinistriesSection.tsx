@@ -36,23 +36,29 @@ export default function MinistriesSection({ locale, dict }: Props) {
           {ministries.map((ministry, i) => {
             const item = dict.items[i] ?? { name: ministry.name, tagline: ministry.tagline, description: ministry.description, meetingTime: ministry.meetingTime ?? "" };
             return (
-              <div key={ministry.id} className={`rounded-2xl border p-6 bg-white transition-all duration-300 hover:shadow-warm hover:-translate-y-1 group cursor-default ${ministry.bgColor}`}>
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl leading-none mt-0.5" role="img" aria-hidden="true">{ministry.icon}</span>
-                  <div className="flex-1 min-w-0">
-                    <h3 className={`font-serif text-lg font-bold mb-1 ${ministry.color}`}>{item.name}</h3>
-                    <p className="text-xs font-semibold text-warm-500 mb-2 italic">{item.tagline}</p>
-                    <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+              <div key={ministry.id} className={`relative rounded-2xl border p-6 bg-white transition-all duration-300 hover:shadow-warm hover:-translate-y-1.5 group cursor-default overflow-hidden ${ministry.bgColor}`}>
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white/60 via-transparent to-transparent pointer-events-none" />
+                <div className="relative">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-white/70 border border-current/10 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-2xl leading-none" role="img" aria-hidden="true">{ministry.icon}</span>
+                    </div>
+                    <div className="flex-1 min-w-0 pt-0.5">
+                      <h3 className={`font-serif text-lg font-bold mb-0.5 ${ministry.color}`}>{item.name}</h3>
+                      <p className="text-xs font-semibold text-warm-500 italic">{item.tagline}</p>
+                    </div>
                   </div>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+                  {item.meetingTime && (
+                    <div className="mt-4 pt-4 border-t border-current/10 flex items-center justify-between">
+                      <p className="text-xs text-warm-500">
+                        <span className="font-semibold text-slate-600">{dict.scheduleLabel}</span>{" "}{item.meetingTime}
+                      </p>
+                      <ArrowRight size={14} className={`${ministry.color} opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5`} />
+                    </div>
+                  )}
                 </div>
-                {item.meetingTime && (
-                  <div className="mt-4 pt-4 border-t border-current/10 flex items-center justify-between">
-                    <p className="text-xs text-warm-500">
-                      <span className="font-semibold text-slate-600">{dict.scheduleLabel}</span> {item.meetingTime}
-                    </p>
-                    <ArrowRight size={14} className={`${ministry.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
-                  </div>
-                )}
               </div>
             );
           })}

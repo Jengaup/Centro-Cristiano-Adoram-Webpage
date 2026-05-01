@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Youtube, ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/data/config";
@@ -33,7 +35,9 @@ export default function Navbar({ locale, dict }: Props) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
+  const pathname = usePathname();
   const otherLocale: Locale = locale === "es" ? "en" : "es";
+  const otherLocalePath = pathname.replace(`/${locale}`, `/${otherLocale}`);
 
   const navLinks = [
     { label: dict.home, href: `/${locale}` },
@@ -66,10 +70,8 @@ export default function Navbar({ locale, dict }: Props) {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-navy-900/98 backdrop-blur-md shadow-navy"
-          : "bg-gradient-to-b from-navy-950/80 to-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-950",
+        isScrolled && "shadow-navy backdrop-blur-md"
       )}
     >
       <nav
@@ -82,9 +84,14 @@ export default function Navbar({ locale, dict }: Props) {
           className="flex items-center gap-2.5 group"
           onClick={() => setMobileOpen(false)}
         >
-          <div className="w-9 h-9 rounded-lg bg-gold-500 flex items-center justify-center shadow-gold group-hover:bg-gold-400 transition-colors">
-            <span className="text-navy-950 font-serif font-bold text-lg leading-none">A</span>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
+            alt="Centro Cristiano Adoram"
+            width={44}
+            height={44}
+            className="rounded-lg object-contain"
+          />
           <div className="hidden sm:block">
             <span className="block text-white font-serif font-bold text-base leading-tight">Centro Cristiano</span>
             <span className="block text-gold-400 font-bold text-sm tracking-widest uppercase leading-tight">Adoram</span>
@@ -140,7 +147,7 @@ export default function Navbar({ locale, dict }: Props) {
         <div className="flex items-center gap-2">
           {/* Language switcher */}
           <Link
-            href={`/${otherLocale}`}
+            href={otherLocalePath}
             className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 text-xs font-bold tracking-wide transition-all"
             aria-label={`Switch to ${dict.switchLang}`}
           >
@@ -186,7 +193,7 @@ export default function Navbar({ locale, dict }: Props) {
             ))}
             <div className="pt-3 pb-1 border-t border-white/10 space-y-2">
               <Link
-                href={`/${otherLocale}`}
+                href={otherLocalePath}
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-colors text-sm"
               >

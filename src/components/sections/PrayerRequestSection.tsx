@@ -43,10 +43,19 @@ interface FormState {
 
 const initialState: FormState = { name: "", email: "", phone: "", request: "", isPrivate: true };
 
+// Obfuscated recipient — assembled at runtime to reduce email harvesting
+const R = ["adoram", "lares", "@", "gmail", ".com"].join("");
+const COOLDOWN_MS = 60_000;
+
+function sanitize(str: string): string {
+  return str.replace(/<[^>]*>/g, "").trim();
+}
+
 export default function PrayerRequestSection({ dict }: { dict: PrayerDict }) {
   const [form, setForm] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [lastSubmit, setLastSubmit] = useState(0);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -55,8 +64,27 @@ export default function PrayerRequestSection({ dict }: { dict: PrayerDict }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Rate limit: one submission per minute
+    if (Date.now() - lastSubmit < COOLDOWN_MS) return;
     setIsLoading(true);
-    await new Promise((res) => setTimeout(res, 1200));
+    try {
+      await fetch(`https://formsubmit.co/${R}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: sanitize(form.name),
+          email: sanitize(form.email) || "No proporcionado",
+          phone: sanitize(form.phone) || "No proporcionado",
+          request: sanitize(form.request),
+          private: form.isPrivate ? "Sí, solo equipo pastoral" : "No",
+          _subject: `Petición de oración, ${sanitize(form.name)}`,
+          _template: "table",
+        }),
+      });
+    } catch {
+      // Show success even on error to avoid exposing internals
+    }
+    setLastSubmit(Date.now());
     setSubmitted(true);
     setIsLoading(false);
   };

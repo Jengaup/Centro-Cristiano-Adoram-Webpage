@@ -24,6 +24,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
   const dict = await getDictionary(params.locale);
   const d = dict.devocionales;
   const devotionals = getPublishedDevotionals();
+  const isEn = params.locale === "en";
 
   return (
     <div className="min-h-screen bg-warm-50">
@@ -62,7 +63,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                   {devotionalCategories.map((cat) => (
                     <li key={cat.id}>
                       <button className="w-full text-left px-3 py-2 rounded-lg text-sm text-slate-600 hover:bg-warm-100 hover:text-navy-700 transition-colors">
-                        {cat.name}
+                        {params.locale === "en" && cat.nameEn ? cat.nameEn : cat.name}
                       </button>
                     </li>
                   ))}
@@ -80,7 +81,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                       key={tag.id}
                       className="px-2.5 py-1 rounded-full bg-warm-100 text-slate-600 text-xs font-semibold hover:bg-navy-100 hover:text-navy-700 transition-colors border border-warm-200"
                     >
-                      {tag.name}
+                      {params.locale === "en" && tag.nameEn ? tag.nameEn : tag.name}
                     </button>
                   ))}
                 </div>
@@ -104,7 +105,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                     <div className="p-6">
                       <div className="flex flex-wrap gap-1.5 mb-3">
                         {devotional.tags.slice(0, 2).map((tag) => (
-                          <Badge key={tag.id} variant="gold">{tag.name}</Badge>
+                          <Badge key={tag.id} variant="gold">{params.locale === "en" && tag.nameEn ? tag.nameEn : tag.name}</Badge>
                         ))}
                         {devotional.isFeatured && (
                           <Badge variant="navy">{d.featured}</Badge>
@@ -114,9 +115,11 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                         <BookOpen size={11} />{devotional.scriptureReference}
                       </p>
                       <h2 className="font-serif text-xl font-bold text-navy-900 group-hover:text-navy-700 transition-colors leading-snug mb-2">
-                        {devotional.title}
+                        {isEn && devotional.titleEn ? devotional.titleEn : devotional.title}
                       </h2>
-                      <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-4">{devotional.excerpt}</p>
+                      <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-4">
+                        {isEn && devotional.excerptEn ? devotional.excerptEn : devotional.excerpt}
+                      </p>
                       <div className="flex items-center justify-between pt-4 border-t border-warm-100">
                         <div className="flex items-center gap-2">
                           <div className="w-6 h-6 rounded-full bg-navy-100 flex items-center justify-center">
