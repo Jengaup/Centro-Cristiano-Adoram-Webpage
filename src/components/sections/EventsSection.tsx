@@ -1,6 +1,5 @@
 import { CalendarDays, Clock, MapPin, ArrowRight, Video } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
-import Badge from "@/components/ui/Badge";
 import { getUpcomingEvents, CATEGORY_COLORS } from "@/data/events";
 import { formatDate, getMonthAbbr, getDayNumber } from "@/lib/utils";
 import type { ChurchEvent } from "@/data/events";
@@ -49,8 +48,6 @@ export default function EventsSection({ dict }: { dict: EventsDict }) {
                   <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${CATEGORY_COLORS[event.category]}`}>
                     {dict.categories[event.category]}
                   </span>
-                  {event.isHighlighted && <Badge variant="gold">{dict.featured}</Badge>}
-                  {event.isFree && <Badge variant="success">{dict.free}</Badge>}
                 </div>
                 <h3 className="font-serif text-lg font-bold text-navy-900 group-hover:text-navy-700 transition-colors">{event.title}</h3>
                 {event.subtitle && <p className="text-gold-600 text-xs font-semibold mb-1 italic">{event.subtitle}</p>}
@@ -65,7 +62,7 @@ export default function EventsSection({ dict }: { dict: EventsDict }) {
                     href={event.registrationUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-navy-700 hover:bg-navy-800 text-white text-xs font-bold transition-colors"
+                    className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white text-xs font-bold shadow-md hover:shadow-lg transition-all"
                   >
                     <Video size={13} />Unirse al Zoom
                   </a>
