@@ -59,17 +59,17 @@ export default function EventsSection({ dict }: { dict: EventsDict }) {
                   <span className="flex items-center gap-1.5"><CalendarDays size={11} />{formatDate(event.date)}</span>
                   <span className="flex items-center gap-1.5"><Clock size={11} />{event.time}{event.endTime ? `, ${event.endTime}` : ""}</span>
                   <span className="flex items-center gap-1.5"><MapPin size={11} />{event.location}</span>
-                  {event.registrationUrl && (
-                    <a
-                      href={event.registrationUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-navy-600 font-semibold hover:text-navy-800 transition-colors"
-                    >
-                      <Video size={11} />Unirse al Zoom
-                    </a>
-                  )}
                 </div>
+                {event.registrationUrl && (
+                  <a
+                    href={event.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-navy-700 hover:bg-navy-800 text-white text-xs font-bold transition-colors"
+                  >
+                    <Video size={13} />Unirse al Zoom
+                  </a>
+                )}
               </div>
               <ArrowRight size={18} className="shrink-0 text-warm-300 group-hover:text-gold-500 mt-1 transition-all duration-200 group-hover:translate-x-0.5 hidden sm:block" />
             </article>
