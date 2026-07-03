@@ -1,4 +1,4 @@
-import { CalendarDays, Clock, MapPin, ArrowRight } from "lucide-react";
+import { CalendarDays, Clock, MapPin, ArrowRight, Video } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Badge from "@/components/ui/Badge";
 import { getUpcomingEvents, CATEGORY_COLORS } from "@/data/events";
@@ -59,6 +59,17 @@ export default function EventsSection({ dict }: { dict: EventsDict }) {
                   <span className="flex items-center gap-1.5"><CalendarDays size={11} />{formatDate(event.date)}</span>
                   <span className="flex items-center gap-1.5"><Clock size={11} />{event.time}{event.endTime ? `, ${event.endTime}` : ""}</span>
                   <span className="flex items-center gap-1.5"><MapPin size={11} />{event.location}</span>
+                  {event.registrationUrl && (
+                    <a
+                      href={event.registrationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center gap-1.5 text-navy-600 font-semibold hover:text-navy-800 transition-colors"
+                    >
+                      <Video size={11} />Unirse al Zoom
+                    </a>
+                  )}
                 </div>
               </div>
               <ArrowRight size={18} className="shrink-0 text-warm-300 group-hover:text-gold-500 mt-1 transition-all duration-200 group-hover:translate-x-0.5 hidden sm:block" />
