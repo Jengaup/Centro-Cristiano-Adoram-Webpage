@@ -64,7 +64,6 @@ export default function EventsSection({ dict }: { dict: EventsDict }) {
                       href={event.registrationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center gap-1.5 text-navy-600 font-semibold hover:text-navy-800 transition-colors"
                     >
                       <Video size={11} />Unirse al Zoom
