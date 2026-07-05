@@ -34,7 +34,7 @@ export default async function HomePage({ params }: { params: { locale: Locale } 
       <AboutSection dict={dict.about} />
       <PastorWelcome locale={params.locale} dict={dict.pastor} />
       <MinistriesSection locale={params.locale} dict={dict.ministries} />
-      <EventsSection dict={dict.events} />
+      <EventsSection locale={params.locale} dict={dict.events} />
 <DevotionalHighlight locale={params.locale} dict={dict.devotional} />
       <TestimoniesSection locale={params.locale} dict={dict.testimonies} />
       <PlanVisitSection locale={params.locale} dict={dict.planVisit} />

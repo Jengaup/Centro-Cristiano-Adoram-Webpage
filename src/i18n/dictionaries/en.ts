@@ -179,11 +179,11 @@ const en = {
   },
   events: {
     eyebrow: "Calendar",
-    title: "Upcoming Events",
-    subtitle: "Don't miss anything. There is something special waiting for you.",
-    viewAll: "View all",
-    free: "Free",
-    featured: "Featured",
+    title: "Service Calendar",
+    subtitle: "Don't miss anything. There is something special waiting for you every week.",
+    today: "Today",
+    noEventsDay: "No services scheduled on this day.",
+    joinZoom: "Join Zoom",
     noEvents: "No upcoming events scheduled.",
     categories: {
       culto: "Service",
