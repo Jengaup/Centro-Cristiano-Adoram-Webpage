@@ -2,8 +2,23 @@
 
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Clock, MapPin, Video } from "lucide-react";
-import { weeklyServices, CATEGORY_COLORS } from "@/data/events";
+import { weeklyServices, specialEvents, CATEGORY_COLORS } from "@/data/events";
 import type { ChurchEvent } from "@/data/events";
+
+// Campos compartidos entre servicios semanales y eventos especiales
+interface CalendarItem {
+  id: string;
+  title: string;
+  titleEn?: string;
+  description: string;
+  descriptionEn?: string;
+  time: string;
+  endTime?: string;
+  location: string;
+  locationEn?: string;
+  category: ChurchEvent["category"];
+  registrationUrl?: string;
+}
 
 interface CalendarDict {
   today: string;
@@ -23,6 +38,21 @@ const CATEGORY_DOTS: Record<ChurchEvent["category"], string> = {
 
 function sameDay(a: Date, b: Date) {
   return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+}
+
+function dateKey(d: Date) {
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${d.getFullYear()}-${m}-${day}`;
+}
+
+// Eventos especiales primero, luego los servicios semanales del día
+function itemsFor(date: Date): CalendarItem[] {
+  const key = dateKey(date);
+  return [
+    ...specialEvents.filter((e) => e.date === key),
+    ...weeklyServices.filter((s) => s.dayOfWeek === date.getDay()),
+  ];
 }
 
 export default function MonthCalendar({ locale, dict }: { locale: string; dict: CalendarDict }) {
@@ -60,8 +90,7 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
   const rawMonthLabel = viewDate.toLocaleDateString(locale, { month: "long", year: "numeric" });
   const monthLabel = rawMonthLabel.charAt(0).toUpperCase() + rawMonthLabel.slice(1);
 
-  const servicesFor = (dow: number) => weeklyServices.filter((s) => s.dayOfWeek === dow);
-  const selectedServices = servicesFor(selected.getDay());
+  const selectedServices = itemsFor(selected);
   const isEn = locale === "en";
 
   const rawSelectedLabel = selected.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" });
@@ -117,7 +146,7 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
               return <div key={`empty-${idx}`} className="min-h-14 sm:min-h-24 border-b border-r border-warm-100 bg-warm-50/50" />;
             }
             const date = new Date(year, month, day);
-            const services = servicesFor(date.getDay());
+            const services = itemsFor(date);
             const isToday = sameDay(date, today);
             const isSelected = sameDay(date, selected);
             return (
