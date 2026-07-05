@@ -49,6 +49,18 @@ export const weeklyServices: WeeklyService[] = [
     category: "culto",
   },
   {
+    id: "svc-lunes-intercesion",
+    title: "Oración e Intercesión",
+    titleEn: "Prayer & Intercession",
+    description: "Toda la iglesia orando e intercediendo unida cada lunes de madrugada. Comienza tu semana en la presencia de Dios.",
+    descriptionEn: "The whole church praying and interceding together every Monday at dawn. Start your week in God's presence.",
+    dayOfWeek: 1,
+    time: "5:00 AM",
+    location: "Zoom",
+    category: "culto",
+    registrationUrl: ZOOM_URL,
+  },
+  {
     id: "svc-martes",
     title: "Estudios Bíblicos",
     titleEn: "Bible Study",
