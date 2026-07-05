@@ -18,6 +18,7 @@ interface CalendarItem {
   locationEn?: string;
   category: ChurchEvent["category"];
   registrationUrl?: string;
+  imageUrl?: string;
 }
 
 interface CalendarDict {
@@ -198,6 +199,16 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
           <div className="space-y-4">
             {selectedServices.map((s) => (
               <article key={s.id} className="bg-white rounded-xl border border-warm-200 p-4">
+                {s.imageUrl && (
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${s.imageUrl}`}
+                    alt={isEn && s.titleEn ? s.titleEn : s.title}
+                    className="w-full rounded-lg mb-3"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                )}
                 <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 ${CATEGORY_COLORS[s.category]}`}>
                   {dict.categories[s.category]}
                 </span>
