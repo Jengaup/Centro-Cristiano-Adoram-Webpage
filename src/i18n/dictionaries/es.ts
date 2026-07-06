@@ -362,6 +362,9 @@ const es = {
     emptyTitle: "Pronto habrá nuevos devocionales",
     emptySubtitle:
       "Vuelve pronto, hay reflexiones en camino.",
+    clearFilters: "Limpiar filtros",
+    noResultsTitle: "No encontramos resultados",
+    noResultsSubtitle: "Intenta con otra búsqueda o limpia los filtros.",
   },
   devotionalPage: {
     backLink: "Todos los devocionales",

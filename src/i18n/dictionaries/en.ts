@@ -360,6 +360,9 @@ const en = {
     minutesRead: "min",
     emptyTitle: "Devotionals coming soon",
     emptySubtitle: "Come back soon, there are reflections on the way.",
+    clearFilters: "Clear filters",
+    noResultsTitle: "No results found",
+    noResultsSubtitle: "Try a different search or clear the filters.",
   },
   devotionalPage: {
     backLink: "All devotionals",

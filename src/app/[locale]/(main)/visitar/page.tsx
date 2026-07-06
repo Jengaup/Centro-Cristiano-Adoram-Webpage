@@ -31,7 +31,7 @@ export default async function VisitPage({ params }: { params: { locale: Locale }
       {/* Hero */}
       <div className="bg-hero-gradient py-24 pt-32 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gold-400 text-xs font-bold tracking-widest uppercase mb-4">{d.heroEyebrow}</p>
+          <p className="text-gold-400 text-xs font-black tracking-[0.25em] uppercase mb-4">{d.heroEyebrow}</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-5 leading-tight">
             {d.heroTitle} <span className="text-gold-400">{d.heroTitleAccent}</span>
           </h1>
@@ -82,7 +82,7 @@ export default async function VisitPage({ params }: { params: { locale: Locale }
                       href={loc.mapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gold-600 hover:text-gold-700 text-sm font-semibold underline underline-offset-2 mt-0.5 inline-block transition-colors"
+                      className="text-gold-600 hover:text-gold-700 text-sm font-semibold underline underline-offset-2 mt-0.5 inline-block transition-colors rounded focus-ring"
                     >
                       {d.openMaps}
                     </a>
@@ -121,10 +121,10 @@ export default async function VisitPage({ params }: { params: { locale: Locale }
                   key={item.title}
                   className="bg-white rounded-2xl border border-warm-200 p-6 shadow-card hover:border-gold-200 hover:shadow-gold transition-all duration-300 group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-warm-50 border border-warm-200 flex items-center justify-center mb-4 group-hover:bg-gold-50 group-hover:border-gold-200 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-warm-50 border border-warm-200 flex items-center justify-center mb-4 group-hover:bg-gold-50 group-hover:border-gold-200 transition-colors">
                     <Icon size={20} className="text-navy-600 group-hover:text-gold-600 transition-colors" />
                   </div>
-                  <h3 className="font-bold text-navy-800 mb-2">{item.title}</h3>
+                  <h3 className="font-serif text-lg font-bold text-navy-900 mb-2">{item.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
                 </div>
               );
@@ -164,7 +164,7 @@ export default async function VisitPage({ params }: { params: { locale: Locale }
           <div className="mt-10 space-y-4">
             {d.faqs.map((faq) => (
               <div key={faq.question} className="bg-white rounded-2xl border border-warm-200 p-6 shadow-card">
-                <h3 className="font-bold text-navy-800 mb-2">{faq.question}</h3>
+                <h3 className="font-serif text-lg font-bold text-navy-900 mb-2">{faq.question}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{faq.answer}</p>
               </div>
             ))}
@@ -180,14 +180,14 @@ export default async function VisitPage({ params }: { params: { locale: Locale }
               href={siteConfig.social.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-lg transition-colors focus-ring-dark w-full sm:w-auto justify-center"
             >
               <MessageCircle size={18} />
               {d.finalWhatsApp}
             </a>
             <Link
               href={`/${params.locale}#oracion`}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-colors focus-ring-dark w-full sm:w-auto justify-center"
             >
               {d.finalPrayer}
               <ArrowRight size={16} />
