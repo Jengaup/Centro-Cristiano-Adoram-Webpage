@@ -2,8 +2,8 @@ import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
   eyebrow?: string;
-  title: string;
-  subtitle?: string;
+  title: React.ReactNode;
+  subtitle?: React.ReactNode;
   centered?: boolean;
   light?: boolean;
   className?: string;
