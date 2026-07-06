@@ -114,7 +114,7 @@ export const specialEvents: ChurchEvent[] = [
     location: "Centro Cristiano Adoram, Lares",
     locationEn: "Centro Cristiano Adoram, Lares",
     category: "conferencia",
-    imageUrl: "/conferencia-matrimonios.jpg",
+    imageUrl: "/conferencia-matrimonios.jpeg",
     isHighlighted: true,
     isFree: true,
   },
