@@ -3,6 +3,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 interface Pillar { title: string; text: string; }
 interface AboutDict {
+  ariaLabel: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -15,15 +16,15 @@ const PILLAR_ICONS = [BookOpen, Target, Eye, Flame];
 
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
-    <section id="nosotros" className="py-24 bg-warm-50" aria-label="Quiénes somos">
+    <section id="nosotros" className="py-20 sm:py-24 bg-warm-50" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader eyebrow={dict.eyebrow} title={dict.title} subtitle={dict.subtitle} />
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {dict.pillars.map((pillar, i) => {
             const Icon = PILLAR_ICONS[i];
             return (
-              <div key={pillar.title} className="relative bg-white rounded-2xl p-8 shadow-card border border-warm-200 group hover:border-gold-300 hover:shadow-gold transition-all duration-300 overflow-hidden">
+              <div key={pillar.title} className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-card border border-warm-200 group hover:border-gold-300 hover:shadow-gold transition-all duration-300 overflow-hidden">
                 {/* Large background number */}
                 <span className="absolute -top-3 -right-1 text-[6.5rem] font-black leading-none select-none pointer-events-none text-warm-100 group-hover:text-gold-50 transition-colors duration-500">
                   {String(i + 1).padStart(2, "0")}

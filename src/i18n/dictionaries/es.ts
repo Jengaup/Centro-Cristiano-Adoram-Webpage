@@ -5,6 +5,7 @@ const es = {
       "Una familia de fe donde la adoración es genuina, la Palabra es viva y hay un lugar para ti. Visítanos, estamos listos para recibirte.",
   },
   nav: {
+    mainNav: "Navegación principal",
     home: "Inicio",
     about: "Nosotros",
     ministries: "Ministerios",
@@ -20,6 +21,7 @@ const es = {
     switchLang: "English",
   },
   hero: {
+    ariaLabel: "Bienvenida",
     eyebrow: "",
     headline1: "Un lugar donde",
     headlineAccent: "el cielo",
@@ -33,6 +35,7 @@ const es = {
     trust3: "Estamos listos para recibirte",
   },
   quickAccess: {
+    ariaLabel: "Acceso rápido",
     schedules: "Horarios",
     schedulesDesc: "Dom 10 AM · Mié 7 PM",
     location: "Ubicación",
@@ -45,6 +48,7 @@ const es = {
     whatsappDesc: "Escríbenos ahora",
   },
   youtube: {
+    ariaLabel: "Transmisión en vivo",
     eyebrow: "Canal Oficial",
     titleLive: "¡Estamos en Vivo!",
     titleFallback: "Últimas Predicaciones",
@@ -59,6 +63,7 @@ const es = {
     shareMessage: "Comparte esta transmisión con tu familia y amigos",
   },
   about: {
+    ariaLabel: "Quiénes somos",
     eyebrow: "Conócenos",
     title: "Una familia de fe auténtica",
     subtitle:
@@ -86,6 +91,7 @@ const es = {
     ],
   },
   pastor: {
+    ariaLabel: "Mensaje del pastor",
     eyebrow: "Mensaje Pastoral",
     title: "Hay un lugar",
     titleAccent: "preparado",
@@ -103,6 +109,7 @@ const es = {
     photoPlaceholderSub: "(Actualiza con foto real)",
   },
   ministries: {
+    ariaLabel: "Ministerios",
     eyebrow: "Ministerios",
     title: "Encuentra tu lugar en el cuerpo",
     subtitle:
@@ -178,6 +185,9 @@ const es = {
     ],
   },
   events: {
+    ariaLabel: "Calendario de eventos",
+    prevMonth: "Mes anterior",
+    nextMonth: "Mes siguiente",
     eyebrow: "Calendario",
     title: "Calendario de Servicios",
     subtitle: "No te pierdas nada. Hay algo especial esperándote cada semana.",
@@ -202,6 +212,7 @@ const es = {
     viewAll: "Ver todas",
   },
   devotional: {
+    ariaLabel: "Devocional destacado",
     eyebrow: "Devocional de la Semana",
     title: "Alimenta tu alma diariamente",
     subtitle:
@@ -211,6 +222,7 @@ const es = {
     minutesRead: "min",
   },
   testimonies: {
+    ariaLabel: "Testimonios",
     eyebrow: "Testimonios",
     title: "Vidas transformadas por Dios",
     subtitle:
@@ -220,6 +232,7 @@ const es = {
     shareLink: "Escríbenos, queremos escucharte",
   },
   planVisit: {
+    ariaLabel: "Planifica tu visita",
     eyebrow: "Primera Visita",
     title: "Estamos listos",
     titleAccent: "para recibirte",
@@ -266,6 +279,8 @@ const es = {
     ctaWhatsApp: "Pregúntanos por WhatsApp",
   },
   prayer: {
+    ariaLabel: "Petición de oración",
+    successAriaLabel: "Petición recibida",
     eyebrow: "Oración",
     title: "Queremos orar por ti",
     subtitle:
@@ -307,6 +322,7 @@ const es = {
     sendAnother: "Enviar otra petición",
   },
   footer: {
+    viewOnMap: "Ver en mapa",
     tagline:
       "Una familia de fe apostólica comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
     schedulesTitle: "Horarios de Servicio",

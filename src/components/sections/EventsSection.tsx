@@ -3,6 +3,9 @@ import MonthCalendar from "@/components/sections/MonthCalendar";
 import type { ChurchEvent } from "@/data/events";
 
 interface EventsDict {
+  ariaLabel: string;
+  prevMonth: string;
+  nextMonth: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -14,7 +17,7 @@ interface EventsDict {
 
 export default function EventsSection({ locale, dict }: { locale: string; dict: EventsDict }) {
   return (
-    <section id="eventos" className="py-24 bg-white" aria-label="Calendario de eventos">
+    <section id="eventos" className="py-20 sm:py-24 bg-white" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <SectionHeader eyebrow={dict.eyebrow} title={dict.title} subtitle={dict.subtitle} centered={false} />
@@ -22,6 +25,8 @@ export default function EventsSection({ locale, dict }: { locale: string; dict: 
         <MonthCalendar
           locale={locale}
           dict={{
+            prevMonth: dict.prevMonth,
+            nextMonth: dict.nextMonth,
             today: dict.today,
             noEventsDay: dict.noEventsDay,
             joinZoom: dict.joinZoom,

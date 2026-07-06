@@ -127,7 +127,7 @@ export default async function DevotionalsPage({ params }: { params: { locale: Lo
                           </div>
                           <div>
                             <p className="text-xs font-semibold text-navy-700">{devotional.authorName}</p>
-                            <p className="text-xs text-warm-500">{formatDate(devotional.publishDate, { day: "numeric", month: "short" })}</p>
+                            <p className="text-xs text-warm-500">{formatDate(devotional.publishDate, { day: "numeric", month: "short" }, params.locale)}</p>
                           </div>
                         </div>
                         {devotional.readingTimeMinutes && (

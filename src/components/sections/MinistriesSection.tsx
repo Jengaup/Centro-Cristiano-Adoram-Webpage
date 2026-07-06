@@ -11,6 +11,7 @@ interface MinistryItem {
 }
 
 interface MinistriesDict {
+  ariaLabel: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -28,15 +29,15 @@ interface Props {
 
 export default function MinistriesSection({ locale, dict }: Props) {
   return (
-    <section id="ministerios" className="py-24 bg-warm-50" aria-label="Ministerios">
+    <section id="ministerios" className="py-20 sm:py-24 bg-warm-50" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader eyebrow={dict.eyebrow} title={dict.title} subtitle={dict.subtitle} />
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {ministries.map((ministry, i) => {
             const item = dict.items[i] ?? { name: ministry.name, tagline: ministry.tagline, description: ministry.description, meetingTime: ministry.meetingTime ?? "" };
             return (
-              <div key={ministry.id} className={`relative rounded-2xl border p-6 bg-white transition-all duration-300 hover:shadow-warm hover:-translate-y-1.5 group cursor-default overflow-hidden ${ministry.bgColor}`}>
+              <div key={ministry.id} className={`relative rounded-2xl border p-6 sm:p-8 bg-white shadow-card transition-all duration-300 hover:shadow-gold group cursor-default overflow-hidden ${ministry.bgColor}`}>
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white/60 via-transparent to-transparent pointer-events-none" />
                 <div className="relative">
@@ -66,7 +67,7 @@ export default function MinistriesSection({ locale, dict }: Props) {
 
         <p className="mt-12 text-center text-slate-500 text-sm">
           {dict.contactText}{" "}
-          <a href={`/${locale}#oracion`} className="text-gold-600 hover:text-gold-700 font-semibold underline underline-offset-2 transition-colors">{dict.contactLink}</a>
+          <a href={`/${locale}#oracion`} className="text-gold-600 hover:text-gold-700 font-semibold underline underline-offset-2 transition-colors rounded focus-ring">{dict.contactLink}</a>
           {" "}{dict.contactEnd}
         </p>
       </div>

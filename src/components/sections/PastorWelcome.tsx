@@ -1,8 +1,10 @@
 import { Quote } from "lucide-react";
+import SectionHeader from "@/components/ui/SectionHeader";
 import { siteConfig } from "@/data/config";
 import type { Locale } from "@/i18n/config";
 
 interface PastorDict {
+  ariaLabel: string;
   eyebrow: string;
   title: string;
   titleAccent: string;
@@ -24,9 +26,9 @@ interface Props {
 
 export default function PastorWelcome({ locale, dict }: Props) {
   return (
-    <section id="pastor" className="py-24 bg-white" aria-label="Mensaje del pastor">
+    <section id="pastor" className="py-20 sm:py-24 bg-white overflow-x-clip" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Pastor photo */}
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0 shadow-navy">
@@ -46,12 +48,18 @@ export default function PastorWelcome({ locale, dict }: Props) {
 
           {/* Message */}
           <div>
-            <p className="text-gold-600 text-xs font-bold tracking-widest uppercase mb-4">{dict.eyebrow}</p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
-              {dict.title}{" "}
-              <span className="text-gold-500">{dict.titleAccent}</span>{" "}
-              {dict.titleEnd}
-            </h2>
+            <SectionHeader
+              centered={false}
+              eyebrow={dict.eyebrow}
+              title={
+                <>
+                  {dict.title}{" "}
+                  <span className="text-gold-500">{dict.titleAccent}</span>{" "}
+                  {dict.titleEnd}
+                </>
+              }
+              className="mb-6"
+            />
             <div className="relative">
               <Quote size={40} className="absolute -top-2 -left-4 text-gold-200 fill-gold-100" />
               <div className="pl-6 space-y-4 text-slate-600 leading-relaxed text-base sm:text-lg">
@@ -67,7 +75,10 @@ export default function PastorWelcome({ locale, dict }: Props) {
             </div>
             <div className="mt-8 bg-warm-50 rounded-xl p-4 border border-warm-200">
               <p className="text-navy-700 text-sm font-semibold text-center mb-1">{dict.firstVisitTeaser}</p>
-              <a href={`/${locale}/visitar`} className="block text-center text-gold-600 hover:text-gold-700 text-sm font-bold transition-colors underline underline-offset-2">
+              <a
+                href={`/${locale}/visitar`}
+                className="block text-center text-gold-600 hover:text-gold-700 text-sm font-bold transition-colors underline underline-offset-2 rounded focus-ring"
+              >
                 {dict.firstVisitLink}
               </a>
             </div>

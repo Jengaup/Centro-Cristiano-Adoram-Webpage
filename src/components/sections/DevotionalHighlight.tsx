@@ -7,6 +7,7 @@ import { formatDate } from "@/lib/utils";
 import type { Locale } from "@/i18n/config";
 
 interface DevotionalDict {
+  ariaLabel: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -30,19 +31,19 @@ export default function DevotionalHighlight({ locale, dict }: Props) {
   const devVerse  = isEn && devotional.scriptureTextEn ? devotional.scriptureTextEn : devotional.scriptureText;
 
   return (
-    <section id="devocional" className="py-24 bg-navy-gradient text-white" aria-label="Devocional destacado">
+    <section id="devocional" className="py-20 sm:py-24 bg-navy-gradient text-white" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <SectionHeader eyebrow={dict.eyebrow} title={dict.title} subtitle={dict.subtitle} light centered={false} />
-            <Link href={`/${locale}/devocionales`} className="mt-8 inline-flex items-center gap-2 text-gold-300 hover:text-gold-200 font-semibold text-sm transition-colors">
+            <Link href={`/${locale}/devocionales`} className="mt-8 inline-flex items-center gap-2 text-gold-300 hover:text-gold-200 font-semibold text-sm transition-colors rounded focus-ring-dark">
               {dict.exploreAll} <ArrowRight size={14} />
             </Link>
           </div>
 
           <div>
             <Link href={`/${locale}/devocionales/${devotional.slug}`} className="group block">
-              <article className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-gold-400/40 transition-all duration-300 overflow-hidden">
+              <article className="relative bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 sm:p-8 hover:bg-white/15 hover:border-gold-400/40 transition-all duration-300 overflow-hidden">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-gold-500/5 via-transparent to-transparent pointer-events-none" />
                 <div className="flex flex-wrap gap-2 mb-4">
                   {devotional.tags.slice(0, 2).map((tag) => (
@@ -64,7 +65,7 @@ export default function DevotionalHighlight({ locale, dict }: Props) {
                     </div>
                     <div>
                       <p className="text-white text-xs font-semibold">{devotional.authorName}</p>
-                      <p className="text-navy-300 text-xs">{formatDate(devotional.publishDate)}</p>
+                      <p className="text-navy-300 text-xs">{formatDate(devotional.publishDate, undefined, locale)}</p>
                     </div>
                   </div>
                   {devotional.readingTimeMinutes && (

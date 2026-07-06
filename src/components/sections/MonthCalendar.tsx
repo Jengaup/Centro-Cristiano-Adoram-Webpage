@@ -22,6 +22,8 @@ interface CalendarItem {
 }
 
 interface CalendarDict {
+  prevMonth: string;
+  nextMonth: string;
   today: string;
   noEventsDay: string;
   joinZoom: string;
@@ -112,21 +114,21 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
           <div className="flex items-center gap-1.5">
             <button
               onClick={goToday}
-              className="px-3 py-1.5 rounded-lg text-xs font-bold text-gold-400 hover:text-navy-900 hover:bg-gold-400 border border-gold-400/50 transition-colors"
+              className="px-3 py-1.5 rounded-lg text-xs font-bold text-gold-400 hover:text-navy-900 hover:bg-gold-400 border border-gold-400/50 transition-colors focus-ring-dark"
             >
               {dict.today}
             </button>
             <button
               onClick={() => goMonth(-1)}
-              aria-label="Mes anterior"
-              className="p-1.5 rounded-lg text-navy-200 hover:text-white hover:bg-white/10 transition-colors"
+              aria-label={dict.prevMonth}
+              className="p-1.5 rounded-lg text-navy-200 hover:text-white hover:bg-white/10 transition-colors focus-ring-dark"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={() => goMonth(1)}
-              aria-label="Mes siguiente"
-              className="p-1.5 rounded-lg text-navy-200 hover:text-white hover:bg-white/10 transition-colors"
+              aria-label={dict.nextMonth}
+              className="p-1.5 rounded-lg text-navy-200 hover:text-white hover:bg-white/10 transition-colors focus-ring-dark"
             >
               <ChevronRight size={18} />
             </button>
@@ -144,7 +146,7 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
         <div className="grid grid-cols-7">
           {cells.map((day, idx) => {
             if (day === null) {
-              return <div key={`empty-${idx}`} className="min-h-14 sm:min-h-24 border-b border-r border-warm-100 bg-warm-50/50" />;
+              return <div key={`empty-${idx}`} className="min-h-16 sm:min-h-24 border-b border-r border-warm-100 bg-warm-50/50" />;
             }
             const date = new Date(year, month, day);
             const services = itemsFor(date);
@@ -154,7 +156,9 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
               <button
                 key={day}
                 onClick={() => setSelected(date)}
-                className={`min-h-14 sm:min-h-24 border-b border-r border-warm-100 p-1 sm:p-1.5 text-left align-top transition-colors ${
+                aria-label={date.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" })}
+                aria-pressed={isSelected}
+                className={`min-h-16 sm:min-h-24 border-b border-r border-warm-100 p-1 sm:p-1.5 text-left align-top transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-500 ${
                   isSelected ? "bg-gold-50 ring-2 ring-inset ring-gold-400" : "hover:bg-warm-50"
                 }`}
               >
@@ -234,7 +238,7 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
                     href={s.registrationUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white text-xs font-bold shadow-md hover:shadow-lg transition-all"
+                    className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-burgundy-500 hover:bg-burgundy-600 text-white text-xs font-bold shadow-md hover:shadow-lg transition-all focus-ring"
                   >
                     <Video size={13} />
                     {dict.joinZoom}
