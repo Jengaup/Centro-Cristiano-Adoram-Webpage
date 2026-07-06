@@ -5,6 +5,7 @@ const en = {
       "A faith family where worship is genuine, the Word is alive, and there is a place for you. Visit us, we are ready to receive you.",
   },
   nav: {
+    mainNav: "Main navigation",
     home: "Home",
     about: "About",
     ministries: "Ministries",
@@ -20,6 +21,7 @@ const en = {
     switchLang: "Español",
   },
   hero: {
+    ariaLabel: "Welcome",
     eyebrow: "",
     headline1: "A place where",
     headlineAccent: "heaven",
@@ -33,6 +35,7 @@ const en = {
     trust3: "We are ready to receive you",
   },
   quickAccess: {
+    ariaLabel: "Quick access",
     schedules: "Schedules",
     schedulesDesc: "Sun 10 AM · Wed 7 PM",
     location: "Location",
@@ -45,6 +48,7 @@ const en = {
     whatsappDesc: "Message us now",
   },
   youtube: {
+    ariaLabel: "Live stream",
     eyebrow: "Official Channel",
     titleLive: "We're Live!",
     titleFallback: "Latest Sermons",
@@ -59,6 +63,7 @@ const en = {
     shareMessage: "Share this broadcast with your family and friends",
   },
   about: {
+    ariaLabel: "Who we are",
     eyebrow: "Get to Know Us",
     title: "An authentic faith family",
     subtitle:
@@ -86,6 +91,7 @@ const en = {
     ],
   },
   pastor: {
+    ariaLabel: "Pastor's message",
     eyebrow: "Pastoral Message",
     title: "There is a place",
     titleAccent: "prepared",
@@ -103,6 +109,7 @@ const en = {
     photoPlaceholderSub: "(Update with real photo)",
   },
   ministries: {
+    ariaLabel: "Ministries",
     eyebrow: "Ministries",
     title: "Find your place in the body",
     subtitle:
@@ -169,21 +176,24 @@ const en = {
         meetingTime: "Check schedule",
       },
       {
-        name: "Community Outreach",
-        tagline: "God's love in action",
+        name: "Operación Amor",
+        tagline: "Evangelism and compassion on the streets",
         description:
-          "Volunteers who reach out to the community with practical love: food distribution, hospital visits, and support for families in need.",
+          "An evangelism ministry that takes God's love to the streets: sharing the gospel and feeding the homeless and those struggling with addiction.",
         meetingTime: "Monthly outreach events",
       },
     ],
   },
   events: {
+    ariaLabel: "Events calendar",
+    prevMonth: "Previous month",
+    nextMonth: "Next month",
     eyebrow: "Calendar",
-    title: "Upcoming Events",
-    subtitle: "Don't miss anything. There is something special waiting for you.",
-    viewAll: "View all",
-    free: "Free",
-    featured: "Featured",
+    title: "Service Calendar",
+    subtitle: "Don't miss anything. There is something special waiting for you every week.",
+    today: "Today",
+    noEventsDay: "No services scheduled on this day.",
+    joinZoom: "Join Zoom",
     noEvents: "No upcoming events scheduled.",
     categories: {
       culto: "Service",
@@ -201,6 +211,7 @@ const en = {
     viewAll: "View all",
   },
   devotional: {
+    ariaLabel: "Featured devotional",
     eyebrow: "Devotional of the Week",
     title: "Feed your soul daily",
     subtitle:
@@ -210,6 +221,7 @@ const en = {
     minutesRead: "min",
   },
   testimonies: {
+    ariaLabel: "Testimonies",
     eyebrow: "Testimonies",
     title: "Lives transformed by God",
     subtitle:
@@ -219,6 +231,7 @@ const en = {
     shareLink: "Write to us, we want to hear you",
   },
   planVisit: {
+    ariaLabel: "Plan your visit",
     eyebrow: "First Visit",
     title: "We are ready",
     titleAccent: "to receive you",
@@ -265,6 +278,8 @@ const en = {
     ctaWhatsApp: "Ask Us on WhatsApp",
   },
   prayer: {
+    ariaLabel: "Prayer request",
+    successAriaLabel: "Request received",
     eyebrow: "Prayer",
     title: "We want to pray for you",
     subtitle:
@@ -306,6 +321,7 @@ const en = {
     sendAnother: "Send another request",
   },
   footer: {
+    viewOnMap: "View on map",
     tagline:
       "An apostolic faith family committed to worshiping God, growing in His Word, and transforming our communities.",
     schedulesTitle: "Service Times",

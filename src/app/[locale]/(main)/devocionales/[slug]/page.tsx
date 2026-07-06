@@ -94,7 +94,7 @@ export default async function DevotionalPage({ params }: Props) {
               </div>
               <div>
                 <p className="font-bold text-navy-800 text-sm">{devotional.authorName}</p>
-                <p className="text-warm-500 text-xs">{formatDate(devotional.publishDate)}</p>
+                <p className="text-warm-500 text-xs">{formatDate(devotional.publishDate, undefined, params.locale)}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 flex-wrap">

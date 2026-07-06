@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --navy-dark: #0F1B2D;
-    --navy: #1B3A5C;
-    --gold: #C9A84C;
-    --warm-white: #FAFAF8;
-  }
-
   * {
     box-sizing: border-box;
   }
@@ -61,6 +54,17 @@
   }
 }
 
+@layer components {
+  /* Anillo de foco estándar del sitio: dorado, visible solo con teclado */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2;
+  }
+
+  .focus-ring-dark {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -72,6 +76,22 @@
 
   .animate-slide-up {
     animation: slideUp 0.7s ease-out forwards;
+  }
+}
+
+/* Con animaciones reducidas, el contenido animado debe ser visible de inmediato
+   (el Hero arranca en opacity-0 esperando la animación) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
 

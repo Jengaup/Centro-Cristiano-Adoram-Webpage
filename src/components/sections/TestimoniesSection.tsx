@@ -4,6 +4,7 @@ import { testimonies } from "@/data/testimonies";
 import type { Locale } from "@/i18n/config";
 
 interface TestimoniesDict {
+  ariaLabel: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -19,13 +20,13 @@ interface Props {
 
 export default function TestimoniesSection({ locale, dict }: Props) {
   return (
-    <section id="testimonios" className="py-24 bg-warm-50" aria-label="Testimonios">
+    <section id="testimonios" className="py-20 sm:py-24 bg-warm-50" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader eyebrow={dict.eyebrow} title={dict.title} subtitle={dict.subtitle} />
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {testimonies.map((testimony) => (
-            <article key={testimony.id} className="relative bg-white rounded-2xl p-8 shadow-card border border-warm-200 hover:border-gold-200 hover:shadow-gold transition-all duration-300 group overflow-hidden">
+            <article key={testimony.id} className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-card border border-warm-200 hover:border-gold-200 hover:shadow-gold transition-all duration-300 group overflow-hidden">
               {/* Decorative quote mark background */}
               <Quote size={80} className="absolute -top-2 -right-2 text-warm-100 fill-warm-100 group-hover:text-gold-50 group-hover:fill-gold-50 transition-colors duration-500 pointer-events-none" />
               <div className="relative">
@@ -55,7 +56,7 @@ export default function TestimoniesSection({ locale, dict }: Props) {
 
         <div className="mt-12 text-center">
           <p className="text-slate-500 text-base mb-4">{dict.shareTitle}</p>
-          <a href={`/${locale}#oracion`} className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-bold text-sm underline underline-offset-2 transition-colors">
+          <a href={`/${locale}#oracion`} className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-bold text-sm underline underline-offset-2 transition-colors rounded focus-ring">
             {dict.shareLink}
           </a>
         </div>

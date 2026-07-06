@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Shirt, Smile, Baby, Car, Clock, ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
@@ -7,6 +6,7 @@ import type { Locale } from "@/i18n/config";
 
 interface PlanVisitItem { title: string; description: string; }
 interface PlanVisitDict {
+  ariaLabel: string;
   eyebrow: string;
   title: string;
   titleAccent: string;
@@ -26,21 +26,21 @@ interface Props { locale: Locale; dict: PlanVisitDict; }
 
 export default function PlanVisitSection({ locale, dict }: Props) {
   return (
-    <section id="visitar" className="py-24 bg-white" aria-label="Planifica tu visita">
+    <section id="visitar" className="py-20 sm:py-24 bg-white" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <SectionHeader eyebrow={dict.eyebrow} title={`${dict.title} ${dict.titleAccent}`} subtitle={dict.subtitle} centered={false} />
+            <SectionHeader eyebrow={dict.eyebrow} title={<>{dict.title} <span className="text-gold-500">{dict.titleAccent}</span></>} subtitle={dict.subtitle} centered={false} />
             <div className="mt-10 space-y-5">
               {dict.items.map((item, i) => {
                 const Icon = ITEM_ICONS[i];
                 return (
                   <div key={item.title} className="flex items-start gap-4 group">
-                    <div className="w-10 h-10 rounded-xl bg-warm-100 border border-warm-200 flex items-center justify-center shrink-0 group-hover:bg-gold-50 group-hover:border-gold-200 transition-colors">
-                      <Icon size={18} className="text-navy-600 group-hover:text-gold-600 transition-colors" />
+                    <div className="w-12 h-12 rounded-xl bg-warm-100 border border-warm-200 flex items-center justify-center shrink-0 group-hover:bg-gold-50 group-hover:border-gold-200 transition-colors">
+                      <Icon size={20} className="text-navy-600 group-hover:text-gold-600 transition-colors" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-navy-800 text-sm mb-1">{item.title}</h3>
+                      <h3 className="font-serif text-base font-bold text-navy-900 mb-1">{item.title}</h3>
                       <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
                     </div>
                   </div>
@@ -48,22 +48,18 @@ export default function PlanVisitSection({ locale, dict }: Props) {
               })}
             </div>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link href={`/${locale}/visitar`}>
-                <Button variant="gold" size="lg" className="group">
-                  {dict.ctaVisit}
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-              <a href={siteConfig.social.whatsapp} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">
-                  <MessageCircle size={16} />
-                  {dict.ctaWhatsApp}
-                </Button>
-              </a>
+              <Button href={`/${locale}/visitar`} variant="gold" size="lg" className="group w-full sm:w-auto">
+                {dict.ctaVisit}
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button href={siteConfig.social.whatsapp} external variant="outline" size="lg" className="w-full sm:w-auto">
+                <MessageCircle size={16} />
+                {dict.ctaWhatsApp}
+              </Button>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-navy-900 to-navy-800 rounded-2xl p-8 text-white shadow-navy">
+          <div className="bg-gradient-to-br from-navy-900 to-navy-800 rounded-2xl p-6 sm:p-8 text-white shadow-navy">
             <h3 className="font-serif text-2xl font-bold mb-2">{dict.checklistTitle}</h3>
             <p className="text-navy-200 text-sm mb-7">{dict.checklistSubtitle}</p>
             <ul className="space-y-4">

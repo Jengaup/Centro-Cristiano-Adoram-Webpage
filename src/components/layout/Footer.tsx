@@ -5,6 +5,7 @@ import { siteConfig } from "@/data/config";
 import type { Locale } from "@/i18n/config";
 
 interface FooterDict {
+  viewOnMap: string;
   tagline: string;
   schedulesTitle: string;
   navigationTitle: string;
@@ -131,7 +132,7 @@ export default function Footer({ locale, dict }: Props) {
                       <p className="text-gold-400 text-xs italic mt-0.5">{loc.scheduleNote}</p>
                     )}
                     <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-navy-300 text-xs hover:text-gold-300 transition-colors underline underline-offset-2">
-                      Ver en mapa →
+                      {dict.viewOnMap} →
                     </a>
                   </div>
                 </li>

@@ -1,9 +1,10 @@
-import Link from "next/link";
 import { ArrowRight, Calendar, PlayCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { siteConfig } from "@/data/config";
 import type { Locale } from "@/i18n/config";
 
 interface HeroDict {
+  ariaLabel: string;
   eyebrow: string;
   headline1: string;
   headlineAccent: string;
@@ -23,7 +24,7 @@ interface Props {
 
 export default function HeroSection({ locale, dict }: Props) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient" aria-label="Bienvenida">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient" aria-label={dict.ariaLabel}>
       {/* Background texture */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -46,9 +47,9 @@ export default function HeroSection({ locale, dict }: Props) {
         <div className="w-[800px] h-[800px] rounded-full border border-gold-500/[0.06]" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32 pt-40">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24 pt-28 sm:py-32 sm:pt-40">
         {dict.eyebrow && (
-          <p className="animate-fade-in text-gold-400 text-xs sm:text-sm font-black tracking-[0.35em] uppercase mb-6">
+          <p className="animate-fade-in text-gold-400 text-xs sm:text-sm font-black tracking-[0.25em] uppercase mb-6">
             {dict.eyebrow}
           </p>
         )}
@@ -66,20 +67,21 @@ export default function HeroSection({ locale, dict }: Props) {
           {dict.subheadline}
         </p>
         <div className="animate-slide-up flex flex-col sm:flex-row items-center justify-center gap-4 [animation-delay:300ms] opacity-0 [animation-fill-mode:forwards]">
-          <Link href={`/${locale}/visitar`}>
-            <Button variant="gold" size="xl" className="group w-full sm:w-auto">
-              <Calendar size={20} className="shrink-0" />
-              {dict.cta1}
-              <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
-          <a
-            href="#transmision"
-            className="inline-flex items-center gap-2.5 px-8 py-4 text-base font-semibold text-white border border-white/25 rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 w-full sm:w-auto justify-center"
+          <Button href={`/${locale}/visitar`} variant="gold" size="xl" className="group w-full sm:w-auto">
+            <Calendar size={20} className="shrink-0" />
+            {dict.cta1}
+            <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
+          </Button>
+          <Button
+            href={siteConfig.social.youtube}
+            external
+            variant="outlineLight"
+            size="xl"
+            className="w-full sm:w-auto"
           >
             <PlayCircle size={20} className="text-gold-400 shrink-0" />
             {dict.cta2}
-          </a>
+          </Button>
         </div>
 
         {/* Trust badges */}
@@ -93,8 +95,8 @@ export default function HeroSection({ locale, dict }: Props) {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* Scroll indicator (oculto en móvil: colisiona con contenido en pantallas cortas) */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden sm:flex" aria-hidden="true">
         <div className="w-6 h-10 rounded-full border border-white/20 flex items-start justify-center pt-2">
           <div className="w-1 h-2.5 rounded-full bg-gold-400 animate-pulse-slow" />
         </div>

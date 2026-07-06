@@ -6,6 +6,8 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 
 interface PrayerDict {
+  ariaLabel: string;
+  successAriaLabel: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -91,15 +93,15 @@ export default function PrayerRequestSection({ dict }: { dict: PrayerDict }) {
 
   if (submitted) {
     return (
-      <section id="oracion" className="py-24 bg-warm-50" aria-label="Petición recibida">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section id="oracion" className="py-20 sm:py-24 bg-warm-50" aria-label={dict.successAriaLabel}>
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center" role="status" aria-live="polite">
           <div className="w-20 h-20 rounded-full bg-emerald-100 border-4 border-emerald-200 flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 size={36} className="text-emerald-600" />
           </div>
           <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">{dict.successTitle}</h2>
           <p className="text-slate-600 text-lg leading-relaxed mb-6">{dict.successMessage}</p>
           <p className="text-gold-600 font-serif text-xl italic">{dict.successScripture}</p>
-          <button onClick={() => { setSubmitted(false); setForm(initialState); }} className="mt-8 text-navy-600 hover:text-navy-800 font-semibold text-sm underline underline-offset-2 transition-colors">
+          <button onClick={() => { setSubmitted(false); setForm(initialState); }} className="mt-8 text-navy-600 hover:text-navy-800 font-semibold text-sm underline underline-offset-2 transition-colors rounded focus-ring">
             {dict.sendAnother}
           </button>
         </div>
@@ -110,9 +112,9 @@ export default function PrayerRequestSection({ dict }: { dict: PrayerDict }) {
   const bullets = [dict.confidentiality, dict.intercessors, dict.followUp];
 
   return (
-    <section id="oracion" className="py-24 bg-warm-50" aria-label="Petición de oración">
+    <section id="oracion" className="py-20 sm:py-24 bg-warm-50" aria-label={dict.ariaLabel}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <SectionHeader eyebrow={dict.eyebrow} title={dict.title} subtitle={dict.subtitle} centered={false} />
             <div className="mt-10 space-y-6">
@@ -132,7 +134,7 @@ export default function PrayerRequestSection({ dict }: { dict: PrayerDict }) {
             </blockquote>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-card border border-warm-200 p-8">
+          <div className="bg-white rounded-2xl shadow-card border border-warm-200 p-6 sm:p-8">
             <h3 className="font-serif text-xl font-bold text-navy-900 mb-1">{dict.formTitle}</h3>
             <p className="text-slate-500 text-sm mb-6">{dict.formSubtitle}</p>
             <form onSubmit={handleSubmit} className="space-y-5">
