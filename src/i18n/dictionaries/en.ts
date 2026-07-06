@@ -169,10 +169,10 @@ const en = {
         meetingTime: "Check schedule",
       },
       {
-        name: "Community Outreach",
-        tagline: "God's love in action",
+        name: "Operación Amor",
+        tagline: "Evangelism and compassion on the streets",
         description:
-          "Volunteers who reach out to the community with practical love: food distribution, hospital visits, and support for families in need.",
+          "An evangelism ministry that takes God's love to the streets: sharing the gospel and feeding the homeless and those struggling with addiction.",
         meetingTime: "Monthly outreach events",
       },
     ],

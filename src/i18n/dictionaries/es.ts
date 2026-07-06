@@ -169,10 +169,10 @@ const es = {
         meetingTime: "Consultar horario",
       },
       {
-        name: "Alcance Comunitario",
-        tagline: "El amor de Dios en acción",
+        name: "Operación Amor",
+        tagline: "Evangelismo y compasión en las calles",
         description:
-          "Voluntarios que salen a la comunidad con amor práctico: distribución de alimentos, visitas hospitalarias, apoyo a familias necesitadas.",
+          "Ministerio de evangelismo que lleva el amor de Dios a las calles: comparte el evangelio y alimenta a personas sin hogar y en adicción.",
         meetingTime: "Eventos mensuales de alcance",
       },
     ],
