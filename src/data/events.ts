@@ -104,6 +104,22 @@ export const weeklyServices: WeeklyService[] = [
 // Eventos especiales de una sola vez; se muestran en el calendario en su fecha exacta
 export const specialEvents: ChurchEvent[] = [
   {
+    id: "evt-pasadia-2026-07",
+    title: "Pasadía: Verano Familiar Adoram 2026",
+    titleEn: "Family Beach Day: Adoram Family Summer 2026",
+    description: "Bajo el sol de su amor: disfrutando juntos las maravillas de Dios. Pasadía familiar de la iglesia. \"Mirad cuán bueno y cuán delicioso es habitar los hermanos juntos en armonía\" (Salmo 133:1).",
+    descriptionEn: "Under the sun of His love: enjoying God's wonders together. Church family beach day. \"How good and pleasant it is when God's people live together in unity!\" (Psalm 133:1).",
+    date: "2026-07-18",
+    time: "8:00 AM",
+    endTime: "3:00 PM",
+    location: "Balneario La Monserrate, Luquillo, P.R.",
+    locationEn: "La Monserrate Beach, Luquillo, P.R.",
+    category: "comunidad",
+    imageUrl: "/Pasadia.jpeg",
+    isHighlighted: true,
+    isFree: true,
+  },
+  {
     id: "evt-matrimonios-2026-08",
     title: "Conferencia de Matrimonios",
     titleEn: "Marriage Conference",
