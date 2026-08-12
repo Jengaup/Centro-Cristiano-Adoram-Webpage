@@ -239,11 +239,13 @@ export default function Navbar({ locale, dict }: Props) {
       </nav>
 
       {/* Mobile menu: siempre montado para animar apertura/cierre;
+          absolute para no ocupar espacio dentro del header fijo cuando está cerrado
+          (visibility oculta pero conserva layout, y el header pintaría ese espacio);
           visibility mantiene los links fuera del orden de tabulación cuando está cerrado */}
       <div
         id="mobile-menu"
         className={cn(
-          "lg:hidden bg-navy-950/98 backdrop-blur-md border-t border-white/10 shadow-navy transition-all duration-300 ease-out",
+          "lg:hidden absolute top-full left-0 right-0 bg-navy-950/98 backdrop-blur-md border-t border-white/10 shadow-navy transition-all duration-300 ease-out",
           mobileOpen
             ? "opacity-100 translate-y-0 visible"
             : "opacity-0 -translate-y-2 invisible pointer-events-none"
