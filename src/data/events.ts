@@ -104,6 +104,21 @@ export const weeklyServices: WeeklyService[] = [
 // Eventos especiales de una sola vez; se muestran en el calendario en su fecha exacta
 export const specialEvents: ChurchEvent[] = [
   {
+    id: "evt-dia-clamor-2026-10",
+    title: "Día de Clamor en Camuy",
+    titleEn: "Day of Crying Out in Camuy",
+    description: "Vamos a clamar unidos como el pueblo de Dios. Adoración con los Apóstoles Juan Alberto Martínez y Wendy Ortiz; prédica por Josué González. Coordinador: Richard Rodríguez, (939) 459-3451. \"Si se humillare mi pueblo... yo oiré desde los cielos, y perdonaré sus pecados, y sanaré su tierra\" (2 Crónicas 7:14). ¡No faltes, te esperamos!",
+    descriptionEn: "Let us cry out together as the people of God. Worship with Apostles Juan Alberto Martínez and Wendy Ortiz; preaching by Josué González. Coordinator: Richard Rodríguez, (939) 459-3451. \"If my people humble themselves... I will hear from heaven, forgive their sin, and heal their land\" (2 Chronicles 7:14). Don't miss it!",
+    date: "2026-10-24",
+    time: "6:00 PM",
+    location: "Parque de Zanjas, Camuy",
+    locationEn: "Parque de Zanjas, Camuy",
+    category: "especial",
+    imageUrl: "/dia-de-clamor.jpeg",
+    isHighlighted: true,
+    isFree: true,
+  },
+  {
     id: "evt-atardecer-valle-2026-08",
     title: "Un Atardecer en el Valle con Jesús",
     titleEn: "A Sunset in the Valley with Jesus",
