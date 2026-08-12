@@ -104,6 +104,21 @@ export const weeklyServices: WeeklyService[] = [
 // Eventos especiales de una sola vez; se muestran en el calendario en su fecha exacta
 export const specialEvents: ChurchEvent[] = [
   {
+    id: "evt-atardecer-valle-2026-08",
+    title: "Un Atardecer en el Valle con Jesús",
+    titleEn: "A Sunset in the Valley with Jesus",
+    description: "Un tiempo en la presencia de Dios en el valle, junto al ministerio Yo Danzo para El Rey. Invitados: Centro Cristiano Adoram, los Apóstoles Juan A. Martínez y Wendy Ortiz, y el Ministerio de Danza Chayil. Libre de costo. Trae tu silla de playa o portátil. Registro llamando al (787) 646-9932.",
+    descriptionEn: "A time in God's presence in the valley, with the Yo Danzo para El Rey ministry. Guests: Centro Cristiano Adoram, Apostles Juan A. Martínez and Wendy Ortiz, and the Danza Chayil Ministry. Free of charge. Bring your beach or folding chair. Register by calling (787) 646-9932.",
+    date: "2026-08-22",
+    time: "3:00 PM",
+    location: "Castillo Labadie, Moca",
+    locationEn: "Castillo Labadie, Moca",
+    category: "especial",
+    imageUrl: "/atardecer-valle.jpeg",
+    isHighlighted: true,
+    isFree: true,
+  },
+  {
     id: "evt-pasadia-2026-07",
     title: "Pasadía: Verano Familiar Adoram 2026",
     titleEn: "Family Beach Day: Adoram Family Summer 2026",

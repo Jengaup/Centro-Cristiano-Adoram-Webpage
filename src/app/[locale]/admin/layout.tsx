@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     default: "Panel de Administración | Adoram",
     template: "%s | Admin Adoram",
   },
+  // El panel es una demo interna: fuera de buscadores (más fuerte que robots.txt)
+  robots: { index: false, follow: false },
 };
 
 export function generateStaticParams() {

@@ -41,6 +41,7 @@ const csp = [
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self' https://formsubmit.co",
+  "upgrade-insecure-requests",
 ].join("; ");
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -49,6 +50,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta httpEquiv="Content-Security-Policy" content={csp} />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
+        {/* Anti-clickjacking: GitHub Pages no permite el header X-Frame-Options,
+            este fallback evita que el sitio se cargue dentro de un iframe ajeno */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "if(self!==top){try{top.location=self.location}catch(e){document.documentElement.style.display='none'}}",
+          }}
+        />
       </head>
       <body className="font-sans min-h-screen flex flex-col">{children}</body>
     </html>

@@ -147,6 +147,7 @@ export default function DevotionalList({
                       <Link
                         href={`/devocionales/${devotional.slug}`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="p-1.5 rounded-lg text-warm-500 hover:text-navy-600 hover:bg-warm-100 transition-colors"
                         title="Ver devocional"
                       >
