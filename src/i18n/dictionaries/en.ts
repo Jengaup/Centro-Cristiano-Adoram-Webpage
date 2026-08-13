@@ -194,6 +194,7 @@ const en = {
     today: "Today",
     noEventsDay: "No services scheduled on this day.",
     joinZoom: "Join Zoom",
+    register: "Register here",
     noEvents: "No upcoming events scheduled.",
     categories: {
       culto: "Service",

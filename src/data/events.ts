@@ -104,6 +104,22 @@ export const weeklyServices: WeeklyService[] = [
 // Eventos especiales de una sola vez; se muestran en el calendario en su fecha exacta
 export const specialEvents: ChurchEvent[] = [
   {
+    id: "evt-congreso-mujeres-2026-10",
+    title: "Congreso de Mujeres: Re-conociendo al Espíritu Santo",
+    titleEn: "Women's Conference: Re-knowing the Holy Spirit",
+    description: "Aniversario #22. Anfitriones: Apóstoles Juan y Wendy Martínez; invitados: Pastores Misael Mejías y Ángela Peña. 8:00 AM registro y desayuno, 9:00 AM ministración. Donativo $10.00 (ATH Móvil). Más info: 787-379-8296 / 787-312-9765. ¡Te esperamos!",
+    descriptionEn: "22nd Anniversary. Hosts: Apostles Juan and Wendy Martínez; guests: Pastors Misael Mejías and Ángela Peña. 8:00 AM registration and breakfast, 9:00 AM ministry time. $10.00 donation (ATH Móvil). More info: 787-379-8296 / 787-312-9765. We are waiting for you!",
+    date: "2026-10-03",
+    time: "8:00 AM",
+    location: "Centro Cristiano Adoram, Lares",
+    locationEn: "Centro Cristiano Adoram, Lares",
+    category: "conferencia",
+    imageUrl: "/congreso-mujeres.jpeg",
+    registrationUrl: "https://forms.gle/CJEi94HeW4gi5SzW8",
+    isHighlighted: true,
+    isFree: false,
+  },
+  {
     id: "evt-dia-clamor-2026-10",
     title: "Día de Clamor en Camuy",
     titleEn: "Day of Crying Out in Camuy",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Clock, MapPin, Video } from "lucide-react";
+import { ChevronLeft, ChevronRight, ClipboardList, Clock, MapPin, Video } from "lucide-react";
 import { weeklyServices, specialEvents, CATEGORY_COLORS } from "@/data/events";
 import type { ChurchEvent } from "@/data/events";
 
@@ -22,6 +22,7 @@ interface CalendarItem {
 }
 
 interface CalendarDict {
+  register: string;
   prevMonth: string;
   nextMonth: string;
   today: string;
@@ -240,8 +241,17 @@ export default function MonthCalendar({ locale, dict }: { locale: string; dict: 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-burgundy-500 hover:bg-burgundy-600 text-white text-xs font-bold shadow-md hover:shadow-lg transition-all focus-ring"
                   >
-                    <Video size={13} />
-                    {dict.joinZoom}
+                    {s.registrationUrl.includes("zoom") ? (
+                      <>
+                        <Video size={13} />
+                        {dict.joinZoom}
+                      </>
+                    ) : (
+                      <>
+                        <ClipboardList size={13} />
+                        {dict.register}
+                      </>
+                    )}
                   </a>
                 )}
               </article>

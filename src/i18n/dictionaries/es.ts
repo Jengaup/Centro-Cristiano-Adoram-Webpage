@@ -194,6 +194,7 @@ const es = {
     today: "Hoy",
     noEventsDay: "No hay servicios programados este día.",
     joinZoom: "Unirse al Zoom",
+    register: "Regístrate aquí",
     noEvents: "No hay eventos próximos programados.",
     categories: {
       culto: "Culto",

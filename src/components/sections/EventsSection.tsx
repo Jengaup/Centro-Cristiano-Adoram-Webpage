@@ -12,6 +12,7 @@ interface EventsDict {
   today: string;
   noEventsDay: string;
   joinZoom: string;
+  register: string;
   categories: Record<ChurchEvent["category"], string>;
 }
 
@@ -30,6 +31,7 @@ export default function EventsSection({ locale, dict }: { locale: string; dict: 
             today: dict.today,
             noEventsDay: dict.noEventsDay,
             joinZoom: dict.joinZoom,
+            register: dict.register,
             categories: dict.categories,
           }}
         />
