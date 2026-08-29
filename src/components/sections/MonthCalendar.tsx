@@ -45,6 +45,7 @@ const CATEGORY_DOTS: Record<ChurchEvent["category"], string> = {
   ministerio: "bg-gold-600",
   especial: "bg-gold-600",
   comunidad: "bg-green-700",
+  jovenes: "bg-purple-600",
 };
 
 function sameDay(a: Date, b: Date) {

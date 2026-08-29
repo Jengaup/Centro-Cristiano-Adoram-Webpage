@@ -203,6 +203,7 @@ const en = {
       ministerio: "Ministry",
       especial: "Special",
       comunidad: "Community",
+      jovenes: "T.G Youth",
     },
   },
   sermons: {

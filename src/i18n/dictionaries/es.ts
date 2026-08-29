@@ -203,6 +203,7 @@ const es = {
       ministerio: "Ministerio",
       especial: "Especial",
       comunidad: "Comunidad",
+      jovenes: "T.G Youth",
     },
   },
   sermons: {
