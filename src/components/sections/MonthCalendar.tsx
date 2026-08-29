@@ -2,7 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, ClipboardList, Clock, MapPin, Video } from "lucide-react";
-import { weeklyServices, specialEvents, CATEGORY_COLORS } from "@/data/events";
+import {
+  weeklyServices,
+  specialEvents,
+  youthEvents,
+  YOUTH_OVERRIDE_START,
+  YOUTH_OVERRIDE_END,
+  CATEGORY_COLORS,
+} from "@/data/events";
 import type { ChurchEvent } from "@/data/events";
 
 // Campos compartidos entre servicios semanales y eventos especiales
@@ -50,12 +57,20 @@ function dateKey(d: Date) {
   return `${d.getFullYear()}-${m}-${day}`;
 }
 
-// Eventos especiales primero, luego los servicios semanales del día
+// Eventos especiales primero, luego actividades de jóvenes, luego servicios semanales.
+// Dentro del rango del calendario mensual de T.G Youth, el Servicio de Jóvenes
+// genérico de los viernes se sustituye por la actividad publicada para esa fecha.
 function itemsFor(date: Date): CalendarItem[] {
   const key = dateKey(date);
+  const inYouthOverride = key >= YOUTH_OVERRIDE_START && key <= YOUTH_OVERRIDE_END;
   return [
     ...specialEvents.filter((e) => e.date === key),
-    ...weeklyServices.filter((s) => s.dayOfWeek === date.getDay()),
+    ...youthEvents.filter((e) => e.date === key),
+    ...weeklyServices.filter(
+      (s) =>
+        s.dayOfWeek === date.getDay() &&
+        !(s.id === "svc-viernes-jovenes" && inYouthOverride)
+    ),
   ];
 }
 
