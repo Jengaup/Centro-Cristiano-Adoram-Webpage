@@ -19,6 +19,9 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
   return {
     title: `${d.heroTitle} ${d.heroTitleAccent}`,
     description: d.heroSubtitle,
+    alternates: {
+      languages: { es: "/es/visitar", en: "/en/visitar" },
+    },
   };
 }
 

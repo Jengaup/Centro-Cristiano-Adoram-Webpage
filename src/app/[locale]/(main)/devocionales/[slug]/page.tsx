@@ -25,7 +25,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const devotional = getDevotionalBySlug(params.slug);
   if (!devotional) return { title: "Devocional" };
-  return { title: devotional.title, description: devotional.excerpt };
+  return {
+    title: devotional.title,
+    description: devotional.excerpt,
+    alternates: {
+      languages: { es: `/es/devocionales/${devotional.slug}`, en: `/en/devocionales/${devotional.slug}` },
+    },
+  };
 }
 
 export default async function DevotionalPage({ params }: Props) {

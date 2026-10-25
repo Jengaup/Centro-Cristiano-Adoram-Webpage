@@ -13,6 +13,9 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
   return {
     title: dict.devocionales.heroTitle,
     description: dict.devocionales.heroSubtitle,
+    alternates: {
+      languages: { es: "/es/devocionales", en: "/en/devocionales" },
+    },
   };
 }
 

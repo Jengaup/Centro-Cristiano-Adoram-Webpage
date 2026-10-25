@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "Un lugar donde el cielo toca la tierra",
   description:
     "Una familia de fe apostólica comprometida con adorar a Dios, crecer en su Palabra y transformar nuestras comunidades.",
-  url: "https://adoram.iglesia",
+  url: "https://ccadoram.com",
   contactEmail: "adoramlares@gmail.com",
   phone: "787-379-8296",
   whatsappNumber: "17873798296",

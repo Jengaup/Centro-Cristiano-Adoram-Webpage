@@ -165,7 +165,8 @@ export default function DevotionalsExplorer({ locale, dict }: { locale: string; 
         </div>
       </aside>
 
-      <main className="lg:col-span-3">
+      {/* No es <main>: ya existe un único landmark <main> en el layout de la app */}
+      <div className="lg:col-span-3">
         <p className="text-slate-500 text-sm mb-6" role="status" aria-live="polite">
           {filtered.length} {filtered.length !== 1 ? dict.countPlural : dict.count}
         </p>
@@ -234,7 +235,7 @@ export default function DevotionalsExplorer({ locale, dict }: { locale: string; 
             )}
           </div>
         )}
-      </main>
+      </div>
     </div>
   );
 }

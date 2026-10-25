@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
   return {
     title: dict.metadata.title,
     description: dict.metadata.description,
+    alternates: {
+      languages: { es: "/es", en: "/en" },
+    },
   };
 }
 
@@ -38,7 +41,7 @@ export default async function HomePage({ params }: { params: { locale: Locale } 
 <DevotionalHighlight locale={params.locale} dict={dict.devotional} />
       <TestimoniesSection locale={params.locale} dict={dict.testimonies} />
       <PlanVisitSection locale={params.locale} dict={dict.planVisit} />
-      <PrayerRequestSection dict={dict.prayer} />
+      <PrayerRequestSection locale={params.locale} dict={dict.prayer} />
     </>
   );
 }

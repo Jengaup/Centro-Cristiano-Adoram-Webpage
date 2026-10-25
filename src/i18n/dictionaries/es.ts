@@ -289,7 +289,7 @@ const es = {
       "No estás solo. Trae tu carga ante Dios y nuestro equipo de intercesores lo creerá junto contigo.",
     confidentiality: {
       title: "Confidencialidad",
-      text: "Toda petición es manejada con absoluta discreción y respeto por parte de nuestro equipo pastoral.",
+      text: "Tu petición se transmite mediante un proveedor externo de formularios. Una vez recibida, el acceso queda limitado al personal pastoral y de intercesión autorizado, según la opción de privacidad que elijas abajo.",
     },
     intercessors: {
       title: "Intercesores comprometidos",
@@ -306,14 +306,28 @@ const es = {
     formSubtitle: "Todos los campos con * son requeridos.",
     nameLabel: "Nombre *",
     namePlaceholder: "Tu nombre",
+    nameHelp: "Puede ser tu nombre completo, un apodo o solo tu inicial.",
     emailLabel: "Email",
     emailPlaceholder: "tu@email.com",
     phoneLabel: "Teléfono",
     phonePlaceholder: "+1 000-000-0000",
+    contactOptionalHelp:
+      "El email y el teléfono son opcionales. Compártelos solo si deseas que te contactemos para dar seguimiento.",
     requestLabel: "Tu petición de oración *",
-    requestPlaceholder: "Cuéntanos cómo podemos orar por ti...",
+    requestPlaceholder: "Cuéntanos cómo podemos orar por ti... Comparte solo lo necesario, incluyendo de otras personas.",
+    requestCounter: "caracteres",
     privateLabel:
-      "Mi petición es privada, solo el equipo pastoral y de intercesión debe verla.",
+      "Prefiero que mi petición sea privada: que solo la vea el equipo pastoral y de intercesión autorizado.",
+    noticeText:
+      "Usaremos esta información para atender tu petición de oración y, si lo autorizas, darte seguimiento. Se transmite mediante un proveedor externo de formularios (FormSubmit). Este formulario no es un servicio de emergencia, médico, psicológico o de crisis.",
+    noticeEmergency:
+      "Si vives una emergencia inmediata, comunícate con los servicios de emergencia de tu área (911 en Puerto Rico y EE. UU.).",
+    privacyLinkLabel: "Política de Privacidad",
+    consentPre: "He leído y acepto la ",
+    consentLinkText: "Política de Privacidad",
+    consentPost: " para el manejo de esta petición. *",
+    requiredError: "Este campo es requerido.",
+    consentRequiredError: "Debes aceptar la Política de Privacidad para continuar.",
     sendButton: "Enviar Petición de Oración",
     sending: "Enviando...",
     successTitle: "¡Recibimos tu petición!",
@@ -322,6 +336,12 @@ const es = {
     successScripture:
       '"La oración eficaz del justo puede mucho.", Santiago 5:16',
     sendAnother: "Enviar otra petición",
+    errorTitle: "No pudimos enviar tu petición",
+    errorMessage:
+      "Puede haber sido un problema de conexión. Tu información no se ha perdido: revisa los datos e intenta de nuevo, o contáctanos directamente.",
+    retryButton: "Intentar de nuevo",
+    callUs: "Llámanos",
+    whatsappUs: "WhatsApp",
   },
   footer: {
     viewOnMap: "Ver en mapa",
@@ -344,6 +364,14 @@ const es = {
       devotionals: "Devocionales",
       planVisit: "Planifica tu Visita",
       prayerRequest: "Petición de Oración",
+    },
+    legalTitle: "Legal",
+    legal: {
+      privacy: "Política de Privacidad",
+      terms: "Términos de Uso",
+      accessibility: "Accesibilidad",
+      dataRequest: "Solicitar acceso o eliminación",
+      contact: "Contacto",
     },
   },
   devocionales: {
@@ -479,6 +507,220 @@ const es = {
     message:
       "Parece que esta página no existe. Pero no estás perdido, Dios sabe exactamente dónde estás.",
     cta: "Volver al inicio",
+  },
+  legalNav: {
+    skipToContent: "Saltar al contenido principal",
+    backHome: "Volver al inicio",
+  },
+  privacyPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Política de Privacidad",
+    lastUpdated: "Última actualización: 25 de octubre de 2026",
+    intro:
+      "Centro Cristiano Adoram ('nosotros', 'la iglesia') es una comunidad de fe apostólica con sedes en Lares y Bayamón, Puerto Rico. Este sitio publica información institucional, horarios, eventos, ministerios y devocionales, y permite enviar peticiones de oración mediante un formulario. Esta política describe, de forma transparente y proporcional, cómo se maneja la información que nos compartes a través del sitio. No es asesoría legal; es una descripción técnica de nuestras prácticas actuales.",
+    sections: [
+      {
+        heading: "1. Responsable",
+        paragraphs: [
+          "El responsable de este sitio es Centro Cristiano Adoram. Puedes contactarnos sobre asuntos de privacidad al correo adoramlares@gmail.com.",
+        ],
+      },
+      {
+        heading: "2. Qué información recopilamos",
+        paragraphs: [
+          "El único formulario que recopila información personal en este sitio es el de Petición de Oración. En él puedes enviar: tu nombre (requerido; puede ser tu nombre completo, un apodo o solo tu inicial), un correo electrónico (opcional), un número de teléfono (opcional) y el texto libre de tu petición (requerido, con un límite de 2,000 caracteres).",
+          "El texto libre de tu petición puede incluir, por tu propia voluntad, información personal o sensible (por ejemplo sobre salud, relaciones familiares, finanzas o situaciones personales difíciles). Te pedimos que compartas únicamente lo necesario, y que evites incluir información identificable de terceros sin su consentimiento.",
+          "El sitio no usa cookies, no tiene analítica, no tiene píxeles de rastreo y no guarda tu petición en el navegador (localStorage/sessionStorage). No recopilamos tu dirección IP ni creamos perfiles de navegación.",
+        ],
+      },
+      {
+        heading: "3. Para qué usamos esta información",
+        paragraphs: [
+          "Usamos la información del formulario para: (a) recibir y orar por tu petición; (b) darte seguimiento pastoral personal, únicamente si proporcionaste un medio de contacto y autorizaste el seguimiento; (c) prevenir abuso del formulario (por ejemplo spam); y (d) mantener seguridad básica del sitio.",
+          "No usamos tu información para marketing, publicidad, venta a terceros, ni para publicar tu petición como testimonio sin tu autorización explícita y separada.",
+        ],
+      },
+      {
+        heading: "4. Quién puede acceder a tu petición",
+        paragraphs: [
+          "El acceso a las peticiones recibidas está limitado, según la práctica real de la iglesia, al personal pastoral y a los intercesores autorizados. Si marcaste tu petición como privada, es nuestra intención y práctica que solo ese personal autorizado la vea.",
+          "Es importante que entiendas que esta es una práctica organizacional, no una garantía técnica infalible: la transmisión pasa por un proveedor externo de formularios y llega a una cuenta de correo electrónico (ver sección 5), por lo que no podemos prometer confidencialidad absoluta o seguridad total frente a cualquier escenario. La opción de privacidad que eliges no debe confundirse con el consentimiento para procesar tus datos, que se solicita por separado en el formulario.",
+        ],
+      },
+      {
+        heading: "5. Proveedores externos que participan en el manejo de tu información",
+        paragraphs: [
+          "FormSubmit (formsubmit.co): procesa técnicamente el envío de tu petición desde el formulario hasta nuestra cuenta de correo. No tenemos control sobre las prácticas internas de este proveedor; puedes consultar su propia política en formsubmit.co.",
+          "Proveedor de correo electrónico: la petición llega a una cuenta de Gmail administrada por la iglesia. El manejo posterior del mensaje está sujeto también a las políticas de privacidad de Google.",
+          "Alojamiento y entrega del sitio: este sitio se publica de forma estática en GitHub Pages y se sirve a través de Cloudflare (gestión de DNS/CDN para el dominio ccadoram.com). Ninguno de los dos recibe el contenido de tu petición de oración; solo sirven los archivos públicos del sitio.",
+          "No vendemos, alquilamos ni compartimos tu información con terceros para fines distintos a los descritos en esta política.",
+        ],
+      },
+      {
+        heading: "6. Período de retención",
+        paragraphs: [
+          "PENDIENTE DE CONFIRMACIÓN: Centro Cristiano Adoram aún no ha definido formalmente un período de retención para las peticiones de oración recibidas por correo electrónico. Esta sección se actualizará tan pronto el propietario del sitio confirme esta política. Mientras tanto, cualquier persona puede solicitar la eliminación de su petición en cualquier momento (ver sección 7).",
+        ],
+      },
+      {
+        heading: "7. Tus derechos: acceso, corrección y eliminación",
+        paragraphs: [
+          "Puedes solicitar acceso a la información que enviaste, pedir que la corrijamos, solicitar su eliminación, o retirar tu autorización de seguimiento, en cualquier momento. Visita nuestra página de Solicitud de Acceso o Eliminación de Datos para ver cómo hacerlo.",
+        ],
+      },
+      {
+        heading: "8. Seguridad",
+        paragraphs: [
+          "Tomamos medidas técnicas razonables (como el envío cifrado por HTTPS) para proteger la información que nos compartes. Sin embargo, ningún sistema de transmisión o almacenamiento de datos es completamente seguro, y no podemos garantizar seguridad absoluta ni confidencialidad infalible.",
+        ],
+      },
+      {
+        heading: "9. Menores de edad",
+        paragraphs: [
+          "Este sitio incluye información sobre ministerios para niños (Adoram Kids) y jóvenes (T.G. Youth Network), pero el formulario general de petición de oración no está diseñado para que niños pequeños envíen información personal sin la participación de un padre, madre o tutor. No solicitamos intencionalmente fecha de nacimiento, escuela, dirección residencial u otros datos específicos de menores a través de este sitio.",
+          "No publicamos nombres, fotografías, testimonios ni situaciones personales de menores de edad sin la autorización verificable de su padre, madre o tutor legal.",
+        ],
+      },
+      {
+        heading: "10. Enlaces externos y plataformas sociales",
+        paragraphs: [
+          "Este sitio enlaza a YouTube, Facebook, Instagram, WhatsApp, Google Maps y Zoom. Al visitar o usar esas plataformas, tu información queda sujeta a las políticas de privacidad de cada una, no a esta. Te recomendamos revisarlas directamente.",
+        ],
+      },
+      {
+        heading: "11. Cambios a esta política",
+        paragraphs: [
+          "Podemos actualizar esta política cuando cambien nuestras prácticas. La fecha de 'última actualización' en la parte superior refleja la versión vigente.",
+        ],
+      },
+      {
+        heading: "12. Contacto",
+        paragraphs: [
+          "Para preguntas sobre esta política o sobre el manejo de tu información, escríbenos a adoramlares@gmail.com.",
+        ],
+      },
+    ],
+  },
+  termsPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Términos de Uso",
+    lastUpdated: "Última actualización: 25 de octubre de 2026",
+    intro:
+      "Estos Términos de Uso describen las condiciones razonables y proporcionales para usar el sitio web de Centro Cristiano Adoram. Al usar este sitio, aceptas estos términos.",
+    sections: [
+      {
+        heading: "1. Naturaleza del sitio",
+        paragraphs: [
+          "Este es un sitio informativo y religioso de carácter comunitario. Publicamos horarios, eventos, ministerios, devocionales y un formulario de petición de oración. No es una tienda en línea, no procesa pagos, donaciones, ventas ni suscripciones.",
+        ],
+      },
+      {
+        heading: "2. No sustituye servicios profesionales ni de emergencia",
+        paragraphs: [
+          "El contenido de este sitio, incluyendo los devocionales y el formulario de petición de oración, no sustituye atención médica, psicológica, legal o financiera profesional, ni servicios de emergencia. Si vives una emergencia inmediata, comunícate con los servicios de emergencia de tu área (911 en Puerto Rico y EE. UU.).",
+        ],
+      },
+      {
+        heading: "3. Sobre las peticiones de oración",
+        paragraphs: [
+          "Enviar una petición de oración no garantiza una respuesta inmediata, un resultado específico, ni contacto personal, salvo que lo hayas autorizado y nuestro equipo pueda darle seguimiento.",
+        ],
+      },
+      {
+        heading: "4. Uso responsable",
+        paragraphs: [
+          "Al usar el formulario de este sitio, te comprometes a no enviar contenido abusivo, amenazante, de spam, ni a suplantar la identidad de otra persona. Nos reservamos el derecho de ignorar o descartar envíos que incumplan estas condiciones.",
+        ],
+      },
+      {
+        heading: "5. Propiedad intelectual",
+        paragraphs: [
+          "Los textos, devocionales, imágenes, logotipo y materiales propios publicados en este sitio pertenecen a Centro Cristiano Adoram o se usan con el permiso correspondiente, salvo que se indique lo contrario. No está permitido reproducirlos con fines comerciales sin autorización.",
+        ],
+      },
+      {
+        heading: "6. Enlaces a servicios externos",
+        paragraphs: [
+          "Este sitio enlaza a plataformas externas (YouTube, redes sociales, WhatsApp, Google Maps, Zoom, formularios de registro). No somos responsables del contenido ni las prácticas de esos servicios externos.",
+        ],
+      },
+      {
+        heading: "7. Exactitud de horarios y eventos",
+        paragraphs: [
+          "Nos esforzamos por mantener actualizada la información de horarios, eventos y ministerios, pero estos pueden cambiar sin previo aviso. Te recomendamos confirmar por nuestros canales de contacto antes de un evento importante.",
+        ],
+      },
+      {
+        heading: "8. Limitación de responsabilidad",
+        paragraphs: [
+          "Este sitio se ofrece 'tal cual'. En la medida permitida por la ley, Centro Cristiano Adoram no será responsable por daños indirectos derivados del uso de este sitio o de la información aquí publicada.",
+        ],
+      },
+      {
+        heading: "9. Contacto y vigencia",
+        paragraphs: [
+          "Estos términos pueden actualizarse ocasionalmente. Para preguntas, escríbenos a adoramlares@gmail.com.",
+        ],
+      },
+    ],
+  },
+  accessibilityPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Declaración de Accesibilidad",
+    lastUpdated: "Última revisión: 25 de octubre de 2026",
+    intro:
+      "Centro Cristiano Adoram está comprometido a que este sitio sea accesible para la mayor cantidad posible de personas, incluyendo quienes usan tecnología de asistencia como lectores de pantalla o navegación por teclado.",
+    sections: [
+      {
+        heading: "Estándar objetivo",
+        paragraphs: [
+          "Buscamos cumplir con las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2, nivel AA. Este es un objetivo continuo, no una certificación de cumplimiento perfecto: es posible que existan áreas del sitio que aún no cumplan completamente este estándar.",
+        ],
+      },
+      {
+        heading: "Medidas implementadas",
+        paragraphs: [
+          "Entre las medidas actuales se incluyen: navegación completa por teclado, enlace para saltar al contenido principal, atributo de idioma en el documento, estados de foco visibles, etiquetas asociadas a los campos de formulario, mensajes de error y éxito anunciados a lectores de pantalla, soporte para 'prefers-reduced-motion', y estructura semántica de encabezados y regiones.",
+        ],
+      },
+      {
+        heading: "Áreas de mejora conocidas",
+        paragraphs: [
+          "Seguimos revisando el sitio de forma continua. Si encuentras una barrera de accesibilidad, agradecemos que nos lo reportes usando el método a continuación.",
+        ],
+      },
+      {
+        heading: "Cómo reportar una barrera de accesibilidad",
+        paragraphs: [
+          "Escríbenos a adoramlares@gmail.com describiendo: la página donde ocurrió el problema, una descripción breve de la dificultad, el navegador que usas, y la tecnología de asistencia (si aplica, por ejemplo un lector de pantalla). Revisaremos cada reporte.",
+        ],
+      },
+    ],
+  },
+  dataRequestPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Solicitar Acceso o Eliminación de Datos",
+    lastUpdated: "Última actualización: 25 de octubre de 2026",
+    intro:
+      "Si enviaste una petición de oración a través de este sitio, puedes solicitar acceso a tu información, su corrección, su eliminación, o retirar tu autorización de seguimiento, en cualquier momento.",
+    whatYouCanRequest: {
+      heading: "Qué puedes solicitar",
+      items: [
+        "Acceso: una copia de la información que enviaste.",
+        "Corrección: actualizar o corregir algún dato.",
+        "Eliminación: que borremos tu petición y datos asociados.",
+        "Retiro de seguimiento: que dejemos de contactarte, aunque lo hayas autorizado antes.",
+      ],
+    },
+    howToRequest: {
+      heading: "Cómo solicitarlo",
+      text:
+        "Envía un correo a adoramlares@gmail.com. Para ayudarnos a localizar tu petición más rápido, incluye si es posible: el nombre que usaste al enviarla, la fecha aproximada del envío, y el correo o teléfono que proporcionaste (si los diste). No necesitas compartir información adicional ni crear una cuenta.",
+      emailButtonLabel: "Enviar solicitud por correo",
+      emailSubject: "Solicitud de datos - Petición de oración",
+    },
+    responseNote:
+      "Atenderemos tu solicitud tan pronto como sea razonablemente posible. No existe actualmente un plazo formal garantizado; estamos trabajando en definir uno.",
   },
 };
 

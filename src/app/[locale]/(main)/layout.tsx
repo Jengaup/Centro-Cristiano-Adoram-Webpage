@@ -19,8 +19,14 @@ export default async function MainLayout({
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:rounded-lg focus:bg-gold-500 focus:text-navy-950 focus:font-bold focus:text-sm focus:shadow-lg"
+      >
+        {dict.legalNav.skipToContent}
+      </a>
       <Navbar locale={params.locale} dict={dict.nav} />
-      <main className="flex-1">{children}</main>
+      <main id="main-content" className="flex-1">{children}</main>
       <Footer locale={params.locale} dict={dict.footer} />
     </>
   );

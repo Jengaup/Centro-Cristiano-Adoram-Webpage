@@ -39,6 +39,12 @@ export default function AdminLayout({
 
   return (
     <div className="font-sans bg-slate-50 min-h-screen flex">
+      <a
+        href="#admin-main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2.5 focus:rounded-lg focus:bg-gold-500 focus:text-navy-950 focus:font-bold focus:text-sm focus:shadow-lg"
+      >
+        Saltar al contenido principal
+      </a>
       {/* Sidebar */}
       <aside className="w-64 shrink-0 bg-navy-950 text-white min-h-screen flex-col hidden lg:flex">
         <div className="p-5 border-b border-white/10">
@@ -108,7 +114,7 @@ export default function AdminLayout({
           </Link>
         </header>
 
-        <main className="flex-1 p-6 lg:p-8 max-w-7xl w-full">
+        <main id="admin-main-content" className="flex-1 p-6 lg:p-8 max-w-7xl w-full">
           {children}
         </main>
       </div>

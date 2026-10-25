@@ -288,7 +288,7 @@ const en = {
       "You are not alone. Bring your burden before God and our team of intercessors will believe alongside you.",
     confidentiality: {
       title: "Confidentiality",
-      text: "Every request is handled with absolute discretion and respect by our pastoral team.",
+      text: "Your request is transmitted through an external form provider. Once received, access is limited to authorized pastoral and intercession staff, based on the privacy option you choose below.",
     },
     intercessors: {
       title: "Committed Intercessors",
@@ -305,14 +305,28 @@ const en = {
     formSubtitle: "All fields marked with * are required.",
     nameLabel: "Name *",
     namePlaceholder: "Your name",
+    nameHelp: "This can be your full name, a nickname, or just your initial.",
     emailLabel: "Email",
     emailPlaceholder: "you@email.com",
     phoneLabel: "Phone",
     phonePlaceholder: "+1 000-000-0000",
+    contactOptionalHelp:
+      "Email and phone are optional. Share them only if you'd like us to follow up with you.",
     requestLabel: "Your prayer request *",
-    requestPlaceholder: "Tell us how we can pray for you...",
+    requestPlaceholder: "Tell us how we can pray for you... Please share only what's necessary, including about other people.",
+    requestCounter: "characters",
     privateLabel:
-      "My request is private, only the pastoral and intercession team should see it.",
+      "I'd prefer my request to be private: seen only by the authorized pastoral and intercession team.",
+    noticeText:
+      "We'll use this information to attend to your prayer request and, if you authorize it, to follow up with you. It is transmitted through an external form provider (FormSubmit). This form is not an emergency, medical, psychological, or crisis service.",
+    noticeEmergency:
+      "If you are experiencing an immediate emergency, please contact your local emergency services (911 in Puerto Rico and the U.S.).",
+    privacyLinkLabel: "Privacy Policy",
+    consentPre: "I have read and accept the ",
+    consentLinkText: "Privacy Policy",
+    consentPost: " for the handling of this request. *",
+    requiredError: "This field is required.",
+    consentRequiredError: "You must accept the Privacy Policy to continue.",
     sendButton: "Send Prayer Request",
     sending: "Sending...",
     successTitle: "We received your request!",
@@ -321,6 +335,12 @@ const en = {
     successScripture:
       '"The effective prayer of a righteous person can accomplish much.", James 5:16',
     sendAnother: "Send another request",
+    errorTitle: "We couldn't send your request",
+    errorMessage:
+      "This may have been a connection problem. Your information has not been lost: please check it and try again, or contact us directly.",
+    retryButton: "Try again",
+    callUs: "Call us",
+    whatsappUs: "WhatsApp",
   },
   footer: {
     viewOnMap: "View on map",
@@ -343,6 +363,14 @@ const en = {
       devotionals: "Devotionals",
       planVisit: "Plan Your Visit",
       prayerRequest: "Prayer Request",
+    },
+    legalTitle: "Legal",
+    legal: {
+      privacy: "Privacy Policy",
+      terms: "Terms of Use",
+      accessibility: "Accessibility",
+      dataRequest: "Request access or deletion",
+      contact: "Contact",
     },
   },
   devocionales: {
@@ -477,6 +505,220 @@ const en = {
     message:
       "It seems this page does not exist. But you are not lost, God knows exactly where you are.",
     cta: "Back to home",
+  },
+  legalNav: {
+    skipToContent: "Skip to main content",
+    backHome: "Back to home",
+  },
+  privacyPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Privacy Policy",
+    lastUpdated: "Last updated: October 25, 2026",
+    intro:
+      "Centro Cristiano Adoram ('we', 'the church') is an apostolic faith community with locations in Lares and Bayamón, Puerto Rico. This site publishes institutional information, schedules, events, ministries, and devotionals, and allows you to submit prayer requests through a form. This policy describes, transparently and proportionally, how information you share through the site is handled. It is not legal advice; it is a technical description of our current practices.",
+    sections: [
+      {
+        heading: "1. Who is responsible",
+        paragraphs: [
+          "This site is operated by Centro Cristiano Adoram. You can contact us about privacy matters at adoramlares@gmail.com.",
+        ],
+      },
+      {
+        heading: "2. What information we collect",
+        paragraphs: [
+          "The only form on this site that collects personal information is the Prayer Request form. Through it you may submit: your name (required; it can be your full name, a nickname, or just your initial), an email address (optional), a phone number (optional), and the free-text content of your request (required, limited to 2,000 characters).",
+          "The free-text content of your request may, by your own choice, include personal or sensitive information (for example about health, family relationships, finances, or difficult personal situations). We ask that you share only what is necessary, and avoid including identifiable information about other people without their consent.",
+          "The site does not use cookies, has no analytics, has no tracking pixels, and does not save your request in the browser (localStorage/sessionStorage). We do not collect your IP address or build browsing profiles.",
+        ],
+      },
+      {
+        heading: "3. How we use this information",
+        paragraphs: [
+          "We use the information from the form to: (a) receive and pray for your request; (b) provide personal pastoral follow-up, only if you provided a contact method and authorized follow-up; (c) prevent abuse of the form (e.g., spam); and (d) maintain basic site security.",
+          "We do not use your information for marketing, advertising, sale to third parties, or to publish your request as a testimony without your separate, explicit authorization.",
+        ],
+      },
+      {
+        heading: "4. Who can access your request",
+        paragraphs: [
+          "Access to received requests is limited, per the church's actual practice, to authorized pastoral staff and intercessors. If you marked your request as private, it is our intention and practice that only that authorized staff sees it.",
+          "It's important to understand this is an organizational practice, not an infallible technical guarantee: the transmission passes through an external form provider and arrives at an email account (see section 5), so we cannot promise absolute confidentiality or total security against every scenario. The privacy option you choose should not be confused with consent to process your data, which is requested separately in the form.",
+        ],
+      },
+      {
+        heading: "5. External providers involved in handling your information",
+        paragraphs: [
+          "FormSubmit (formsubmit.co): technically processes the submission of your request from the form to our email account. We do not control this provider's internal practices; you can review its own policy at formsubmit.co.",
+          "Email provider: the request arrives at a Gmail account administered by the church. Subsequent handling of the message is also subject to Google's privacy policies.",
+          "Hosting and delivery: this site is published as a static site on GitHub Pages and served through Cloudflare (DNS/CDN management for the ccadoram.com domain). Neither receives the content of your prayer request; they only serve the site's public files.",
+          "We do not sell, rent, or share your information with third parties for purposes other than those described in this policy.",
+        ],
+      },
+      {
+        heading: "6. Retention period",
+        paragraphs: [
+          "PENDING CONFIRMATION: Centro Cristiano Adoram has not yet formally defined a retention period for prayer requests received by email. This section will be updated as soon as the site owner confirms this policy. In the meantime, anyone may request deletion of their request at any time (see section 7).",
+        ],
+      },
+      {
+        heading: "7. Your rights: access, correction, and deletion",
+        paragraphs: [
+          "You can request access to the information you submitted, ask us to correct it, request its deletion, or withdraw your authorization for follow-up, at any time. Visit our Data Access or Deletion Request page to see how.",
+        ],
+      },
+      {
+        heading: "8. Security",
+        paragraphs: [
+          "We take reasonable technical measures (such as encrypted HTTPS submission) to protect the information you share with us. However, no data transmission or storage system is completely secure, and we cannot guarantee absolute security or infallible confidentiality.",
+        ],
+      },
+      {
+        heading: "9. Minors",
+        paragraphs: [
+          "This site includes information about ministries for children (Adoram Kids) and youth (T.G. Youth Network), but the general prayer request form is not designed for young children to submit personal information without the involvement of a parent or guardian. We do not intentionally request date of birth, school, home address, or other child-specific data through this site.",
+          "We do not publish names, photographs, testimonies, or personal situations of minors without verifiable authorization from their parent or legal guardian.",
+        ],
+      },
+      {
+        heading: "10. External links and social platforms",
+        paragraphs: [
+          "This site links to YouTube, Facebook, Instagram, WhatsApp, Google Maps, and Zoom. When you visit or use those platforms, your information becomes subject to each platform's own privacy policy, not this one. We recommend reviewing them directly.",
+        ],
+      },
+      {
+        heading: "11. Changes to this policy",
+        paragraphs: [
+          "We may update this policy as our practices change. The 'last updated' date at the top reflects the current version.",
+        ],
+      },
+      {
+        heading: "12. Contact",
+        paragraphs: [
+          "For questions about this policy or about how your information is handled, write to us at adoramlares@gmail.com.",
+        ],
+      },
+    ],
+  },
+  termsPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Terms of Use",
+    lastUpdated: "Last updated: October 25, 2026",
+    intro:
+      "These Terms of Use describe the reasonable and proportional conditions for using the Centro Cristiano Adoram website. By using this site, you accept these terms.",
+    sections: [
+      {
+        heading: "1. Nature of the site",
+        paragraphs: [
+          "This is an informational, community-oriented religious site. We publish schedules, events, ministries, devotionals, and a prayer request form. It is not an online store, and it does not process payments, donations, sales, or subscriptions.",
+        ],
+      },
+      {
+        heading: "2. Not a substitute for professional or emergency services",
+        paragraphs: [
+          "The content of this site, including devotionals and the prayer request form, does not substitute for professional medical, psychological, legal, or financial care, nor for emergency services. If you are experiencing an immediate emergency, contact your local emergency services (911 in Puerto Rico and the U.S.).",
+        ],
+      },
+      {
+        heading: "3. About prayer requests",
+        paragraphs: [
+          "Submitting a prayer request does not guarantee an immediate response, a specific outcome, or personal contact, unless you authorized it and our team is able to follow up.",
+        ],
+      },
+      {
+        heading: "4. Responsible use",
+        paragraphs: [
+          "By using the form on this site, you agree not to submit abusive, threatening, or spam content, and not to impersonate another person. We reserve the right to ignore or discard submissions that violate these conditions.",
+        ],
+      },
+      {
+        heading: "5. Intellectual property",
+        paragraphs: [
+          "The text, devotionals, images, logo, and original materials published on this site belong to Centro Cristiano Adoram or are used with the corresponding permission, unless otherwise noted. They may not be reproduced for commercial purposes without authorization.",
+        ],
+      },
+      {
+        heading: "6. Links to external services",
+        paragraphs: [
+          "This site links to external platforms (YouTube, social media, WhatsApp, Google Maps, Zoom, registration forms). We are not responsible for the content or practices of those external services.",
+        ],
+      },
+      {
+        heading: "7. Accuracy of schedules and events",
+        paragraphs: [
+          "We strive to keep schedule, event, and ministry information up to date, but these may change without notice. We recommend confirming through our contact channels before an important event.",
+        ],
+      },
+      {
+        heading: "8. Limitation of liability",
+        paragraphs: [
+          "This site is provided 'as is.' To the extent permitted by law, Centro Cristiano Adoram will not be liable for indirect damages arising from the use of this site or the information published here.",
+        ],
+      },
+      {
+        heading: "9. Contact and effective date",
+        paragraphs: [
+          "These terms may be updated occasionally. For questions, write to us at adoramlares@gmail.com.",
+        ],
+      },
+    ],
+  },
+  accessibilityPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Accessibility Statement",
+    lastUpdated: "Last reviewed: October 25, 2026",
+    intro:
+      "Centro Cristiano Adoram is committed to making this site accessible to as many people as possible, including those who use assistive technology such as screen readers or keyboard navigation.",
+    sections: [
+      {
+        heading: "Target standard",
+        paragraphs: [
+          "We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.2, level AA. This is an ongoing goal, not a certification of perfect compliance: some areas of the site may not yet fully meet this standard.",
+        ],
+      },
+      {
+        heading: "Measures implemented",
+        paragraphs: [
+          "Current measures include: full keyboard navigation, a skip-to-main-content link, a document language attribute, visible focus states, labels associated with form fields, error and success messages announced to screen readers, support for 'prefers-reduced-motion', and semantic heading and landmark structure.",
+        ],
+      },
+      {
+        heading: "Known areas for improvement",
+        paragraphs: [
+          "We continue to review the site on an ongoing basis. If you find an accessibility barrier, we would appreciate you reporting it using the method below.",
+        ],
+      },
+      {
+        heading: "How to report an accessibility barrier",
+        paragraphs: [
+          "Write to us at adoramlares@gmail.com describing: the page where the issue occurred, a brief description of the difficulty, the browser you're using, and the assistive technology (if applicable, e.g., a screen reader). We will review each report.",
+        ],
+      },
+    ],
+  },
+  dataRequestPage: {
+    heroEyebrow: "Legal",
+    heroTitle: "Request Data Access or Deletion",
+    lastUpdated: "Last updated: October 25, 2026",
+    intro:
+      "If you submitted a prayer request through this site, you can request access to your information, its correction, its deletion, or withdraw your authorization for follow-up, at any time.",
+    whatYouCanRequest: {
+      heading: "What you can request",
+      items: [
+        "Access: a copy of the information you submitted.",
+        "Correction: update or correct a piece of data.",
+        "Deletion: that we delete your request and associated data.",
+        "Withdraw follow-up: that we stop contacting you, even if you authorized it before.",
+      ],
+    },
+    howToRequest: {
+      heading: "How to request it",
+      text:
+        "Send an email to adoramlares@gmail.com. To help us locate your request faster, please include, if possible: the name you used when submitting it, the approximate date of submission, and the email or phone you provided (if any). You do not need to share additional information or create an account.",
+      emailButtonLabel: "Send request by email",
+      emailSubject: "Data Request - Prayer Request",
+    },
+    responseNote:
+      "We will handle your request as soon as reasonably possible. There is currently no formal guaranteed timeframe; we are working on defining one.",
   },
 };
 

@@ -46,7 +46,13 @@ const csp = [
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+    // lang="es" es el valor por defecto (defaultLocale). Next.js App Router no permite
+    // que un layout anidado (p.ej. app/[locale]/layout.tsx) modifique el <html> raíz, así
+    // que el script de abajo corrige el idioma en rutas /en/ apenas carga el documento.
+    // Ver auditoría: esto cubre lectores de pantalla y navegación con JS activo; la
+    // corrección 100% "horneada" en el HTML estático por ruta requeriría reestructurar
+    // el árbol de layouts (fuera de alcance de este cambio para no romper rutas).
+    <html lang="es" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
         <meta httpEquiv="Content-Security-Policy" content={csp} />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -55,6 +61,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           dangerouslySetInnerHTML={{
             __html: "if(self!==top){try{top.location=self.location}catch(e){document.documentElement.style.display='none'}}",
+          }}
+        />
+        {/* Corrige lang="en" en rutas /en/*, ya que el layout raíz no conoce el locale */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "try{if(location.pathname.indexOf('/en/')===0||location.pathname==='/en'){document.documentElement.lang='en'}}catch(e){}",
           }}
         />
       </head>

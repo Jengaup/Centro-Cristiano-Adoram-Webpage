@@ -25,6 +25,14 @@ interface FooterDict {
     planVisit: string;
     prayerRequest: string;
   };
+  legalTitle: string;
+  legal: {
+    privacy: string;
+    terms: string;
+    accessibility: string;
+    dataRequest: string;
+    contact: string;
+  };
 }
 
 interface Props {
@@ -155,7 +163,26 @@ export default function Footer({ locale, dict }: Props) {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-300">
+        <div className="pt-6 border-t border-white/10">
+          <h3 className="sr-only">{dict.legalTitle}</h3>
+          <nav aria-label={dict.legalTitle} className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
+            {[
+              { label: dict.legal.privacy, href: `/${locale}/privacidad` },
+              { label: dict.legal.terms, href: `/${locale}/terminos` },
+              { label: dict.legal.accessibility, href: `/${locale}/accesibilidad` },
+              { label: dict.legal.dataRequest, href: `/${locale}/solicitud-datos` },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="text-navy-300 hover:text-gold-300 underline underline-offset-2 transition-colors rounded focus-ring-dark">
+                {link.label}
+              </Link>
+            ))}
+            <a href={`mailto:${siteConfig.contactEmail}`} className="text-navy-300 hover:text-gold-300 underline underline-offset-2 transition-colors rounded focus-ring-dark">
+              {dict.legal.contact}
+            </a>
+          </nav>
+        </div>
+
+        <div className="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-300">
           <p>© {currentYear} {siteConfig.name}. {dict.copyright}</p>
           <p className="flex items-center gap-1.5">
             {dict.madeWith} <Heart size={12} className="text-red-400 fill-red-400" /> {dict.madeWithEnd}
