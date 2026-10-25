@@ -6,16 +6,10 @@
 
 ---
 
-## 1. Conflicto: apellido de la Apóstol Wendy
+## 1. Apellido de la Apóstol Wendy — RESUELTO
 
-- **Dato consistente en la mayoría del sitio:** "Wendy **Ortiz**"
-  - `src/data/config.ts` (`siteConfig.pastorName`): "Apóstol Juan Alberto Martínez & Apóstol Wendy **Ortiz**"
-  - `src/i18n/dictionaries/es.ts` (`pastor.signature`): "Apóstoles Juan Alberto Martínez & Wendy **Ortiz**"
-  - `src/data/events.ts` (evento "Día de Clamor en Camuy"): "los Apóstoles Juan Alberto Martínez y Wendy **Ortiz**"
-  - `src/data/events.ts` (evento "Un Atardecer en el Valle con Jesús"): "Juan A. Martínez y Wendy **Ortiz**"
-- **Dato en conflicto:** "Wendy **Martínez**"
-  - `src/data/events.ts` (evento "Congreso de Mujeres"): "Anfitriones: Apóstoles Juan y Wendy **Martínez**" (en inglés también: "Apostles Juan and Wendy **Martínez**")
-- **Acción recomendada:** Confirmar si el apellido correcto es "Ortiz" (como aparece en 3 de 4 lugares, incluida la configuración central del sitio) y corregir la entrada del Congreso de Mujeres en `src/data/events.ts`.
+- **Confirmado por el propietario (26 de octubre de 2026): el apellido correcto es "Ortiz".**
+- La entrada del evento "Congreso de Mujeres" en `src/data/events.ts` (que decía "Wendy Martínez" en español e inglés) **fue corregida a "Wendy Ortiz"**, quedando consistente con `siteConfig.pastorName`, la firma pastoral de los diccionarios, y los otros dos eventos que ya usaban "Ortiz" correctamente.
 
 ## 2. Conflicto: apellido del Pastor invitado Misael
 
@@ -62,10 +56,11 @@ El teléfono oficial de la iglesia en `siteConfig.phone` es `787-379-8296`. Se e
 
 | # | Hallazgo | Acción tomada |
 |---|---|---|
-| 1 | Wendy Martínez vs. Ortiz | **Documentado, no corregido** — pendiente de tu confirmación |
+| 1 | Wendy Martínez vs. Ortiz | **Corregido** — confirmado por el propietario que es "Ortiz" |
 | 2 | Misael Mejía vs. Mejías | **Documentado, no corregido** — pendiente de tu confirmación |
 | 3 | Teléfonos personales no centralizados | **Documentado, no corregido** — pendiente de confirmar autorización |
 | 4 | Pastor José Alberto Jiménez sin referencia cruzada | **Documentado, no corregido** — pendiente de confirmar rol |
 | 5 | Dominio `siteConfig.url` desactualizado | **Corregido** (campo técnico, no institucional/pastoral) |
 | 6 | `sermons.ts` con contenido de plantilla | **Documentado, no corregido** — componente inactivo actualmente |
 | 7 | Claves de diccionario muertas sobre foto placeholder | **Documentado, no corregido** — sin impacto visible |
+| 8 | Enlace de Zoom con contraseña en texto plano (ver `THIRD-PARTY-SERVICES.md`) | **Verificado y aceptado por el propietario** — sin cambios necesarios |

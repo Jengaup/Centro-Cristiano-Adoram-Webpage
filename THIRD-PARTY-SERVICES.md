@@ -38,9 +38,9 @@ Los únicos usos de APIs del navegador relacionados con estado son locales y no 
 
 ---
 
-## 3. Riesgo de seguridad identificado (no corregido — requiere decisión del propietario)
+## 3. Enlace de Zoom con contraseña en texto plano — VERIFICADO Y ACEPTADO POR EL PROPIETARIO (26 de octubre de 2026)
 
-**El enlace de Zoom usado para los servicios semanales (Oración/Intercesión lunes 5am, Estudios Bíblicos martes, Servicio de Oración viernes) incluye la contraseña de la reunión en texto plano, directamente en el código fuente público del sitio** (`src/data/events.ts`, constante `ZOOM_URL`):
+**El enlace de Zoom usado para los servicios semanales (Oración/Intercesión lunes 5am, Estudios Bíblicos martes, Servicio de Oración viernes) incluye la contraseña de la reunión en texto plano, directamente en el código fuente público del sitio** (`src/data/events.ts`, constante `ZOOM_URL`). El propietario confirmó haber verificado este enlace y no requiere cambios — se entiende que las reuniones están pensadas para ser de fácil acceso público. Se conserva esta sección para registro histórico de la auditoría.
 
 ```
 https://us02web.zoom.us/j/85293924829?pwd=KCeqASTEdyT1r17rJLuqa9tAhbaREH.1
